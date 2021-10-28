@@ -41,6 +41,7 @@
 		482201BD22982422003319F0 /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; };
 		482201BE22982422003319F0 /* System.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		482201CF2298252D003319F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 482201CE2298252D003319F0 /* LaunchScreen.storyboard */; };
+		48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C3A272AD8340093381D /* UIContentViewController.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -247,6 +248,7 @@
 		482201B722982422003319F0 /* SystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTests.swift; sourceTree = "<group>"; };
 		482201B922982422003319F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		482201CE2298252D003319F0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48444C3A272AD8340093381D /* UIContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIContentViewController.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -642,6 +644,7 @@
 		482201D522982550003319F0 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				48444C3A272AD8340093381D /* UIContentViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -1148,6 +1151,7 @@
 				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
 				48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */,
 				480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */,
+				48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */,
 				480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */,
 				480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
