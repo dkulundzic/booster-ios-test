@@ -42,6 +42,27 @@
 		482201BE22982422003319F0 /* System.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		482201CF2298252D003319F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 482201CE2298252D003319F0 /* LaunchScreen.storyboard */; };
 		48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C3A272AD8340093381D /* UIContentViewController.swift */; };
+		48444C45272AD8F60093381D /* BoostDetailsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C40272AD8F60093381D /* BoostDetailsContentView.swift */; };
+		48444C46272AD8F60093381D /* BoostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C41272AD8F60093381D /* BoostDetailsPresenter.swift */; };
+		48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C42272AD8F60093381D /* BoostDetailsRouter.swift */; };
+		48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C43272AD8F60093381D /* BoostDetailsViewController.swift */; };
+		48444C49272AD8F60093381D /* BoostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C44272AD8F60093381D /* BoostDetailsInteractor.swift */; };
+		48444C50272AD92A0093381D /* BoostsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C4B272AD92A0093381D /* BoostsContentView.swift */; };
+		48444C51272AD92A0093381D /* BoostsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C4C272AD92A0093381D /* BoostsPresenter.swift */; };
+		48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C4D272AD92A0093381D /* BoostsRouter.swift */; };
+		48444C53272AD92A0093381D /* BoostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C4E272AD92A0093381D /* BoostsViewController.swift */; };
+		48444C54272AD92A0093381D /* BoostsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C4F272AD92A0093381D /* BoostsInteractor.swift */; };
+		48444C5B272AD9590093381D /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C56272AD9590093381D /* MapContentView.swift */; };
+		48444C5C272AD9590093381D /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C57272AD9590093381D /* MapPresenter.swift */; };
+		48444C5D272AD9590093381D /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C58272AD9590093381D /* MapRouter.swift */; };
+		48444C5E272AD9590093381D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C59272AD9590093381D /* MapViewController.swift */; };
+		48444C5F272AD9590093381D /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C5A272AD9590093381D /* MapInteractor.swift */; };
+		48444C66272AD9730093381D /* TabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C61272AD9730093381D /* TabBarContentView.swift */; };
+		48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C62272AD9730093381D /* TabBarPresenter.swift */; };
+		48444C68272AD9730093381D /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C63272AD9730093381D /* TabBarRouter.swift */; };
+		48444C69272AD9730093381D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C64272AD9730093381D /* TabBarViewController.swift */; };
+		48444C6A272AD9730093381D /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C65272AD9730093381D /* TabBarInteractor.swift */; };
+		48444C6E272AD9B80093381D /* BoostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C6D272AD9B80093381D /* BoostsDataSource.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -249,6 +270,27 @@
 		482201B922982422003319F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		482201CE2298252D003319F0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48444C3A272AD8340093381D /* UIContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIContentViewController.swift; sourceTree = "<group>"; };
+		48444C40272AD8F60093381D /* BoostDetailsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDetailsContentView.swift; sourceTree = "<group>"; };
+		48444C41272AD8F60093381D /* BoostDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDetailsPresenter.swift; sourceTree = "<group>"; };
+		48444C42272AD8F60093381D /* BoostDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDetailsRouter.swift; sourceTree = "<group>"; };
+		48444C43272AD8F60093381D /* BoostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDetailsViewController.swift; sourceTree = "<group>"; };
+		48444C44272AD8F60093381D /* BoostDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDetailsInteractor.swift; sourceTree = "<group>"; };
+		48444C4B272AD92A0093381D /* BoostsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsContentView.swift; sourceTree = "<group>"; };
+		48444C4C272AD92A0093381D /* BoostsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsPresenter.swift; sourceTree = "<group>"; };
+		48444C4D272AD92A0093381D /* BoostsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsRouter.swift; sourceTree = "<group>"; };
+		48444C4E272AD92A0093381D /* BoostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsViewController.swift; sourceTree = "<group>"; };
+		48444C4F272AD92A0093381D /* BoostsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsInteractor.swift; sourceTree = "<group>"; };
+		48444C56272AD9590093381D /* MapContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
+		48444C57272AD9590093381D /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		48444C58272AD9590093381D /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		48444C59272AD9590093381D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		48444C5A272AD9590093381D /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		48444C61272AD9730093381D /* TabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContentView.swift; sourceTree = "<group>"; };
+		48444C62272AD9730093381D /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		48444C63272AD9730093381D /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		48444C64272AD9730093381D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		48444C65272AD9730093381D /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		48444C6D272AD9B80093381D /* BoostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsDataSource.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -652,8 +694,101 @@
 		482201D622982554003319F0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				48444C3F272AD8DC0093381D /* Boost details */,
+				48444C3E272AD8C10093381D /* Boosts */,
+				48444C3D272AD8BA0093381D /* Map */,
+				48444C3C272AD8B40093381D /* Tab bar */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		48444C3C272AD8B40093381D /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+				48444C6B272AD97D0093381D /* Views */,
+				48444C65272AD9730093381D /* TabBarInteractor.swift */,
+				48444C62272AD9730093381D /* TabBarPresenter.swift */,
+				48444C63272AD9730093381D /* TabBarRouter.swift */,
+				48444C64272AD9730093381D /* TabBarViewController.swift */,
+			);
+			path = "Tab bar";
+			sourceTree = "<group>";
+		};
+		48444C3D272AD8BA0093381D /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				48444C60272AD95E0093381D /* Views */,
+				48444C5A272AD9590093381D /* MapInteractor.swift */,
+				48444C57272AD9590093381D /* MapPresenter.swift */,
+				48444C58272AD9590093381D /* MapRouter.swift */,
+				48444C59272AD9590093381D /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		48444C3E272AD8C10093381D /* Boosts */ = {
+			isa = PBXGroup;
+			children = (
+				48444C6C272AD9AB0093381D /* Data source */,
+				48444C55272AD92E0093381D /* Views */,
+				48444C4F272AD92A0093381D /* BoostsInteractor.swift */,
+				48444C4C272AD92A0093381D /* BoostsPresenter.swift */,
+				48444C4D272AD92A0093381D /* BoostsRouter.swift */,
+				48444C4E272AD92A0093381D /* BoostsViewController.swift */,
+			);
+			path = Boosts;
+			sourceTree = "<group>";
+		};
+		48444C3F272AD8DC0093381D /* Boost details */ = {
+			isa = PBXGroup;
+			children = (
+				48444C4A272AD8F90093381D /* Views */,
+				48444C44272AD8F60093381D /* BoostDetailsInteractor.swift */,
+				48444C41272AD8F60093381D /* BoostDetailsPresenter.swift */,
+				48444C42272AD8F60093381D /* BoostDetailsRouter.swift */,
+				48444C43272AD8F60093381D /* BoostDetailsViewController.swift */,
+			);
+			path = "Boost details";
+			sourceTree = "<group>";
+		};
+		48444C4A272AD8F90093381D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48444C40272AD8F60093381D /* BoostDetailsContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48444C55272AD92E0093381D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48444C4B272AD92A0093381D /* BoostsContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48444C60272AD95E0093381D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48444C56272AD9590093381D /* MapContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48444C6B272AD97D0093381D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48444C61272AD9730093381D /* TabBarContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48444C6C272AD9AB0093381D /* Data source */ = {
+			isa = PBXGroup;
+			children = (
+				48444C6D272AD9B80093381D /* BoostsDataSource.swift */,
+			);
+			path = "Data source";
 			sourceTree = "<group>";
 		};
 		488240522349446600CB6FFE /* Protocols */ = {
@@ -1148,19 +1283,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48444C6E272AD9B80093381D /* BoostsDataSource.swift in Sources */,
+				48444C69272AD9730093381D /* TabBarViewController.swift in Sources */,
+				48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */,
 				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
+				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,
+				48444C5B272AD9590093381D /* MapContentView.swift in Sources */,
+				48444C51272AD92A0093381D /* BoostsPresenter.swift in Sources */,
 				48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */,
 				480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */,
+				48444C5C272AD9590093381D /* MapPresenter.swift in Sources */,
 				48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */,
 				480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */,
 				480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
 				488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */,
+				48444C5D272AD9590093381D /* MapRouter.swift in Sources */,
 				480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */,
+				48444C53272AD92A0093381D /* BoostsViewController.swift in Sources */,
+				48444C68272AD9730093381D /* TabBarRouter.swift in Sources */,
 				480E55FE229BEF860031BDF7 /* Bundle-System.swift in Sources */,
+				48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */,
+				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
 				480E55F1229BEE6F0031BDF7 /* UIView-BoosterTest.swift in Sources */,
+				48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */,
+				48444C6A272AD9730093381D /* TabBarInteractor.swift in Sources */,
+				48444C5F272AD9590093381D /* MapInteractor.swift in Sources */,
 				480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */,
 				4822014522982175003319F0 /* BoosterTestApp.swift in Sources */,
+				48444C45272AD8F60093381D /* BoostDetailsContentView.swift in Sources */,
+				48444C5E272AD9590093381D /* MapViewController.swift in Sources */,
+				48444C46272AD8F60093381D /* BoostDetailsPresenter.swift in Sources */,
+				48444C49272AD8F60093381D /* BoostDetailsInteractor.swift in Sources */,
+				48444C50272AD92A0093381D /* BoostsContentView.swift in Sources */,
+				48444C54272AD92A0093381D /* BoostsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
