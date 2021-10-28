@@ -5,3 +5,9 @@
   Created by Domagoj Kulundzic on 27/05/2019.
   Copyright © 2019 Codeopolis. All rights reserved.
 */
+
+// MARK: - Map
+"map_title" = "Map";
+
+// MARK: - Boosts
+"boosts_title" = "Boosts";

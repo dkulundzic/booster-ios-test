@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localization
 
 protocol TabBarDisplayLogic: AnyObject { }
 
@@ -26,11 +27,9 @@ extension TabBarViewController: TabBarDisplayLogic { }
 
 private extension TabBarViewController {
   func setupViewControllers() {
-#warning("TODO: Localise")
-    mapScene.tabBarItem.title = "Map"
+    mapScene.tabBarItem.title = Localization.Map.title.localized()
     mapScene.tabBarItem.image = Icons.map.image
-#warning("TODO: Localise")
-    boostsScene.tabBarItem.title = "Boosts"
+    boostsScene.tabBarItem.title = Localization.Boosts.title.localized()
     boostsScene.tabBarItem.image = Icons.boost.image
     
     viewControllers = [mapScene, UINavigationController(rootViewController: boostsScene)]

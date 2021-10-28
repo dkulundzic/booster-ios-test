@@ -19,3 +19,7 @@ public extension LocalizationAsset {
     return withVaList(args) { NSString(format: localizedString, locale: Locale.current, arguments: $0) as String }
   }
 }
+
+public extension LocalizationAsset where Self: RawRepresentable, Self.RawValue == String {
+  var name: String { rawValue }
+}

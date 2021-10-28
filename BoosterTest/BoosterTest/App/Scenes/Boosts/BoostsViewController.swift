@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localization
 
 protocol BoostsDisplayLogic: AnyObject { }
 
@@ -27,7 +28,6 @@ private extension BoostsViewController {
   func setupView() { }
   
   func setupNavigationBar() {
-    #warning("TODO: Localise")
-    navigationItem.title = "Boosts"
+    navigationItem.title = Localization.Boosts.title.localized()
   }
 }
