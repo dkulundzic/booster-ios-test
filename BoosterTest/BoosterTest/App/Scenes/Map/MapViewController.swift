@@ -13,7 +13,7 @@ protocol MapDisplayLogic: AnyObject { }
 class MapViewController: UIViewController {
   var presenter: MapViewPresentingLogic?
   private lazy var contentView = MapContentView()
-
+  
   override func loadView() {
     view = contentView
   }
@@ -28,5 +28,18 @@ class MapViewController: UIViewController {
 extension MapViewController: MapDisplayLogic { }
 
 private extension MapViewController {
-  func setupView() { }
+  func setupView() {
+    setupContentView()
+  }
+  
+  func setupContentView() {
+    contentView.actionsView.homeButtonTapHandler = { [weak self] in
+#warning("TODO:")
+      print(#function)
+    }
+    contentView.actionsView.centerButtonTapHandler = { [weak self] in
+#warning("TODO:")
+      print(#function)
+    }
+  }
 }
