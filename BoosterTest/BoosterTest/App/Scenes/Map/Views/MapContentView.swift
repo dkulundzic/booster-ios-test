@@ -141,8 +141,7 @@ private extension MapContentView {
   func setupSelectionPinView() {
     addSubview(selectionPinView)
     selectionPinView.snp.makeConstraints {
-      $0.centerX.equalTo(mapView)
-      $0.bottom.equalTo(mapView.readableContentGuide.snp.centerY)
+      $0.center.equalTo(mapView.readableContentGuide)
     }
     selectionPinView.alpha = 0.0
   }
