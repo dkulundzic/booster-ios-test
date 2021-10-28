@@ -12,20 +12,19 @@ import MapKit
 protocol MapDisplayLogic: AnyObject {
   func displayInfoView(shown: Bool)
   func displaySelectionPin(shown: Bool)
+  func displayCenteringButton(enabled: Bool)
+  func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D)
 }
 
-class MapViewController: UIViewController {
+class MapViewController: UIContentViewController<MapContentView> {
   var presenter: MapViewPresentingLogic?
-  private lazy var contentView = MapContentView()
   private var didShowInfoViewOnce = false
-  
-  override func loadView() {
-    view = contentView
-  }
-  
+  private var didCenterOnUserOnce = false
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    presenter?.onViewLoaded()
   }
 }
 
@@ -36,8 +35,15 @@ extension MapViewController: MapDisplayLogic {
   }
   
   func displaySelectionPin(shown: Bool) {
-#warning("TODO:")
-    print(#function)
+    contentView.isSelectionPinViewHidden = !shown
+  }
+  
+  func displayCenteringButton(enabled: Bool) {
+    contentView.actionsView.isCenterButtonEnabled = enabled
+  }
+  
+  func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D) {
+    contentView.mapView.setRegion(createMapViewRegion(for: userLocation), animated: true)
   }
 }
 
@@ -47,6 +53,14 @@ extension MapViewController: MKMapViewDelegate {
     guard fullyRendered && !didShowInfoViewOnce else { return }
     didShowInfoViewOnce = true
     presenter?.onMapFirstTimeRendering()
+  }
+  
+  func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    presenter?.onMapUpdatedUserLocation(userLocation.coordinate)
+    
+    guard !didCenterOnUserOnce else { return }
+    didCenterOnUserOnce = true
+    mapView.setRegion(createMapViewRegion(for: userLocation.coordinate), animated: true)
   }
 }
 
@@ -66,8 +80,11 @@ private extension MapViewController {
       print(#function)
     }
     contentView.actionsView.centerButtonTapHandler = { [weak self] in
-#warning("TODO:")
-      print(#function)
+      self?.presenter?.onCenterButtonTapped()
     }
+  }
+  
+  func createMapViewRegion(for location: CLLocationCoordinate2D) -> MKCoordinateRegion {
+    MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
   }
 }

@@ -29,6 +29,13 @@ class MapActionsView: UIView {
   }
 }
 
+extension MapActionsView {
+  var isCenterButtonEnabled: Bool {
+    get { centerButton.isEnabled }
+    set { centerButton.isEnabled = newValue }
+  }
+}
+
 private extension MapActionsView {
   @objc func homeButtonTapped() {
     homeButtonTapHandler?()

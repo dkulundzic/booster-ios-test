@@ -46,6 +46,17 @@ extension MapContentView {
       }
     }
   }
+  
+  var isSelectionPinViewHidden: Bool {
+    get {
+      selectionPinView.alpha != 0
+    }
+    set {
+      Animation.animation {
+        self.selectionPinView.alpha = newValue ? 0.0 : 1.0
+      }
+    }
+  }
 }
 
 // MARK: - Actions
@@ -79,7 +90,7 @@ private extension MapContentView {
       $0.height.equalToSuperview().multipliedBy(0.7)
     }
     mapView.showsUserLocation = true
-    mapView.mapType = .hybrid
+    mapView.mapType = .satelliteFlyover
     mapView.layer.cornerRadius = 8
   }
   
@@ -121,7 +132,7 @@ private extension MapContentView {
   func setupInfoView() {
     vibrancyView.contentView.addSubview(infoView)
     infoView.snp.makeConstraints {
-      $0.edges.equalToSuperview().inset(8)
+      $0.edges.equalToSuperview().inset(10)
     }
     infoView.title = Localization.Map.infoTitle.localized()
     infoView.subtitle = Localization.Map.infoSubtitle.localized()
@@ -131,7 +142,8 @@ private extension MapContentView {
     addSubview(selectionPinView)
     selectionPinView.snp.makeConstraints {
       $0.centerX.equalTo(mapView)
-      $0.bottom.equalTo(mapView.snp.centerY)
+      $0.bottom.equalTo(mapView.readableContentGuide.snp.centerY)
     }
+    selectionPinView.alpha = 0.0
   }
 }

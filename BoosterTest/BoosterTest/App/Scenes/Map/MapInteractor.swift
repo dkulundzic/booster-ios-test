@@ -7,10 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
 
-protocol MapBusinessLogic: AnyObject { }
+protocol MapBusinessLogic: AnyObject {
+  func requestLocationAuthorization()
+}
 
-class MapInteractor { }
+class MapInteractor {
+  private let locationManager = CLLocationManager()
+}
 
 // MARK: - MapBusinessLogic
-extension MapInteractor: MapBusinessLogic { }
+extension MapInteractor: MapBusinessLogic {
+  func requestLocationAuthorization() {
+    locationManager.requestWhenInUseAuthorization()
+  }
+}
