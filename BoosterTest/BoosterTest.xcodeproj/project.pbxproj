@@ -74,6 +74,7 @@
 		48444C87272AEE5F0093381D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C86272AEE5F0093381D /* ActionButton.swift */; };
 		48444C89272B10B00093381D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C88272B10B00093381D /* InfoView.swift */; };
 		48444C8C272B1B320093381D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C8B272B1B320093381D /* Animation.swift */; };
+		48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C8D272B1E770093381D /* MapSelectionPinView.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -312,6 +313,7 @@
 		48444C86272AEE5F0093381D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		48444C88272B10B00093381D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		48444C8B272B1B320093381D /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		48444C8D272B1E770093381D /* MapSelectionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionPinView.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -801,6 +803,7 @@
 			children = (
 				48444C56272AD9590093381D /* MapContentView.swift */,
 				48444C82272AE7AE0093381D /* MapActionsView.swift */,
+				48444C8D272B1E770093381D /* MapSelectionPinView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1355,6 +1358,7 @@
 			files = (
 				48444C6E272AD9B80093381D /* BoostsDataSource.swift in Sources */,
 				48444C69272AD9730093381D /* TabBarViewController.swift in Sources */,
+				48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */,
 				48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */,
 				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
 				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,

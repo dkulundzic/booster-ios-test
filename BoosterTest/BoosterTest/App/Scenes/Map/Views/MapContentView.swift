@@ -20,6 +20,7 @@ class MapContentView: UIView {
   private lazy var blurView = UIVisualEffectView(effect: blurEffect)
   private lazy var vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
   private lazy var infoView = InfoView()
+  private lazy var selectionPinView = MapSelectionPinView()
   private let blurEffect = UIBlurEffect(style: .systemChromeMaterial)
   
   override init(frame: CGRect) {
@@ -64,6 +65,7 @@ private extension MapContentView {
     setupBlurView()
     setupVibrancyView()
     setupInfoView()
+    setupSelectionPinView()
   }
   
   func setupView() {
@@ -123,5 +125,13 @@ private extension MapContentView {
     }
     infoView.title = Localization.Map.infoTitle.localized()
     infoView.subtitle = Localization.Map.infoSubtitle.localized()
+  }
+  
+  func setupSelectionPinView() {
+    addSubview(selectionPinView)
+    selectionPinView.snp.makeConstraints {
+      $0.centerX.equalTo(mapView)
+      $0.bottom.equalTo(mapView.snp.centerY)
+    }
   }
 }
