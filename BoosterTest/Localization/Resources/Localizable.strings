@@ -11,6 +11,8 @@
 
 // MARK: - Map
 "map_title" = "Map";
+"map_info_title" = "Order a boost";
+"map_info_subtitle" = "Zoom & drag the map to pin exact spot";
 
 // MARK: - Boosts
 "boosts_title" = "Boosts";

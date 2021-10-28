@@ -14,4 +14,9 @@ public struct Colors {
     case lightPurple
     case purple
   }
+  
+  public enum Text: String, ColorAsset {
+    case title
+    case subtitle
+  }
 }

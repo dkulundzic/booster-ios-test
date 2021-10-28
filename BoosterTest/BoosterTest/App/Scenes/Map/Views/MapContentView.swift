@@ -15,8 +15,12 @@ import SnapKit
 class MapContentView: UIView {
   var actionTapHandler: Action?
   private(set) lazy var actionsView = MapActionsView()
-  private lazy var mapView = MKMapView()
-  private lazy var actionButton = ActionButton(type: .system)
+  private(set) lazy var mapView = MKMapView()
+  private lazy var actionButton = ActionButton()
+  private lazy var blurView = UIVisualEffectView(effect: blurEffect)
+  private lazy var vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
+  private lazy var infoView = InfoView()
+  private let blurEffect = UIBlurEffect(style: .systemChromeMaterial)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -26,6 +30,20 @@ class MapContentView: UIView {
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+}
+
+extension MapContentView {
+  var isInfoViewHidden: Bool {
+    get {
+      blurView.alpha != 0      
+    }
+    set {
+      Animation.animation {
+        self.blurView.alpha = newValue ? 0.0 : 1.0
+        self.blurView.setNeedsLayout()        
+      }
+    }
   }
 }
 
@@ -43,6 +61,9 @@ private extension MapContentView {
     setupMapView()
     setupActionsView()
     setupActionButton()
+    setupBlurView()
+    setupVibrancyView()
+    setupInfoView()
   }
   
   func setupView() {
@@ -75,5 +96,32 @@ private extension MapContentView {
     }
     actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     actionButton.setTitle(Localization.Actions.next.localized(), for: .normal)
+  }
+  
+  func setupBlurView() {
+    addSubview(blurView)
+    blurView.snp.makeConstraints {
+      $0.leading.trailing.top.equalTo(safeAreaLayoutGuide).inset(16)
+    }
+    blurView.clipsToBounds = true
+    blurView.isUserInteractionEnabled = false
+    blurView.alpha = 0.0
+    blurView.layer.cornerRadius = 8
+  }
+  
+  func setupVibrancyView() {
+    blurView.contentView.addSubview(vibrancyView)
+    vibrancyView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
+  }
+  
+  func setupInfoView() {
+    vibrancyView.contentView.addSubview(infoView)
+    infoView.snp.makeConstraints {
+      $0.edges.equalToSuperview().inset(8)
+    }
+    infoView.title = Localization.Map.infoTitle.localized()
+    infoView.subtitle = Localization.Map.infoSubtitle.localized()
   }
 }

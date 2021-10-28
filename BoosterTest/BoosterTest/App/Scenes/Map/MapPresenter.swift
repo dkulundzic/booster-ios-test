@@ -8,7 +8,10 @@
 
 import Foundation
 
-protocol MapViewPresentingLogic: AnyObject { }
+protocol MapViewPresentingLogic: AnyObject {
+  func onViewLoaded()
+  func onMapFirstTimeRendering()
+}
 
 class MapPresenter {
   var interactor: MapBusinessLogic?
@@ -23,4 +26,13 @@ class MapPresenter {
 }
 
 // MARK: - MapViewPresentingLogic
-extension MapPresenter: MapViewPresentingLogic { }
+extension MapPresenter: MapViewPresentingLogic {
+  func onViewLoaded() {
+#warning("TODO:")
+    print(#function)
+  }
+  
+  func onMapFirstTimeRendering() {
+    view?.displayInfoView(shown: true)
+  }
+}

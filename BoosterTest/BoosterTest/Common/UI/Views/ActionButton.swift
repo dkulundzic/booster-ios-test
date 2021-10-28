@@ -32,9 +32,9 @@ private extension GradientButton {
   }
   
   func setupView() {
+    titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     colors = [Colors.General.lightPurple.color, Colors.General.purple.color]
     setTitleColor(.white, for: .normal)
-    titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-    layer.cornerRadius = 16
+    layer.cornerRadius = 6
   }
 }

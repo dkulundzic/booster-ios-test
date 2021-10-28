@@ -15,6 +15,8 @@ public struct Localization {
   
   public enum Map: String, LocalizationAsset {
     case title = "map_title"
+    case infoTitle = "map_info_title"
+    case infoSubtitle = "map_info_subtitle"
   }
   
   public enum Boosts: String, LocalizationAsset {
