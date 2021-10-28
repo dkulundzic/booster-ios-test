@@ -75,6 +75,8 @@
 		48444C89272B10B00093381D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C88272B10B00093381D /* InfoView.swift */; };
 		48444C8C272B1B320093381D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C8B272B1B320093381D /* Animation.swift */; };
 		48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C8D272B1E770093381D /* MapSelectionPinView.swift */; };
+		48444C91272B26080093381D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C90272B26080093381D /* LocationManager.swift */; };
+		48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -314,6 +316,8 @@
 		48444C88272B10B00093381D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		48444C8B272B1B320093381D /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		48444C8D272B1E770093381D /* MapSelectionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionPinView.swift; sourceTree = "<group>"; };
+		48444C90272B26080093381D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D-BoosterTest.swift"; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -532,8 +536,9 @@
 		48220165229821A9003319F0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				48444C6F272ADA9E0093381D /* Startup processes */,
 				482201D022982534003319F0 /* Extensions */,
+				48444C8F272B25FC0093381D /* Location */,
+				48444C6F272ADA9E0093381D /* Startup processes */,
 				482201D122982539003319F0 /* UI */,
 			);
 			path = Common;
@@ -666,6 +671,7 @@
 		482201D022982534003319F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				48444C92272B26750093381D /* CoreLocation */,
 				482201D222982541003319F0 /* Foundation */,
 				482201D322982546003319F0 /* UIKit */,
 			);
@@ -855,6 +861,22 @@
 				48444C8B272B1B320093381D /* Animation.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		48444C8F272B25FC0093381D /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				48444C90272B26080093381D /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		48444C92272B26750093381D /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */,
+			);
+			path = CoreLocation;
 			sourceTree = "<group>";
 		};
 		488240522349446600CB6FFE /* Protocols */ = {
@@ -1372,7 +1394,9 @@
 				48444C5C272AD9590093381D /* MapPresenter.swift in Sources */,
 				48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */,
 				480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */,
+				48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */,
 				480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */,
+				48444C91272B26080093381D /* LocationManager.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
 				48444C7C272ADE420093381D /* Icons.swift in Sources */,
 				488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */,

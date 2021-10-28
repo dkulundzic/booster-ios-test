@@ -56,8 +56,6 @@ extension MapViewController: MKMapViewDelegate {
   }
   
   func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-    presenter?.onMapUpdatedUserLocation(userLocation.coordinate)
-    
     guard !didCenterOnUserOnce else { return }
     didCenterOnUserOnce = true
     mapView.setRegion(createMapViewRegion(for: userLocation.coordinate), animated: true)

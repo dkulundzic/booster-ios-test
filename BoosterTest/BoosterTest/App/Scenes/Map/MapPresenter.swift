@@ -13,7 +13,6 @@ import Combine
 protocol MapViewPresentingLogic: AnyObject {
   func onViewLoaded()
   func onMapFirstTimeRendering()
-  func onMapUpdatedUserLocation(_ location: CLLocationCoordinate2D)
   func onHomeButtonTapped()
   func onCenterButtonTapped()
 }
@@ -22,7 +21,6 @@ class MapPresenter {
   var interactor: MapBusinessLogic?
   weak private var view: MapDisplayLogic?
   private let router: MapRoutingLogic
-  private var userLocationSubject = CurrentValueSubject<CLLocationCoordinate2D?, Never>(nil)
   private var bag = Set<AnyCancellable>()
   
   init(interface: MapDisplayLogic, interactor: MapBusinessLogic?, router: MapRoutingLogic) {
@@ -36,16 +34,11 @@ class MapPresenter {
 extension MapPresenter: MapViewPresentingLogic {
   func onViewLoaded() {
     setupObserving()
-    interactor?.requestLocationAuthorization()
   }
   
   func onMapFirstTimeRendering() {
     view?.displayInfoView(shown: true)
     view?.displaySelectionPin(shown: true)
-  }
-  
-  func onMapUpdatedUserLocation(_ location: CLLocationCoordinate2D) {
-    userLocationSubject.value = location
   }
   
   func onHomeButtonTapped() {
@@ -54,7 +47,7 @@ extension MapPresenter: MapViewPresentingLogic {
   }
   
   func onCenterButtonTapped() {
-    if let userLocation = userLocationSubject.value {
+    if let userLocation = interactor?.userLocation {
       view?.displayMapCenteringOnUser(using: userLocation)
     }
   }
@@ -62,7 +55,7 @@ extension MapPresenter: MapViewPresentingLogic {
 
 private extension MapPresenter {
   func setupObserving() {
-    userLocationSubject
+    interactor?.userLocationPublisher
       .sink { [weak self] location in
         self?.view?.displayCenteringButton(enabled: location != nil)
       }

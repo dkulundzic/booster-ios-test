@@ -8,18 +8,24 @@
 
 import Foundation
 import CoreLocation
+import Combine
 
 protocol MapBusinessLogic: AnyObject {
-  func requestLocationAuthorization()
+  var userLocationPublisher: AnyPublisher<CLLocation?, Never> { get }
+  var userLocation: CLLocationCoordinate2D? { get }
 }
 
 class MapInteractor {
-  private let locationManager = CLLocationManager()
+  private let locationManager = LocationManager()
 }
 
 // MARK: - MapBusinessLogic
 extension MapInteractor: MapBusinessLogic {
-  func requestLocationAuthorization() {
-    locationManager.requestWhenInUseAuthorization()
+  var userLocationPublisher: AnyPublisher<CLLocation?, Never> {
+    locationManager.locationPublisher
+  }
+  
+  var userLocation: CLLocationCoordinate2D? {
+    locationManager.currentCoordinate
   }
 }
