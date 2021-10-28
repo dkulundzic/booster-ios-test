@@ -11,6 +11,9 @@ import UIKit
 
 final class BoosterAppRouter {
   func initialViewController() -> UIViewController {
-    fatalError("Not implemented yet...")
+    TabBarRouter.createModule(delegate: self)
   }
 }
+
+// MARK: - TabBarRouterDelegate
+extension BoosterAppRouter: TabBarRouterDelegate { }

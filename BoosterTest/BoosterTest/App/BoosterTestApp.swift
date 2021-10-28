@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import System
 
 @UIApplicationMain
 class BoosterTestApp: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,9 @@ class BoosterTestApp: UIResponder, UIApplicationDelegate {
   private let appRouter = BoosterAppRouter()
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    StartupProcessService()
+      .execute(process: AppearanceCustomisationStartupProcess())
+    
     window.rootViewController = appRouter.initialViewController()
     window.makeKeyAndVisible()
     
