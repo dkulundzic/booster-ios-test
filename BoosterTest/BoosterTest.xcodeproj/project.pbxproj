@@ -70,6 +70,8 @@
 		48444C7E272AE4190093381D /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C7D272AE4190093381D /* Localization.swift */; };
 		48444C81272AE5420093381D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48444C80272AE5420093381D /* SnapKit */; };
 		48444C83272AE7AE0093381D /* MapActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C82272AE7AE0093381D /* MapActionsView.swift */; };
+		48444C85272AEBF30093381D /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C84272AEBF30093381D /* GradientButton.swift */; };
+		48444C87272AEE5F0093381D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C86272AEE5F0093381D /* ActionButton.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -304,6 +306,8 @@
 		48444C7B272ADE420093381D /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		48444C7D272AE4190093381D /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		48444C82272AE7AE0093381D /* MapActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapActionsView.swift; sourceTree = "<group>"; };
+		48444C84272AEBF30093381D /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		48444C86272AEE5F0093381D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -696,6 +700,8 @@
 		482201D42298254C003319F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				48444C84272AEBF30093381D /* GradientButton.swift */,
+				48444C86272AEE5F0093381D /* ActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1365,6 +1371,8 @@
 				48444C83272AE7AE0093381D /* MapActionsView.swift in Sources */,
 				480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */,
 				4822014522982175003319F0 /* BoosterTestApp.swift in Sources */,
+				48444C85272AEBF30093381D /* GradientButton.swift in Sources */,
+				48444C87272AEE5F0093381D /* ActionButton.swift in Sources */,
 				48444C45272AD8F60093381D /* BoostDetailsContentView.swift in Sources */,
 				48444C5E272AD9590093381D /* MapViewController.swift in Sources */,
 				48444C78272ADC760093381D /* ColorAsset.swift in Sources */,

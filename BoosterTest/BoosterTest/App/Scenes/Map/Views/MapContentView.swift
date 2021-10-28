@@ -8,11 +8,15 @@
 
 import UIKit
 import MapKit
+import System
+import Localization
 import SnapKit
 
 class MapContentView: UIView {
+  var actionTapHandler: Action?
   private(set) lazy var actionsView = MapActionsView()
   private lazy var mapView = MKMapView()
+  private lazy var actionButton = ActionButton(type: .system)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -25,12 +29,20 @@ class MapContentView: UIView {
   }
 }
 
+// MARK: - Actions
+private extension MapContentView {
+  @objc func actionButtonTapped() {
+    actionTapHandler?()
+  }
+}
+
 // MARK: - Private Methods
 private extension MapContentView {
   func setupViews() {
     setupView()
     setupMapView()
     setupActionsView()
+    setupActionButton()
   }
   
   func setupView() {
@@ -53,5 +65,15 @@ private extension MapContentView {
     actionsView.snp.makeConstraints {
       $0.trailing.bottom.equalTo(mapView).inset(16)
     }
+  }
+  
+  func setupActionButton() {
+    addSubview(actionButton)
+    actionButton.snp.makeConstraints {
+      $0.leading.trailing.equalToSuperview().inset(16)
+      $0.bottom.equalTo(safeAreaLayoutGuide).inset(16)
+    }
+    actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    actionButton.setTitle(Localization.Actions.next.localized(), for: .normal)
   }
 }

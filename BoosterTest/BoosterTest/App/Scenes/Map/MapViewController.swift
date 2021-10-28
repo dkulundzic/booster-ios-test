@@ -33,6 +33,10 @@ private extension MapViewController {
   }
   
   func setupContentView() {
+    contentView.actionTapHandler = { [weak self] in
+#warning("TODO:")
+      print(#function)
+    }
     contentView.actionsView.homeButtonTapHandler = { [weak self] in
 #warning("TODO:")
       print(#function)

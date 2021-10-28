@@ -9,6 +9,10 @@
 import Foundation
 
 public struct Localization {
+  public enum Actions: String, LocalizationAsset {
+    case next = "action_next"
+  }
+  
   public enum Map: String, LocalizationAsset {
     case title = "map_title"
   }

@@ -6,6 +6,9 @@
   Copyright © 2019 Codeopolis. All rights reserved.
 */
 
+// MARK: - Actions
+"action_next" = "Next";
+
 // MARK: - Map
 "map_title" = "Map";
 
