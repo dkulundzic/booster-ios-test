@@ -65,8 +65,9 @@ private extension BoostsCell {
     contentView.addSubview(paymentMethodImageView)
     paymentMethodImageView.snp.makeConstraints {
       $0.leading.top.equalToSuperview().inset(16)
+      $0.size.equalTo(24)
     }
-    paymentMethodImageView.tintColor = Colors.General.purple.color
+    paymentMethodImageView.tintColor = Colors.General.lightPurple.color
     paymentMethodImageView.setContentHuggingPriority(.required, for: .horizontal)
     paymentMethodImageView.setContentCompressionResistancePriority(.required, for: .horizontal)
   }
