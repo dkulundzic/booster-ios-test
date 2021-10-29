@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  GixonUI
+//  BoosterTest
 //
 //  Created by Domagoj Kulundzic on 12/06/2020.
 //  Copyright © 2020 Codeopolis. All rights reserved.

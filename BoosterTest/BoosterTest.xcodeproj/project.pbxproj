@@ -88,6 +88,7 @@
 		48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA5272C0A500093381D /* BoostRequestViewController.swift */; };
 		48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA6272C0A500093381D /* BoostRequestInteractor.swift */; };
 		48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CAD272C13310093381D /* VerticalSeparatorView.swift */; };
+		48444CB0272C13FD0093381D /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CAF272C13FD0093381D /* SectionView.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -340,6 +341,7 @@
 		48444CA5272C0A500093381D /* BoostRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestViewController.swift; sourceTree = "<group>"; };
 		48444CA6272C0A500093381D /* BoostRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestInteractor.swift; sourceTree = "<group>"; };
 		48444CAD272C13310093381D /* VerticalSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSeparatorView.swift; sourceTree = "<group>"; };
+		48444CAF272C13FD0093381D /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -740,6 +742,7 @@
 				48444C86272AEE5F0093381D /* ActionButton.swift */,
 				48444C84272AEBF30093381D /* GradientButton.swift */,
 				48444C88272B10B00093381D /* InfoView.swift */,
+				48444CAF272C13FD0093381D /* SectionView.swift */,
 				48444CAD272C13310093381D /* VerticalSeparatorView.swift */,
 			);
 			path = Views;
@@ -1489,6 +1492,7 @@
 				48444C5E272AD9590093381D /* MapViewController.swift in Sources */,
 				48444C78272ADC760093381D /* ColorAsset.swift in Sources */,
 				48444C46272AD8F60093381D /* BoostDetailsPresenter.swift in Sources */,
+				48444CB0272C13FD0093381D /* SectionView.swift in Sources */,
 				48444C49272AD8F60093381D /* BoostDetailsInteractor.swift in Sources */,
 				48444C50272AD92A0093381D /* BoostsContentView.swift in Sources */,
 				48444C54272AD92A0093381D /* BoostsInteractor.swift in Sources */,
