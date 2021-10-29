@@ -8,13 +8,13 @@
 
 import UIKit
 import System
+import Localization
 
 extension UIAlertController {
   static func boostOrdered(action: Action?) -> UIAlertController {
-    #warning("TODO: Localise")
     let alertController = UIAlertController(
-      title: "Boost ordered",
-      message: "Congratulations, you have successfully ordered a boost! ",
+      title: Localization.Alerts.boostOrderedTitle.localized(),
+      message: Localization.Alerts.boostOrderedMessage.localized(),
       preferredStyle: .alert
     )
     alertController.addAction(.confirmation(action: action))

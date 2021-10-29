@@ -9,6 +9,7 @@
 import UIKit
 import System
 import Model
+import Localization
 
 enum BoostsDataSourceItem: Hashable {
   case boost(BoostsCell.ViewModel)
@@ -50,8 +51,7 @@ extension BoostsDataSource {
 private extension BoostsDataSource {
   func buildSections() {
     let items: [BoostsDataSourceItem] = data.map {
-#warning("TODO: Localise")
-      let deliveryWindowText = try? AttributedStringBuilder(text: "Delivered in the \($0.deliveryWindow.description)")
+      let deliveryWindowText = try? AttributedStringBuilder(text: Localization.Boosts.deliveryWindowDetailFormat.localized($0.deliveryWindow.description))
         .setFont(.systemFont(ofSize: 16, weight: .regular))
         .setFont(.systemFont(ofSize: 16, weight: .bold), inRangeOf: $0.deliveryWindow.description)
         .create()

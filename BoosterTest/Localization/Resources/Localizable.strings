@@ -12,10 +12,24 @@
 "action_cancel" = "Cancel";
 "action_confirmation" = "Ok";
 
+// MARK: - Alerts
+"alerts_boost_ordered_title" = "Boost ordered";
+"alerts_boost_ordered_message" = "Congratulations, you have successfully ordered a boost!";
+
+// MARK: - Boosts
+"boosts_title" = "Boosts";
+"boosts_delivery_detail_format" = "Delivered in the %@";
+
+// MARK: - Boost Request
+"boosts_request_title" = "Request a Boost";
+"boosts_request_delivery_date_section_title" = "Delivery date";
+"boosts_request_delivery_date_section_subtitle" = "Please select the delivery date for your Boost.";
+"boosts_request_delivery_window_section_title" = "Delivery window";
+"boosts_request_delivery_window_section_subtitle" = "Please select the delivery window for your Boost.";
+"boosts_request_payment_method_section_title" = "Payment Method";
+"boosts_request_payment_method_section_subtitle" = "Please select the payment method for your Boost.";
+
 // MARK: - Map
 "map_title" = "Map";
 "map_info_title" = "Order a boost";
 "map_info_subtitle" = "Zoom & drag the map to pin exact spot";
-
-// MARK: - Boosts
-"boosts_title" = "Boosts";

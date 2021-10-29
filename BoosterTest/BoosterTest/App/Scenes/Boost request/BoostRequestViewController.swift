@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localization
 
 protocol BoostRequestDisplayLogic: AnyObject {
   func displayActionButton(enabled: Bool)
@@ -52,7 +53,6 @@ private extension BoostRequestViewController {
   }
   
   func setupNavigationBar() {
-    #warning("TODO: Localise")
-    navigationItem.title = "Create a Boost"
+    navigationItem.title = Localization.BoostRequest.title.localized()
   }
 }

@@ -17,7 +17,9 @@ public protocol BoostsStoreProtocol {
 public final class BoostsStore {
   private static let boostsSubject = CurrentValueSubject<[Boost], Never>([])
   
-  public init() { }
+  public init() {
+    Self.mockBoosts()
+  }
 }
 
 extension BoostsStore: BoostsStoreProtocol {

@@ -113,10 +113,8 @@ private extension BoostRequestContentView {
   
   func setupDateSectionView() {
     stackView.addArrangedSubview(dateSectionView)
-#warning("TODO: Localise")
-    dateSectionView.title = "Delivery date"
-#warning("TODO: Localise")
-    dateSectionView.subtitle = "Please select the delivery date for you Boost."
+    dateSectionView.title = Localization.BoostRequest.deliveryDateSectionTitle.localized()
+    dateSectionView.subtitle = Localization.BoostRequest.deliveryDateSectionSubtitle.localized()
   }
   
   func setupDatePicker() {
@@ -131,10 +129,8 @@ private extension BoostRequestContentView {
   
   func setupDeliveryWindowSectionView() {
     stackView.addArrangedSubview(deliveryWindowSectionView)
-#warning("TODO: Localise")
-    deliveryWindowSectionView.title = "Delivery window"
-#warning("TODO: Localise")
-    deliveryWindowSectionView.subtitle = "Please select the delivery window for you Boost."
+    deliveryWindowSectionView.title = Localization.BoostRequest.deliveryWindowSectionTitle.localized()
+    deliveryWindowSectionView.subtitle = Localization.BoostRequest.deliveryDateSectionSubtitle.localized()
   }
   
   func setupDeliveryWindowSegmentedControl() {
@@ -146,10 +142,8 @@ private extension BoostRequestContentView {
   
   func setupPaymentMethodSectionView() {
     stackView.addArrangedSubview(paymentMethodSectionView)
-#warning("TODO: Localise")
-    paymentMethodSectionView.title = "Payment Method"
-#warning("TODO: Localise")
-    paymentMethodSectionView.subtitle = "Please select the payment method for you Boost."
+    paymentMethodSectionView.title = Localization.BoostRequest.paymentMethodSectionTitle.localized()
+    paymentMethodSectionView.subtitle = Localization.BoostRequest.paymentMethodSectionSubtitle.localized()
   }
   
   func setupPaymentMethodSegmentedControl() {
