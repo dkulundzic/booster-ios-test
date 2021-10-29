@@ -34,7 +34,11 @@ class MapPresenter {
     return formatter
   }()
   
-  init(interface: MapDisplayLogic, interactor: MapBusinessLogic, router: MapRoutingLogic) {
+  init(
+    interface: MapDisplayLogic,
+    interactor: MapBusinessLogic,
+    router: MapRoutingLogic
+  ) {
     self.view = interface
     self.interactor = interactor
     self.router = router

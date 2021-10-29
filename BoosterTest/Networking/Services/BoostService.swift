@@ -15,22 +15,29 @@ public protocol BoostServiceProtocol {
   func orderBoost(
     at boostLocation: CLLocationCoordinate2D,
     on date: Date,
-    using deliveryMethod: Boost.DeliveryWindow,
+    using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
   ) async
 }
 
 public final class BoostService {
-  public init() { }
+  private let boostsStore: BoostsStoreProtocol
+  
+  public init(boostsStore: BoostsStoreProtocol = BoostsStore()) {
+    self.boostsStore = boostsStore
+  }
 }
 
 extension BoostService: BoostServiceProtocol {
   public func orderBoost(
     at boostLocation: CLLocationCoordinate2D,
     on date: Date,
-    using deliveryMethod: Boost.DeliveryWindow,
+    using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
   ) async {
     await Task.sleep(1 * 1000000000)
+    boostsStore.add(
+      boost: Boost(date: date, deliveryWindow: deliveryWindow, paymentMethod: paymentMethod)
+    )
   }
 }

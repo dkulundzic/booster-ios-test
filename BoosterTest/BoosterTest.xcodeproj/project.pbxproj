@@ -93,6 +93,7 @@
 		48444CB8272C21550093381D /* BoostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB7272C21550093381D /* BoostService.swift */; };
 		48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */; };
 		48444CBC272C22BB0093381D /* UIAlertAction-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */; };
+		48444CC0272C2BB20093381D /* BoostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CBF272C2BB20093381D /* BoostsStore.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -350,6 +351,7 @@
 		48444CB7272C21550093381D /* BoostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostService.swift; sourceTree = "<group>"; };
 		48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-BoosterTest.swift"; sourceTree = "<group>"; };
 		48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction-BoosterTest.swift"; sourceTree = "<group>"; };
+		48444CBF272C2BB20093381D /* BoostsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsStore.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -655,8 +657,8 @@
 		482201C72298244B003319F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				48444CB3272C14E90093381D /* Boost.swift */,
-				48444C99272BEAF50093381D /* FuelPricingInformation.swift */,
+				48444CBD272C2B9D0093381D /* Models */,
+				48444CBE272C2BA30093381D /* Stores */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -949,6 +951,23 @@
 				48444CA2272C0A500093381D /* BoostRequestContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		48444CBD272C2B9D0093381D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48444CB3272C14E90093381D /* Boost.swift */,
+				48444C99272BEAF50093381D /* FuelPricingInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		48444CBE272C2BA30093381D /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				48444CBF272C2BB20093381D /* BoostsStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		488240522349446600CB6FFE /* Protocols */ = {
@@ -1528,6 +1547,7 @@
 			files = (
 				48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */,
 				48444CB4272C14E90093381D /* Boost.swift in Sources */,
+				48444CC0272C2BB20093381D /* BoostsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
