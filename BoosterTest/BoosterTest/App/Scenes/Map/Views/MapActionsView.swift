@@ -80,6 +80,7 @@ private extension MapActionsView {
       $0.size.equalTo(buttonSize)
     }
     homeButton.tintColor = .darkGray
+    homeButton.isEnabled = false
     homeButton.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
     homeButton.setImage(Icons.house.image, for: .normal)
   }
