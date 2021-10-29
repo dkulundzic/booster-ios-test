@@ -15,7 +15,7 @@ class MapActionsView: UIView {
   private lazy var stackView = UIStackView()
   private lazy var homeButton = UIButton(type: .system)
   private lazy var centerButton = UIButton(type: .system)
-  private lazy var separatorView = UIView()
+  private lazy var separatorView = VerticalSeparatorView()
   private let buttonSize = CGSize(width: 50, height: 50)
   
   override init(frame: CGRect) {
@@ -99,8 +99,6 @@ private extension MapActionsView {
     addSubview(separatorView)
     separatorView.snp.makeConstraints {
       $0.centerX.top.bottom.equalTo(stackView)
-      $0.width.equalTo(0.5)
     }
-    separatorView.backgroundColor = .lightGray
   }
 }

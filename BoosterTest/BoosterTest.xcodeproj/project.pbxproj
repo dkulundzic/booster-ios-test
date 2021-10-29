@@ -87,6 +87,7 @@
 		48444CA9272C0A500093381D /* BoostRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA4272C0A500093381D /* BoostRequestRouter.swift */; };
 		48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA5272C0A500093381D /* BoostRequestViewController.swift */; };
 		48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA6272C0A500093381D /* BoostRequestInteractor.swift */; };
+		48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CAD272C13310093381D /* VerticalSeparatorView.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -338,6 +339,7 @@
 		48444CA4272C0A500093381D /* BoostRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestRouter.swift; sourceTree = "<group>"; };
 		48444CA5272C0A500093381D /* BoostRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestViewController.swift; sourceTree = "<group>"; };
 		48444CA6272C0A500093381D /* BoostRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestInteractor.swift; sourceTree = "<group>"; };
+		48444CAD272C13310093381D /* VerticalSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSeparatorView.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -738,6 +740,7 @@
 				48444C86272AEE5F0093381D /* ActionButton.swift */,
 				48444C84272AEBF30093381D /* GradientButton.swift */,
 				48444C88272B10B00093381D /* InfoView.swift */,
+				48444CAD272C13310093381D /* VerticalSeparatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1466,6 +1469,7 @@
 				48444C53272AD92A0093381D /* BoostsViewController.swift in Sources */,
 				48444C68272AD9730093381D /* TabBarRouter.swift in Sources */,
 				480E55FE229BEF860031BDF7 /* Bundle-System.swift in Sources */,
+				48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */,
 				48444C73272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift in Sources */,
 				48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */,
 				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,

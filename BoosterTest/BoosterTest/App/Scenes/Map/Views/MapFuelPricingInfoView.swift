@@ -13,7 +13,7 @@ class MapFuelPricingInfoView: UIView {
   private(set) lazy var regularPriceView = MapFuelPricingView()
   private(set) lazy var premiumPriceView = MapFuelPricingView()
   private lazy var stackView = UIStackView()
-  private lazy var separatorView = UIView()
+  private lazy var separatorView = VerticalSeparatorView()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -60,8 +60,6 @@ private extension MapFuelPricingInfoView {
     addSubview(separatorView)
     separatorView.snp.makeConstraints {
       $0.centerX.top.bottom.equalTo(stackView)
-      $0.width.equalTo(0.5)
     }
-    separatorView.backgroundColor = .lightGray
   }
 }
