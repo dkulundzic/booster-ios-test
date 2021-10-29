@@ -13,10 +13,14 @@ import System
 
 class BoostRequestContentView: UIView {
   var actionTapHandler: Action?
+  var deliveryWindowSelectionHandler: ParametrisedAction<Int>?
+  var paymentMethodSelectionHandler: ParametrisedAction<Int>?
   private lazy var actionButton = ActionButton()
   private lazy var stackView = UIStackView()
   private lazy var deliveryWindowSectionView = SectionView()
   private lazy var deliveryWindowSegmentedControl = UISegmentedControl(items: Boost.DeliveryWindow.allCases.map(\.description))
+  private lazy var paymentMethodSectionView = SectionView()
+  private lazy var paymentMethodSegmentedControl = UISegmentedControl(items: Boost.PaymentMethod.allCases.map(\.description))
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -29,10 +33,21 @@ class BoostRequestContentView: UIView {
   }
 }
 
+extension BoostRequestContentView {
+  var isActionButtonEnabled: Bool {
+    get { actionButton.isEnabled }
+    set { actionButton.isEnabled = newValue }
+  }
+}
+
 // MARK: - Actions
 private extension BoostRequestContentView {
   @objc func deliveryWindowSegmentedControlChangedSelectedSegment(_ sender: UISegmentedControl) {
-    print(#function, sender.selectedSegmentIndex)
+    deliveryWindowSelectionHandler?(sender.selectedSegmentIndex)
+  }
+  
+  @objc func paymentMethodSegmentedControlChangedSelectedSegment(_ sender: UISegmentedControl) {
+    paymentMethodSelectionHandler?(sender.selectedSegmentIndex)
   }
   
   @objc func actionButtonTapped() {
@@ -48,6 +63,8 @@ private extension BoostRequestContentView {
     setupStackView()
     setupDeliveryWindowSectionView()
     setupDeliveryWindowSegmentedControl()
+    setupPaymentMethodSectionView()
+    setupPaymentMethodSegmentedControl()
   }
   
   func setupView() {
@@ -90,5 +107,20 @@ private extension BoostRequestContentView {
     deliveryWindowSegmentedControl.selectedSegmentTintColor = Colors.General.purple.color
     deliveryWindowSegmentedControl.apportionsSegmentWidthsByContent = true
     deliveryWindowSegmentedControl.addTarget(self, action: #selector(deliveryWindowSegmentedControlChangedSelectedSegment(_:)), for: .valueChanged)
+  }
+  
+  func setupPaymentMethodSectionView() {
+    stackView.addArrangedSubview(paymentMethodSectionView)
+#warning("TODO: Localise")
+    paymentMethodSectionView.title = "Payment Method"
+#warning("TODO: Localise")
+    paymentMethodSectionView.subtitle = "Please select the payment method for you Boost."
+  }
+  
+  func setupPaymentMethodSegmentedControl() {
+    paymentMethodSectionView.embedView(paymentMethodSegmentedControl)
+    paymentMethodSegmentedControl.selectedSegmentTintColor = Colors.General.lightPurple.color
+    paymentMethodSegmentedControl.apportionsSegmentWidthsByContent = true
+    paymentMethodSegmentedControl.addTarget(self, action: #selector(paymentMethodSegmentedControlChangedSelectedSegment(_:)), for: .valueChanged)
   }
 }

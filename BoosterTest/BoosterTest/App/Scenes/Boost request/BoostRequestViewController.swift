@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol BoostRequestDisplayLogic: AnyObject { }
+protocol BoostRequestDisplayLogic: AnyObject {
+  func displayActionButton(enabled: Bool)
+}
 
 class BoostRequestViewController: ContentViewController<BoostRequestContentView> {
   override var isNavigationBarHidden: Bool? { false }
@@ -18,18 +20,33 @@ class BoostRequestViewController: ContentViewController<BoostRequestContentView>
     super.viewDidLoad()
     setupView()
     setupNavigationBar()
+    presenter?.onViewLoaded()
   }
 }
 
 // MARK: - BoostRequestDisplayLogic
-extension BoostRequestViewController: BoostRequestDisplayLogic { }
+extension BoostRequestViewController: BoostRequestDisplayLogic {
+  func displayActionButton(enabled: Bool) {
+    contentView.isActionButtonEnabled = enabled
+  }
+}
 
 private extension BoostRequestViewController {
   func setupView() {
     setupContentView()
   }
   
-  func setupContentView() { }
+  func setupContentView() {
+    contentView.deliveryWindowSelectionHandler = { [weak self] segmentIndex in
+      self?.presenter?.onDeliveryWindowSegmentSelected(at: segmentIndex)
+    }
+    contentView.paymentMethodSelectionHandler = { [weak self] segmentIndex in
+      self?.presenter?.onPaymentMethodSegmentSelected(at: segmentIndex)
+    }
+    contentView.actionTapHandler = { [weak self] in
+      self?.presenter?.onActionButtonTapped()
+    }
+  }
   
   func setupNavigationBar() {
     #warning("TODO: Localise")

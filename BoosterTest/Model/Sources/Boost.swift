@@ -13,7 +13,7 @@ public struct Boost {
     case morning
     case afternoon
     
-    #warning("TODO: Localise")
+#warning("TODO: Localise")
     public var description: String {
       switch self {
       case .morning:
@@ -27,6 +27,16 @@ public struct Boost {
   public enum PaymentMethod: CaseIterable {
     case cash
     case creditCard
+    
+#warning("TODO: Localise")
+    public var description: String {
+      switch self {
+      case .cash:
+        return "Cash"
+      case .creditCard:
+        return "Credit Card"
+      }
+    }
   }
   
   public let deliveryWindow: DeliveryWindow
