@@ -91,6 +91,7 @@ private extension MapContentView {
     }
     mapView.showsUserLocation = true
     mapView.mapType = .satelliteFlyover
+    mapView.tintColor = .darkGray
     mapView.layer.cornerRadius = 8
   }
   
