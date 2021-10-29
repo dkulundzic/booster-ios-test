@@ -14,14 +14,17 @@ protocol MapViewPresentingLogic: AnyObject {
   func onViewLoaded()
   func onViewWillAppear()
   func onMapFirstTimeRendering()
+  func onUserSelectedBoostLocation(_ location: CLLocationCoordinate2D)
   func onHomeButtonTapped()
   func onCenterButtonTapped()
+  func onActionButtonTapped()
 }
 
 class MapPresenter {
   var interactor: MapBusinessLogic
   weak private var view: MapDisplayLogic?
   private let router: MapRoutingLogic
+  private let boostLocationSubject = CurrentValueSubject<CLLocationCoordinate2D?, Never>(nil)
   private var bag = Set<AnyCancellable>()
   private lazy var currencyFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
@@ -53,6 +56,10 @@ extension MapPresenter: MapViewPresentingLogic {
     view?.displaySelectionPin(shown: true)
   }
   
+  func onUserSelectedBoostLocation(_ location: CLLocationCoordinate2D) {
+    boostLocationSubject.value = location
+  }
+  
   func onHomeButtonTapped() {
 #warning("TODO:")
     print(#function)
@@ -63,10 +70,21 @@ extension MapPresenter: MapViewPresentingLogic {
       view?.displayMapCenteringOnUser(using: userLocation)
     }
   }
+  
+  func onActionButtonTapped() {
+    guard let boostLocation = boostLocationSubject.value else { return }
+    router.showBoostRequestScene(using: boostLocation)
+  }
 }
 
 private extension MapPresenter {
   func setupObserving() {
+    boostLocationSubject
+      .sink { [weak self] boostLocation in
+        self?.view?.displayActionButton(enabled: boostLocation != nil)
+      }
+      .store(in: &bag)
+    
     interactor.userLocationPublisher
       .sink { [weak self] location in
         self?.view?.displayCenteringButton(enabled: location != nil)

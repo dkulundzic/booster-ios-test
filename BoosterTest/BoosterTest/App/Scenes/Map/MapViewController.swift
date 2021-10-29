@@ -13,6 +13,7 @@ protocol MapDisplayLogic: AnyObject {
   func displayInfoView(shown: Bool)
   func displaySelectionPin(shown: Bool)
   func displayCenteringButton(enabled: Bool)
+  func displayActionButton(enabled: Bool)
   func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D)
   func displayFuelInformation(regularPricing: MapFuelPricingView.ViewModel, premiumPricing: MapFuelPricingView.ViewModel)
   func displayFuelInformationLoading(inProgress: Bool)
@@ -51,6 +52,10 @@ extension MapViewController: MapDisplayLogic {
     contentView.actionsView.isCenterButtonEnabled = enabled
   }
   
+  func displayActionButton(enabled: Bool) {
+    contentView.isActionButtonEnabled = enabled
+  }
+  
   func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D) {
     contentView.mapView.setRegion(createMapViewRegion(for: userLocation), animated: true)
   }
@@ -68,6 +73,10 @@ extension MapViewController: MapDisplayLogic {
 
 // MARK: - MKMapViewDelegate
 extension MapViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    presenter?.onUserSelectedBoostLocation(mapView.centerCoordinate)
+  }
+  
   func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
     guard !didShowInfoViewOnce else { return }
     didShowInfoViewOnce = true
@@ -89,12 +98,10 @@ private extension MapViewController {
   func setupContentView() {
     contentView.mapView.delegate = self
     contentView.actionTapHandler = { [weak self] in
-#warning("TODO:")
-      print(#function)
+      self?.presenter?.onActionButtonTapped()
     }
     contentView.actionsView.homeButtonTapHandler = { [weak self] in
-#warning("TODO:")
-      print(#function)
+      self?.presenter?.onHomeButtonTapped()
     }
     contentView.actionsView.centerButtonTapHandler = { [weak self] in
       self?.presenter?.onCenterButtonTapped()

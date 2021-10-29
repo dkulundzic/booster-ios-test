@@ -23,6 +23,10 @@ public final class ActionButton: GradientButton {
   public override var intrinsicContentSize: CGSize {
     CGSize(width: UIView.noIntrinsicMetric, height: 56)
   }
+  
+  public override var isHighlighted: Bool {
+    didSet { applyHighlightIfNeeded(wasHighlighted: oldValue, isHighlighted: isHighlighted) }
+  }
 }
 
 // MARK: - Private Methods
@@ -36,5 +40,12 @@ private extension GradientButton {
     colors = [Colors.General.lightPurple.color, Colors.General.purple.color]
     setTitleColor(.white, for: .normal)
     layer.cornerRadius = 6
+  }
+  
+  func applyHighlightIfNeeded(wasHighlighted: Bool, isHighlighted: Bool) {
+    guard wasHighlighted != isHighlighted else { return }
+    Animation.animation(duration: 0.1) {
+      self.titleLabel?.alpha = self.isHighlighted ? 0.5 : 1
+    }
   }
 }

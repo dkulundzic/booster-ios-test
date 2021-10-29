@@ -38,6 +38,11 @@ class MapContentView: UIView {
 }
 
 extension MapContentView {
+  var isActionButtonEnabled: Bool {
+    get { actionButton.isEnabled }
+    set { actionButton.isEnabled = newValue }
+  }
+  
   var isLoadingFuelInformation: Bool {
     get { fuelInformationLoadingIndicator.isAnimating  }
     set { newValue ? fuelInformationLoadingIndicator.startAnimating() : fuelInformationLoadingIndicator.stopAnimating() }

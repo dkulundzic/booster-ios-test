@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-protocol MapRoutingLogic: AnyObject { }
+protocol MapRoutingLogic: AnyObject {
+  func showBoostRequestScene(using coordinate: CLLocationCoordinate2D)
+}
 
 protocol MapRouterDelegate: AnyObject { }
 
@@ -29,4 +32,9 @@ class MapRouter {
 }
 
 // MARK: - MapRoutingLogic
-extension MapRouter: MapRoutingLogic { }
+extension MapRouter: MapRoutingLogic {
+  func showBoostRequestScene(using coordinate: CLLocationCoordinate2D) {
+#warning("TODO:")
+    print(#function)
+  }
+}

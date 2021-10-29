@@ -82,6 +82,11 @@
 		48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C99272BEAF50093381D /* FuelPricingInformation.swift */; };
 		48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9C272BEB360093381D /* FuelInformationService.swift */; };
 		48444C9F272C08500093381D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9E272C08500093381D /* ViewController.swift */; };
+		48444CA7272C0A500093381D /* BoostRequestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA2272C0A500093381D /* BoostRequestContentView.swift */; };
+		48444CA8272C0A500093381D /* BoostRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA3272C0A500093381D /* BoostRequestPresenter.swift */; };
+		48444CA9272C0A500093381D /* BoostRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA4272C0A500093381D /* BoostRequestRouter.swift */; };
+		48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA5272C0A500093381D /* BoostRequestViewController.swift */; };
+		48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA6272C0A500093381D /* BoostRequestInteractor.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -328,6 +333,11 @@
 		48444C99272BEAF50093381D /* FuelPricingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingInformation.swift; sourceTree = "<group>"; };
 		48444C9C272BEB360093381D /* FuelInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInformationService.swift; sourceTree = "<group>"; };
 		48444C9E272C08500093381D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48444CA2272C0A500093381D /* BoostRequestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestContentView.swift; sourceTree = "<group>"; };
+		48444CA3272C0A500093381D /* BoostRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestPresenter.swift; sourceTree = "<group>"; };
+		48444CA4272C0A500093381D /* BoostRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestRouter.swift; sourceTree = "<group>"; };
+		48444CA5272C0A500093381D /* BoostRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestViewController.swift; sourceTree = "<group>"; };
+		48444CA6272C0A500093381D /* BoostRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestInteractor.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -744,6 +754,7 @@
 		482201D622982554003319F0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				48444CA1272C0A430093381D /* Boost request */,
 				48444C3F272AD8DC0093381D /* Boost details */,
 				48444C3E272AD8C10093381D /* Boosts */,
 				48444C3D272AD8BA0093381D /* Map */,
@@ -900,6 +911,26 @@
 				48444C9C272BEB360093381D /* FuelInformationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		48444CA1272C0A430093381D /* Boost request */ = {
+			isa = PBXGroup;
+			children = (
+				48444CAC272C0A540093381D /* Views */,
+				48444CA6272C0A500093381D /* BoostRequestInteractor.swift */,
+				48444CA3272C0A500093381D /* BoostRequestPresenter.swift */,
+				48444CA4272C0A500093381D /* BoostRequestRouter.swift */,
+				48444CA5272C0A500093381D /* BoostRequestViewController.swift */,
+			);
+			path = "Boost request";
+			sourceTree = "<group>";
+		};
+		48444CAC272C0A540093381D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48444CA2272C0A500093381D /* BoostRequestContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		488240522349446600CB6FFE /* Protocols */ = {
@@ -1419,10 +1450,13 @@
 				48444C8C272B1B320093381D /* Animation.swift in Sources */,
 				48444C71272ADADF0093381D /* AppearanceCustomisationStartupProcess.swift in Sources */,
 				48444C5C272AD9590093381D /* MapPresenter.swift in Sources */,
+				48444CA8272C0A500093381D /* BoostRequestPresenter.swift in Sources */,
 				48444C3B272AD8340093381D /* UIContentViewController.swift in Sources */,
 				480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */,
 				48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */,
+				48444CA9272C0A500093381D /* BoostRequestRouter.swift in Sources */,
 				480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */,
+				48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */,
 				48444C91272B26080093381D /* LocationManager.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
 				48444C7C272ADE420093381D /* Icons.swift in Sources */,
@@ -1437,8 +1471,10 @@
 				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
 				48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */,
 				48444C6A272AD9730093381D /* TabBarInteractor.swift in Sources */,
+				48444CA7272C0A500093381D /* BoostRequestContentView.swift in Sources */,
 				48444C5F272AD9590093381D /* MapInteractor.swift in Sources */,
 				48444C83272AE7AE0093381D /* MapActionsView.swift in Sources */,
+				48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */,
 				480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */,
 				48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */,
 				4822014522982175003319F0 /* BoosterTestApp.swift in Sources */,
