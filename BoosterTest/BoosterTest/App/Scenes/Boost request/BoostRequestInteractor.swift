@@ -12,7 +12,12 @@ import Networking
 import Model
 
 protocol BoostRequestBusinessLogic: AnyObject {
-  func orderBoost(at boostLocation: CLLocationCoordinate2D, using deliveryMethod: Boost.DeliveryWindow, paymentMethod: Boost.PaymentMethod) async
+  func orderBoost(
+    at boostLocation: CLLocationCoordinate2D,
+    on date: Date,
+    using deliveryMethod: Boost.DeliveryWindow,
+    paymentMethod: Boost.PaymentMethod
+  ) async
 }
 
 class BoostRequestInteractor {
@@ -25,7 +30,12 @@ class BoostRequestInteractor {
 
 // MARK: - BoostRequestBusinessLogic
 extension BoostRequestInteractor: BoostRequestBusinessLogic {
-  func orderBoost(at boostLocation: CLLocationCoordinate2D, using deliveryMethod: Boost.DeliveryWindow, paymentMethod: Boost.PaymentMethod) async {
-    await boostService.orderBoost(at: boostLocation, using: deliveryMethod, paymentMethod: paymentMethod)
+  func orderBoost(
+    at boostLocation: CLLocationCoordinate2D,
+    on date: Date,
+    using deliveryMethod: Boost.DeliveryWindow,
+    paymentMethod: Boost.PaymentMethod
+  ) async {
+    await boostService.orderBoost(at: boostLocation, on: date, using: deliveryMethod, paymentMethod: paymentMethod)
   }
 }

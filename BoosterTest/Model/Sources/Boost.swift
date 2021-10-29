@@ -39,13 +39,16 @@ public struct Boost {
     }
   }
   
+  public let date: Date
   public let deliveryWindow: DeliveryWindow
   public let paymentMethod: PaymentMethod
   
   public init(
+    date: Date,
     deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
   ) {
+    self.date = date
     self.deliveryWindow = deliveryWindow
     self.paymentMethod = paymentMethod
   }

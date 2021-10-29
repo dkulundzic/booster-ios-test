@@ -14,9 +14,10 @@ import CoreLocation
 public protocol BoostServiceProtocol {
   func orderBoost(
     at boostLocation: CLLocationCoordinate2D,
+    on date: Date,
     using deliveryMethod: Boost.DeliveryWindow,
-    paymentMethod: Boost.PaymentMethod)
-  async
+    paymentMethod: Boost.PaymentMethod
+  ) async
 }
 
 public final class BoostService {
@@ -26,9 +27,10 @@ public final class BoostService {
 extension BoostService: BoostServiceProtocol {
   public func orderBoost(
     at boostLocation: CLLocationCoordinate2D,
+    on date: Date,
     using deliveryMethod: Boost.DeliveryWindow,
-    paymentMethod: Boost.PaymentMethod)
-  async {
+    paymentMethod: Boost.PaymentMethod
+  ) async {
     await Task.sleep(1 * 1000000000)
   }
 }
