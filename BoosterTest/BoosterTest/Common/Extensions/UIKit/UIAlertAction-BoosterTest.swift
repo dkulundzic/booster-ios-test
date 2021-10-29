@@ -12,7 +12,7 @@ import Localization
 
 extension UIAlertAction {
   static func confirmation(action: Action? = nil) -> UIAlertAction {
-    UIAlertAction(title: Localization.Actions.confirmtion.localized(), style: .cancel, handler: { _ in action?() })
+    UIAlertAction(title: Localization.Actions.confirmation.localized().uppercased(), style: .cancel, handler: { _ in action?() })
   }
   
   static func cancel(action: Action? = nil) -> UIAlertAction {

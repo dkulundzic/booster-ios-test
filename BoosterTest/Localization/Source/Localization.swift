@@ -13,7 +13,7 @@ public struct Localization {
     case next = "action_next"
     case orderBoost = "action_order_boost"
     case cancel = "action_cancel"
-    case confirmtion = "action_confirmation"
+    case confirmation = "action_confirmation"
   }
   
   public enum Alerts: String, LocalizationAsset {
