@@ -60,15 +60,15 @@ extension MapViewController: MapDisplayLogic {
   }
   
   func displayFuelInformationLoading(inProgress: Bool) {
-    contentView.isLoadingFuelInformation = inProgress && !didShowInfoViewOnce
-    if inProgress { didShowInfoViewOnce = true }
+    contentView.isLoadingFuelInformation = inProgress && !didShowActivityIndicatorOnce
+    if inProgress { didShowActivityIndicatorOnce = true }
   }
 }
 
 // MARK: - MKMapViewDelegate
 extension MapViewController: MKMapViewDelegate {
   func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
-    guard fullyRendered && !didShowInfoViewOnce else { return }
+    guard !didShowInfoViewOnce else { return }
     didShowInfoViewOnce = true
     presenter?.onMapFirstTimeRendering()
   }
