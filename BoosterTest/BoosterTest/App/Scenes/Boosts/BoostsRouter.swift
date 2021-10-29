@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Model
 
-protocol BoostsRoutingLogic: AnyObject { }
+protocol BoostsRoutingLogic: AnyObject {
+  func showBoostDetails(for boost: Boost)
+}
 
 protocol BoostsRouterDelegate: AnyObject { }
 
@@ -29,4 +32,9 @@ class BoostsRouter {
 }
 
 // MARK: - BoostsRoutingLogic
-extension BoostsRouter: BoostsRoutingLogic { }
+extension BoostsRouter: BoostsRoutingLogic {
+  func showBoostDetails(for boost: Boost) {
+#warning("TODO:")
+    print(#function)
+  }
+}

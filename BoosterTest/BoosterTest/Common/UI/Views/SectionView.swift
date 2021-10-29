@@ -63,6 +63,7 @@ private extension SectionView {
   func setupView() {
     backgroundColor = .white
     layer.cornerRadius = 8
+    #warning("TODO: Extract into reusable method on UIView.")
     layer.shadowRadius = 16
     layer.shadowOpacity = 0.25
     layer.shadowColor = UIColor.black.cgColor

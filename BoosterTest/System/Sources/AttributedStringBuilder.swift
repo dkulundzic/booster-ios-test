@@ -56,6 +56,17 @@ public extension AttributedStringBuilder {
   }
   
   @discardableResult
+  func setFont(_ font: UIFont?, inRangeOf fragment: String, searchBackwards: Bool = false) throws -> Self {
+    let options: String.CompareOptions = searchBackwards ? [.backwards]: []
+    guard let fragmentRange = text.range(of: fragment, options: options) else {
+      throw BuilderError.invalidRange
+    }
+    let nsRange = NSRange(fragmentRange, in: text)
+    return try addAttribute(key: .font, object: font, range: nsRange)
+  }
+
+  
+  @discardableResult
   func setTextColor(_ color: UIColor?) -> Self {
     return addAttribute(key: .foregroundColor, object: color)
   }

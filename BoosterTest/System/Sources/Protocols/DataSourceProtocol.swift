@@ -35,10 +35,22 @@ public extension DataSourceProtocol {
 	}
 	
 	func section(at index: Int) -> Section? {
-		return sections[safe: index]
+		sections[safe: index]
 	}
 	
 	func item(at indexPath: IndexPath) -> Section.Item? {
-		return section(at: indexPath.section)?.item(at: indexPath.item)
+		section(at: indexPath.section)?.item(at: indexPath.item)
 	}
+}
+
+public extension DataSourceProtocol where Section.Item: Hashable {
+  var snapshot: NSDiffableDataSourceSnapshot<Int, Section.Item> {
+    var snapshot = NSDiffableDataSourceSnapshot<Int, Section.Item>()
+    let sections = 0..<numberOfSections()
+    snapshot.appendSections(Array(sections))
+    sections.forEach { section in
+      snapshot.appendItems(self.section(at: section)?.items ?? [], toSection: section)
+    }
+    return snapshot
+  }
 }

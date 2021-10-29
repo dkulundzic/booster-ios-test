@@ -11,6 +11,7 @@ import UIKit
 
 public enum Icons: String {
   case car = "car.fill"
+  case cash = "dollarsign.circle"
   case creditCard = "creditcard.circle"
   case boost = "fuelpump.circle"
   case house

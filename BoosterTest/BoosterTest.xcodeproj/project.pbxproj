@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48057137272C303F001A98DA /* DataBackedDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057136272C303F001A98DA /* DataBackedDataSourceProtocol.swift */; };
+		48057138272C305F001A98DA /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
+		48057139272C3062001A98DA /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
+		4805713A272C3119001A98DA /* Collection-System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55F9229BEF430031BDF7 /* Collection-System.swift */; };
+		4805713D272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805713C272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift */; };
+		48057140272C42BD001A98DA /* ListLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805713F272C42BD001A98DA /* ListLayoutVendor.swift */; };
+		48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
 		480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55F5229BEEF20031BDF7 /* ReusableView.swift */; };
-		480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55F9229BEF430031BDF7 /* Collection-BoosterTest.swift */; };
 		480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55FB229BEF550031BDF7 /* URL-System.swift */; };
 		480E55FE229BEF860031BDF7 /* Bundle-System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55FD229BEF860031BDF7 /* Bundle-System.swift */; };
 		480E5600229BEFC20031BDF7 /* AttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55FF229BEFC20031BDF7 /* AttributedStringBuilder.swift */; };
@@ -94,8 +100,7 @@
 		48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */; };
 		48444CBC272C22BB0093381D /* UIAlertAction-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */; };
 		48444CC0272C2BB20093381D /* BoostsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CBF272C2BB20093381D /* BoostsStore.swift */; };
-		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
-		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
+		48444CC2272C2DD80093381D /* BoostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CC1272C2DD80093381D /* BoostsCell.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
 		4882405E234945A300CB6FFE /* StartupProcessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405C234945A300CB6FFE /* StartupProcessService.swift */; };
 		48824060234945B500CB6FFE /* SimpleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405F234945B500CB6FFE /* SimpleLogger.swift */; };
@@ -261,11 +266,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		48057136272C303F001A98DA /* DataBackedDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBackedDataSourceProtocol.swift; sourceTree = "<group>"; };
+		4805713C272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boost.PaymentMethod-BoosterTest.swift"; sourceTree = "<group>"; };
+		4805713F272C42BD001A98DA /* ListLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayoutVendor.swift; sourceTree = "<group>"; };
+		48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVendor.swift; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55F5229BEEF20031BDF7 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		480E55F9229BEF430031BDF7 /* Collection-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection-BoosterTest.swift"; sourceTree = "<group>"; };
+		480E55F9229BEF430031BDF7 /* Collection-System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection-System.swift"; sourceTree = "<group>"; };
 		480E55FB229BEF550031BDF7 /* URL-System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL-System.swift"; sourceTree = "<group>"; };
 		480E55FD229BEF860031BDF7 /* Bundle-System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-System.swift"; sourceTree = "<group>"; };
 		480E55FF229BEFC20031BDF7 /* AttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedStringBuilder.swift; sourceTree = "<group>"; };
@@ -352,6 +361,7 @@
 		48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-BoosterTest.swift"; sourceTree = "<group>"; };
 		48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction-BoosterTest.swift"; sourceTree = "<group>"; };
 		48444CBF272C2BB20093381D /* BoostsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsStore.swift; sourceTree = "<group>"; };
+		48444CC1272C2DD80093381D /* BoostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsCell.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -460,6 +470,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4805713B272C3DB3001A98DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4805713C272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4805713E272C42AD001A98DA /* Collection view layouts */ = {
+			isa = PBXGroup;
+			children = (
+				4805713F272C42BD001A98DA /* ListLayoutVendor.swift */,
+				48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */,
+			);
+			path = "Collection view layouts";
+			sourceTree = "<group>";
+		};
 		480E55F4229BEEE80031BDF7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,8 +735,8 @@
 		482201D022982534003319F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4805713B272C3DB3001A98DA /* Model */,
 				48444C92272B26750093381D /* CoreLocation */,
-				482201D222982541003319F0 /* Foundation */,
 				482201D322982546003319F0 /* UIKit */,
 			);
 			path = Extensions;
@@ -719,6 +746,7 @@
 			isa = PBXGroup;
 			children = (
 				48444C8A272B1B1C0093381D /* Animations */,
+				4805713E272C42AD001A98DA /* Collection view layouts */,
 				48444C74272ADBDD0093381D /* Colours */,
 				48444C7A272ADE380093381D /* Icons */,
 				480E55F4229BEEE80031BDF7 /* Protocols */,
@@ -726,14 +754,6 @@
 				482201D42298254C003319F0 /* Views */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		482201D222982541003319F0 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				480E55F9229BEF430031BDF7 /* Collection-BoosterTest.swift */,
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		482201D322982546003319F0 /* UIKit */ = {
@@ -843,6 +863,7 @@
 			isa = PBXGroup;
 			children = (
 				48444C4B272AD92A0093381D /* BoostsContentView.swift */,
+				48444CC1272C2DD80093381D /* BoostsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -975,6 +996,7 @@
 			children = (
 				488240542349447000CB6FFE /* DataSourceProtocol.swift */,
 				488240532349447000CB6FFE /* SectionProtocol.swift */,
+				48057136272C303F001A98DA /* DataBackedDataSourceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -982,8 +1004,9 @@
 		48824067234945E900CB6FFE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				480E55FB229BEF550031BDF7 /* URL-System.swift */,
 				480E55FD229BEF860031BDF7 /* Bundle-System.swift */,
+				480E55F9229BEF430031BDF7 /* Collection-System.swift */,
+				480E55FB229BEF550031BDF7 /* URL-System.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1478,7 +1501,6 @@
 				48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */,
 				48444C9F272C08500093381D /* ViewController.swift in Sources */,
 				48444C96272BDFBB0093381D /* MapFuelPricingView.swift in Sources */,
-				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
 				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,
 				48444C5B272AD9590093381D /* MapContentView.swift in Sources */,
 				48444C51272AD92A0093381D /* BoostsPresenter.swift in Sources */,
@@ -1494,12 +1516,10 @@
 				480E55FC229BEF550031BDF7 /* URL-System.swift in Sources */,
 				48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */,
 				48444CA9272C0A500093381D /* BoostRequestRouter.swift in Sources */,
-				480E55FA229BEF430031BDF7 /* Collection-BoosterTest.swift in Sources */,
 				48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */,
 				48444C91272B26080093381D /* LocationManager.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
 				48444C7C272ADE420093381D /* Icons.swift in Sources */,
-				488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */,
 				48444C5D272AD9590093381D /* MapRouter.swift in Sources */,
 				480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */,
 				48444C53272AD92A0093381D /* BoostsViewController.swift in Sources */,
@@ -1509,9 +1529,11 @@
 				48444C73272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift in Sources */,
 				48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */,
 				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
+				48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */,
 				48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */,
 				48444C6A272AD9730093381D /* TabBarInteractor.swift in Sources */,
 				48444CA7272C0A500093381D /* BoostRequestContentView.swift in Sources */,
+				48057140272C42BD001A98DA /* ListLayoutVendor.swift in Sources */,
 				48444C5F272AD9590093381D /* MapInteractor.swift in Sources */,
 				48444C83272AE7AE0093381D /* MapActionsView.swift in Sources */,
 				48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */,
@@ -1523,9 +1545,11 @@
 				48444C87272AEE5F0093381D /* ActionButton.swift in Sources */,
 				48444C89272B10B00093381D /* InfoView.swift in Sources */,
 				48444C45272AD8F60093381D /* BoostDetailsContentView.swift in Sources */,
+				4805713D272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift in Sources */,
 				48444C5E272AD9590093381D /* MapViewController.swift in Sources */,
 				48444C78272ADC760093381D /* ColorAsset.swift in Sources */,
 				48444C46272AD8F60093381D /* BoostDetailsPresenter.swift in Sources */,
+				48444CC2272C2DD80093381D /* BoostsCell.swift in Sources */,
 				48444CB0272C13FD0093381D /* SectionView.swift in Sources */,
 				48444C49272AD8F60093381D /* BoostDetailsInteractor.swift in Sources */,
 				48444C50272AD92A0093381D /* BoostsContentView.swift in Sources */,
@@ -1566,14 +1590,18 @@
 				488240722349469C00CB6FFE /* PropertyWrappers.swift in Sources */,
 				4882405E234945A300CB6FFE /* StartupProcessService.swift in Sources */,
 				48824064234945D000CB6FFE /* Asset.swift in Sources */,
+				48057138272C305F001A98DA /* DataSourceProtocol.swift in Sources */,
 				48824065234945D000CB6FFE /* ColorAsset.swift in Sources */,
 				488240702349468B00CB6FFE /* TaskThrottler.swift in Sources */,
 				4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */,
+				48057137272C303F001A98DA /* DataBackedDataSourceProtocol.swift in Sources */,
 				4882406B2349464B00CB6FFE /* Global.swift in Sources */,
 				48824066234945D000CB6FFE /* ImageAsset.swift in Sources */,
 				480E5600229BEFC20031BDF7 /* AttributedStringBuilder.swift in Sources */,
 				48824060234945B500CB6FFE /* SimpleLogger.swift in Sources */,
 				4882406A2349464B00CB6FFE /* Environment.swift in Sources */,
+				48057139272C3062001A98DA /* SectionProtocol.swift in Sources */,
+				4805713A272C3119001A98DA /* Collection-System.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

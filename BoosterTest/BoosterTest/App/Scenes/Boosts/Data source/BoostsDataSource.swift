@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import System
+import Model
 
-enum BoostsDataSourceItem {
-  case boost
+enum BoostsDataSourceItem: Hashable {
+  case boost(BoostsCell.ViewModel)
 }
 
 enum BoostsDataSourceSection: SectionProtocol {
@@ -23,16 +25,46 @@ enum BoostsDataSourceSection: SectionProtocol {
   }
 }
 
-class BoostsDataSource: DataSourceProtocol {
+class BoostsDataSource: DataBackedDataSourceProtocol {
+  private(set) var data = [Boost]()
   private(set) lazy var sections = [BoostsDataSourceSection]()
+  private lazy var dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .none
+    return formatter
+  }()
   
   init() {
     buildSections()
   }
 }
 
+extension BoostsDataSource {
+  func setBoosts(_ boosts: [Boost]) {
+    data = boosts
+    buildSections()
+  }
+}
+
 private extension BoostsDataSource {
   func buildSections() {
-    sections.removeAll()
+    let items: [BoostsDataSourceItem] = data.map {
+#warning("TODO: Localise")
+      let deliveryWindowText = try? AttributedStringBuilder(text: "Delivered in the \($0.deliveryWindow.description)")
+        .setFont(.systemFont(ofSize: 16, weight: .regular))
+        .setFont(.systemFont(ofSize: 16, weight: .bold), inRangeOf: $0.deliveryWindow.description)
+        .create()
+      let formattedDate = dateFormatter.string(from: $0.date)
+      return BoostsDataSourceItem.boost(
+        BoostsCell.ViewModel(
+          id: $0.id,
+          formattedDate: formattedDate,
+          deliveryWindowText: deliveryWindowText,
+          paymentMethodIcon: $0.paymentMethod.icon
+        )
+      )
+    }
+    sections = [.boosts(items)]
   }
 }

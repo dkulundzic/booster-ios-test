@@ -39,6 +39,7 @@ public struct Boost {
     }
   }
   
+  public let id = UUID().uuidString
   public let date: Date
   public let deliveryWindow: DeliveryWindow
   public let paymentMethod: PaymentMethod
