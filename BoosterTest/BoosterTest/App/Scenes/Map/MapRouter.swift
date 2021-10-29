@@ -41,4 +41,8 @@ extension MapRouter: MapRoutingLogic {
 }
 
 // MARK: - BoostRequestRouterDelegate
-extension MapRouter: BoostRequestRouterDelegate { }
+extension MapRouter: BoostRequestRouterDelegate {
+  func boostRequestDelegateRequestedDismissal() {
+    viewController?.navigationController?.popViewController(animated: true)
+  }
+}

@@ -12,6 +12,8 @@ public struct Localization {
   public enum Actions: String, LocalizationAsset {
     case next = "action_next"
     case orderBoost = "action_order_boost"
+    case cancel = "action_cancel"
+    case confirmtion = "action_confirmation"
   }
   
   public enum Map: String, LocalizationAsset {

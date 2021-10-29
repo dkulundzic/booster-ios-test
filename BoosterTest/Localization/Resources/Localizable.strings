@@ -9,6 +9,8 @@
 // MARK: - Actions
 "action_next" = "Next";
 "action_order_boost" = "Order Boost";
+"action_cancel" = "Cancel";
+"action_confirmation" = "Ok";
 
 // MARK: - Map
 "map_title" = "Map";

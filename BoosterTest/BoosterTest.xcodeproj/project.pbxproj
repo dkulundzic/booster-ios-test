@@ -90,6 +90,9 @@
 		48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CAD272C13310093381D /* VerticalSeparatorView.swift */; };
 		48444CB0272C13FD0093381D /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CAF272C13FD0093381D /* SectionView.swift */; };
 		48444CB4272C14E90093381D /* Boost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB3272C14E90093381D /* Boost.swift */; };
+		48444CB8272C21550093381D /* BoostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB7272C21550093381D /* BoostService.swift */; };
+		48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */; };
+		48444CBC272C22BB0093381D /* UIAlertAction-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -344,6 +347,9 @@
 		48444CAD272C13310093381D /* VerticalSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSeparatorView.swift; sourceTree = "<group>"; };
 		48444CAF272C13FD0093381D /* SectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		48444CB3272C14E90093381D /* Boost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boost.swift; sourceTree = "<group>"; };
+		48444CB7272C21550093381D /* BoostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostService.swift; sourceTree = "<group>"; };
+		48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController-BoosterTest.swift"; sourceTree = "<group>"; };
+		48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction-BoosterTest.swift"; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -731,6 +737,8 @@
 		482201D322982546003319F0 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */,
+				48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */,
 				480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */,
 				480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */,
 				48444C72272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift */,
@@ -917,6 +925,7 @@
 		48444C9B272BEB2C0093381D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				48444CB7272C21550093381D /* BoostService.swift */,
 				48444C9C272BEB360093381D /* FuelInformationService.swift */,
 			);
 			path = Services;
@@ -1428,6 +1437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */,
+				48444CB8272C21550093381D /* BoostService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1453,6 +1463,7 @@
 				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,
 				48444C5B272AD9590093381D /* MapContentView.swift in Sources */,
 				48444C51272AD92A0093381D /* BoostsPresenter.swift in Sources */,
+				48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */,
 				48444C76272ADBE50093381D /* Colors.swift in Sources */,
 				48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */,
 				480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */,
@@ -1487,6 +1498,7 @@
 				48444CAB272C0A500093381D /* BoostRequestInteractor.swift in Sources */,
 				480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */,
 				48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */,
+				48444CBC272C22BB0093381D /* UIAlertAction-BoosterTest.swift in Sources */,
 				4822014522982175003319F0 /* BoosterTestApp.swift in Sources */,
 				48444C85272AEBF30093381D /* GradientButton.swift in Sources */,
 				48444C87272AEE5F0093381D /* ActionButton.swift in Sources */,

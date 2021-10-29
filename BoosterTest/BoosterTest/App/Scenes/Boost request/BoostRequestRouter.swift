@@ -9,9 +9,14 @@
 import UIKit
 import CoreLocation
 
-protocol BoostRequestRoutingLogic: AnyObject { }
+protocol BoostRequestRoutingLogic: AnyObject {
+  func showBoostOrderedAlert()
+  func dismiss()
+}
 
-protocol BoostRequestRouterDelegate: AnyObject { }
+protocol BoostRequestRouterDelegate: AnyObject {
+  func boostRequestDelegateRequestedDismissal()
+}
 
 class BoostRequestRouter {
   weak var viewController: BoostRequestViewController?
@@ -30,4 +35,14 @@ class BoostRequestRouter {
 }
 
 // MARK: - BoostRequestRoutingLogic
-extension BoostRequestRouter: BoostRequestRoutingLogic { }
+extension BoostRequestRouter: BoostRequestRoutingLogic {
+  func showBoostOrderedAlert() {
+    viewController?.present(UIAlertController.boostOrdered { [weak self] in
+      self?.dismiss()
+    }, animated: true, completion: nil)
+  }
+  
+  func dismiss() {
+    delegate?.boostRequestDelegateRequestedDismissal()
+  }
+}

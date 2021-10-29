@@ -19,7 +19,7 @@ protocol BoostRequestViewPresentingLogic: AnyObject {
 }
 
 class BoostRequestPresenter {
-  var interactor: BoostRequestBusinessLogic?
+  var interactor: BoostRequestBusinessLogic
   weak private var view: BoostRequestDisplayLogic?
   private let router: BoostRequestRoutingLogic
   private let boostLocation: CLLocationCoordinate2D
@@ -30,7 +30,7 @@ class BoostRequestPresenter {
   init(
     boostLocation: CLLocationCoordinate2D,
     interface: BoostRequestDisplayLogic,
-    interactor: BoostRequestBusinessLogic?,
+    interactor: BoostRequestBusinessLogic,
     router: BoostRequestRoutingLogic
   ) {
     self.boostLocation = boostLocation
@@ -60,8 +60,11 @@ extension BoostRequestPresenter: BoostRequestViewPresentingLogic {
       let paymentMethod = paymentMethodSubject.value else {
         return
       }
-    #warning("TODO:")
-    print(#function, deliveryWindow, paymentMethod)
+    Task {
+      await MainActor.run { self.view?.displayActionButton(enabled: false) }
+      await interactor.orderBoost(at: boostLocation, using: deliveryWindow, paymentMethod: paymentMethod)
+      await MainActor.run { self.router.showBoostOrderedAlert() }
+    }
   }
 }
 
@@ -70,7 +73,6 @@ private extension BoostRequestPresenter {
     deliveryWindowSubject
       .combineLatest(paymentMethodSubject)
       .sink { [weak self] deliveryWindow, paymentMethodSubject in
-        print(#function, deliveryWindow?.description, paymentMethodSubject?.description)
         let isOrderingEnabled = deliveryWindow != nil && paymentMethodSubject != nil
         self?.view?.displayActionButton(enabled: isOrderingEnabled)
       }

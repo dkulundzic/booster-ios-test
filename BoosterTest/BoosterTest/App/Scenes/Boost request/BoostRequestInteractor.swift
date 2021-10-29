@@ -7,10 +7,25 @@
 //
 
 import Foundation
+import CoreLocation
+import Networking
+import Model
 
-protocol BoostRequestBusinessLogic: AnyObject { }
+protocol BoostRequestBusinessLogic: AnyObject {
+  func orderBoost(at boostLocation: CLLocationCoordinate2D, using deliveryMethod: Boost.DeliveryWindow, paymentMethod: Boost.PaymentMethod) async
+}
 
-class BoostRequestInteractor { }
+class BoostRequestInteractor {
+  private let boostService: BoostServiceProtocol
+  
+  init(boostService: BoostServiceProtocol = BoostService()) {
+    self.boostService = boostService
+  }
+}
 
 // MARK: - BoostRequestBusinessLogic
-extension BoostRequestInteractor: BoostRequestBusinessLogic { }
+extension BoostRequestInteractor: BoostRequestBusinessLogic {
+  func orderBoost(at boostLocation: CLLocationCoordinate2D, using deliveryMethod: Boost.DeliveryWindow, paymentMethod: Boost.PaymentMethod) async {
+    await boostService.orderBoost(at: boostLocation, using: deliveryMethod, paymentMethod: paymentMethod)
+  }
+}
