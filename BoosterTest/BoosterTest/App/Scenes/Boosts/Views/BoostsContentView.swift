@@ -10,6 +10,7 @@ import UIKit
 
 class BoostsContentView: UIView {
   private(set) lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+  private lazy var collectionBackgroundView = BoostsEmptyView()
   private lazy var layout = ListLayoutVendor(
     estimatedItemHeight: estimatedCellHeight,
     sectionInsets: NSDirectionalEdgeInsets(top: cellSpacing, leading: cellSpacing, bottom: cellSpacing, trailing: cellSpacing),
@@ -26,6 +27,13 @@ class BoostsContentView: UIView {
   @available(*, unavailable)
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+}
+
+extension BoostsContentView {
+  var isEmptyViewShown: Bool {
+    get { collectionBackgroundView.isHidden }
+    set { collectionBackgroundView.isHidden = !newValue }
   }
 }
 
@@ -46,6 +54,7 @@ private extension BoostsContentView {
       $0.edges.equalToSuperview()
     }
     collectionView.backgroundColor = .white
+    collectionView.backgroundView = collectionBackgroundView
     collectionView.alwaysBounceVertical = true
     collectionView.register(BoostsCell.self)
   }

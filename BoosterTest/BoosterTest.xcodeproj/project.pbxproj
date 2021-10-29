@@ -14,6 +14,7 @@
 		4805713D272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805713C272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift */; };
 		48057140272C42BD001A98DA /* ListLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805713F272C42BD001A98DA /* ListLayoutVendor.swift */; };
 		48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */; };
+		48057144272C4B4C001A98DA /* BoostsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057143272C4B4C001A98DA /* BoostsEmptyView.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
@@ -270,6 +271,7 @@
 		4805713C272C3DBF001A98DA /* Boost.PaymentMethod-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boost.PaymentMethod-BoosterTest.swift"; sourceTree = "<group>"; };
 		4805713F272C42BD001A98DA /* ListLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayoutVendor.swift; sourceTree = "<group>"; };
 		48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVendor.swift; sourceTree = "<group>"; };
+		48057143272C4B4C001A98DA /* BoostsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsEmptyView.swift; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 			children = (
 				48444C4B272AD92A0093381D /* BoostsContentView.swift */,
 				48444CC1272C2DD80093381D /* BoostsCell.swift */,
+				48057143272C4B4C001A98DA /* BoostsEmptyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1523,6 +1526,7 @@
 				48444C5D272AD9590093381D /* MapRouter.swift in Sources */,
 				480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */,
 				48444C53272AD92A0093381D /* BoostsViewController.swift in Sources */,
+				48057144272C4B4C001A98DA /* BoostsEmptyView.swift in Sources */,
 				48444C68272AD9730093381D /* TabBarRouter.swift in Sources */,
 				480E55FE229BEF860031BDF7 /* Bundle-System.swift in Sources */,
 				48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */,

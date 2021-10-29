@@ -36,6 +36,7 @@ class BoostsViewController: UIContentViewController<BoostsContentView> {
 // MARK: - BoostsDisplayLogic
 extension BoostsViewController: BoostsDisplayLogic {
   func displayBoosts(using dataSource: BoostsDataSource) {
+    contentView.isEmptyViewShown = dataSource.isEmpty
     diffableDataSource.apply(dataSource.snapshot)
   }
 }
