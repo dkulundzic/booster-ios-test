@@ -81,6 +81,7 @@
 		48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */; };
 		48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C99272BEAF50093381D /* FuelPricingInformation.swift */; };
 		48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9C272BEB360093381D /* FuelInformationService.swift */; };
+		48444C9F272C08500093381D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9E272C08500093381D /* ViewController.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -326,6 +327,7 @@
 		48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFuelPricingInfoView.swift; sourceTree = "<group>"; };
 		48444C99272BEAF50093381D /* FuelPricingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingInformation.swift; sourceTree = "<group>"; };
 		48444C9C272BEB360093381D /* FuelInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInformationService.swift; sourceTree = "<group>"; };
+		48444C9E272C08500093381D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -734,6 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				48444C3A272AD8340093381D /* UIContentViewController.swift */,
+				48444C9E272C08500093381D /* ViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -1404,6 +1407,7 @@
 				48444C69272AD9730093381D /* TabBarViewController.swift in Sources */,
 				48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */,
 				48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */,
+				48444C9F272C08500093381D /* ViewController.swift in Sources */,
 				48444C96272BDFBB0093381D /* MapFuelPricingView.swift in Sources */,
 				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
 				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,

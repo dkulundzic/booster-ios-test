@@ -32,6 +32,9 @@ private extension TabBarViewController {
     boostsScene.tabBarItem.title = Localization.Boosts.title.localized()
     boostsScene.tabBarItem.image = Icons.boost.image
     
-    viewControllers = [mapScene, UINavigationController(rootViewController: boostsScene)]
+    viewControllers = [
+      UINavigationController(rootViewController: mapScene),
+      UINavigationController(rootViewController: boostsScene)
+    ]
   }
 }

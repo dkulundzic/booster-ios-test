@@ -31,3 +31,11 @@ open class UIContentPageViewController<ContentView: UIView>: UIPageViewControlle
     view = contentView
   }
 }
+
+open class ContentViewController<ContentView: UIView>: ViewController {
+  public private(set) lazy var contentView = ContentView()
+
+  open override func loadView() {
+    view = contentView
+  }
+}

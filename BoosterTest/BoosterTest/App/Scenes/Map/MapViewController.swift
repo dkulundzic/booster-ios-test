@@ -18,7 +18,8 @@ protocol MapDisplayLogic: AnyObject {
   func displayFuelInformationLoading(inProgress: Bool)
 }
 
-class MapViewController: UIContentViewController<MapContentView> {
+class MapViewController: ContentViewController<MapContentView> {
+  override var isNavigationBarHidden: Bool? { true }
   var presenter: MapViewPresentingLogic?
   private var didShowInfoViewOnce = false
   private var didCenterOnUserOnce = false
