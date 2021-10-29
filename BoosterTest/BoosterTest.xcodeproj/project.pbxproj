@@ -77,6 +77,10 @@
 		48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C8D272B1E770093381D /* MapSelectionPinView.swift */; };
 		48444C91272B26080093381D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C90272B26080093381D /* LocationManager.swift */; };
 		48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */; };
+		48444C96272BDFBB0093381D /* MapFuelPricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C95272BDFBB0093381D /* MapFuelPricingView.swift */; };
+		48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */; };
+		48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C99272BEAF50093381D /* FuelPricingInformation.swift */; };
+		48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9C272BEB360093381D /* FuelInformationService.swift */; };
 		488240552349447000CB6FFE /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240532349447000CB6FFE /* SectionProtocol.swift */; };
 		488240562349447000CB6FFE /* DataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240542349447000CB6FFE /* DataSourceProtocol.swift */; };
 		4882405D234945A300CB6FFE /* StartupProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882405B234945A200CB6FFE /* StartupProcess.swift */; };
@@ -318,6 +322,10 @@
 		48444C8D272B1E770093381D /* MapSelectionPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionPinView.swift; sourceTree = "<group>"; };
 		48444C90272B26080093381D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D-BoosterTest.swift"; sourceTree = "<group>"; };
+		48444C95272BDFBB0093381D /* MapFuelPricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFuelPricingView.swift; sourceTree = "<group>"; };
+		48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFuelPricingInfoView.swift; sourceTree = "<group>"; };
+		48444C99272BEAF50093381D /* FuelPricingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingInformation.swift; sourceTree = "<group>"; };
+		48444C9C272BEB360093381D /* FuelInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInformationService.swift; sourceTree = "<group>"; };
 		488240532349447000CB6FFE /* SectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		488240542349447000CB6FFE /* DataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceProtocol.swift; sourceTree = "<group>"; };
 		4882405B234945A200CB6FFE /* StartupProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartupProcess.swift; sourceTree = "<group>"; };
@@ -437,6 +445,7 @@
 		480E5631229BF2B40031BDF7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				48444C9B272BEB2C0093381D /* Services */,
 				480E5632229BF2B40031BDF7 /* Networking.h */,
 				480E5633229BF2B40031BDF7 /* Info.plist */,
 			);
@@ -622,6 +631,7 @@
 		482201C72298244B003319F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				48444C99272BEAF50093381D /* FuelPricingInformation.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -810,6 +820,8 @@
 				48444C56272AD9590093381D /* MapContentView.swift */,
 				48444C82272AE7AE0093381D /* MapActionsView.swift */,
 				48444C8D272B1E770093381D /* MapSelectionPinView.swift */,
+				48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */,
+				48444C95272BDFBB0093381D /* MapFuelPricingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -877,6 +889,14 @@
 				48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */,
 			);
 			path = CoreLocation;
+			sourceTree = "<group>";
+		};
+		48444C9B272BEB2C0093381D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				48444C9C272BEB360093381D /* FuelInformationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		488240522349446600CB6FFE /* Protocols */ = {
@@ -1190,6 +1210,7 @@
 				TargetAttributes = {
 					480E562F229BF2B40031BDF7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1300;
 					};
 					480E5637229BF2B40031BDF7 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -1204,7 +1225,7 @@
 					};
 					4822018222982413003319F0 = {
 						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1300;
 					};
 					4822018A22982413003319F0 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -1363,6 +1384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,6 +1404,7 @@
 				48444C69272AD9730093381D /* TabBarViewController.swift in Sources */,
 				48444C8E272B1E770093381D /* MapSelectionPinView.swift in Sources */,
 				48444C52272AD92A0093381D /* BoostsRouter.swift in Sources */,
+				48444C96272BDFBB0093381D /* MapFuelPricingView.swift in Sources */,
 				488240552349447000CB6FFE /* SectionProtocol.swift in Sources */,
 				48444C47272AD8F60093381D /* BoostDetailsRouter.swift in Sources */,
 				48444C5B272AD9590093381D /* MapContentView.swift in Sources */,
@@ -1413,6 +1436,7 @@
 				48444C5F272AD9590093381D /* MapInteractor.swift in Sources */,
 				48444C83272AE7AE0093381D /* MapActionsView.swift in Sources */,
 				480E55F6229BEEF20031BDF7 /* ReusableView.swift in Sources */,
+				48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */,
 				4822014522982175003319F0 /* BoosterTestApp.swift in Sources */,
 				48444C85272AEBF30093381D /* GradientButton.swift in Sources */,
 				48444C87272AEE5F0093381D /* ActionButton.swift in Sources */,
@@ -1439,6 +1463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1582,6 +1607,7 @@
 		480E5648229BF2B40031BDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1591,6 +1617,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1599,6 +1626,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1609,6 +1638,7 @@
 		480E5649229BF2B40031BDF7 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1618,6 +1648,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1626,6 +1657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1636,6 +1668,7 @@
 		480E564A229BF2B40031BDF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1645,6 +1678,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1653,6 +1687,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2021,6 +2056,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Model/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2029,6 +2065,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2050,6 +2087,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Model/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2058,6 +2096,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2078,6 +2117,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Model/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2086,6 +2126,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2096,6 +2137,7 @@
 		482201A022982414003319F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2114,6 +2156,7 @@
 		482201A122982414003319F0 /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2132,6 +2175,7 @@
 		482201A222982414003319F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2161,6 +2205,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = System/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2192,6 +2237,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = System/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2222,6 +2268,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = System/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2307,7 +2354,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Localization/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2316,6 +2363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Localization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2336,7 +2384,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Localization/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2345,6 +2393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Localization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2364,7 +2413,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Localization/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2373,6 +2422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bundle.Localization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

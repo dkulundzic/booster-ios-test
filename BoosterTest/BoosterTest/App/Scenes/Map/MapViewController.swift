@@ -14,17 +14,25 @@ protocol MapDisplayLogic: AnyObject {
   func displaySelectionPin(shown: Bool)
   func displayCenteringButton(enabled: Bool)
   func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D)
+  func displayFuelInformation(regularPricing: MapFuelPricingView.ViewModel, premiumPricing: MapFuelPricingView.ViewModel)
+  func displayFuelInformationLoading(inProgress: Bool)
 }
 
 class MapViewController: UIContentViewController<MapContentView> {
   var presenter: MapViewPresentingLogic?
   private var didShowInfoViewOnce = false
   private var didCenterOnUserOnce = false
+  private var didShowActivityIndicatorOnce = false
     
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
     presenter?.onViewLoaded()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    presenter?.onViewWillAppear()
   }
 }
 
@@ -44,6 +52,16 @@ extension MapViewController: MapDisplayLogic {
   
   func displayMapCenteringOnUser(using userLocation: CLLocationCoordinate2D) {
     contentView.mapView.setRegion(createMapViewRegion(for: userLocation), animated: true)
+  }
+  
+  func displayFuelInformation(regularPricing: MapFuelPricingView.ViewModel, premiumPricing: MapFuelPricingView.ViewModel) {
+    contentView.fuelInformationView.regularPriceView.update(regularPricing)
+    contentView.fuelInformationView.premiumPriceView.update(premiumPricing)
+  }
+  
+  func displayFuelInformationLoading(inProgress: Bool) {
+    contentView.isLoadingFuelInformation = inProgress && !didShowInfoViewOnce
+    if inProgress { didShowInfoViewOnce = true }
   }
 }
 

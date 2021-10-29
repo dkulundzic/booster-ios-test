@@ -16,11 +16,14 @@ class MapContentView: UIView {
   var actionTapHandler: Action?
   private(set) lazy var actionsView = MapActionsView()
   private(set) lazy var mapView = MKMapView()
+  private(set) lazy var fuelInformationView = MapFuelPricingInfoView()
   private lazy var actionButton = ActionButton()
   private lazy var blurView = UIVisualEffectView(effect: blurEffect)
   private lazy var vibrancyView = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: blurEffect))
   private lazy var infoView = InfoView()
   private lazy var selectionPinView = MapSelectionPinView()
+  private lazy var fuelInformationGuide = UILayoutGuide()
+  private lazy var fuelInformationLoadingIndicator = UIActivityIndicatorView(style: .medium)
   private let blurEffect = UIBlurEffect(style: .systemChromeMaterial)
   
   override init(frame: CGRect) {
@@ -35,6 +38,11 @@ class MapContentView: UIView {
 }
 
 extension MapContentView {
+  var isLoadingFuelInformation: Bool {
+    get { fuelInformationLoadingIndicator.isAnimating  }
+    set { newValue ? fuelInformationLoadingIndicator.startAnimating() : fuelInformationLoadingIndicator.stopAnimating() }
+  }
+  
   var isInfoViewHidden: Bool {
     get {
       blurView.alpha != 0      
@@ -73,6 +81,9 @@ private extension MapContentView {
     setupMapView()
     setupActionsView()
     setupActionButton()
+    setupFuelInformationGuide()
+    setupFuelInfoView()
+    setupActivityIndicatorView()
     setupBlurView()
     setupVibrancyView()
     setupInfoView()
@@ -100,6 +111,8 @@ private extension MapContentView {
     actionsView.snp.makeConstraints {
       $0.trailing.bottom.equalTo(mapView).inset(16)
     }
+    actionButton.setContentHuggingPriority(.required, for: .vertical)
+    actionButton.setContentCompressionResistancePriority(.required, for: .vertical)
   }
   
   func setupActionButton() {
@@ -110,6 +123,32 @@ private extension MapContentView {
     }
     actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     actionButton.setTitle(Localization.Actions.next.localized(), for: .normal)
+  }
+  
+  func setupFuelInformationGuide() {
+    addLayoutGuide(fuelInformationGuide)
+    fuelInformationGuide.snp.makeConstraints {
+      $0.leading.trailing.equalToSuperview()
+      $0.top.equalTo(mapView.snp.bottom)
+      $0.bottomMargin.equalTo(actionButton.snp.top)
+    }
+  }
+  
+  func setupFuelInfoView() {
+    addSubview(fuelInformationView)
+    fuelInformationView.snp.makeConstraints {
+      $0.top.greaterThanOrEqualTo(fuelInformationGuide)
+      $0.bottom.lessThanOrEqualTo(fuelInformationGuide)
+      $0.leading.trailing.centerY.equalTo(fuelInformationGuide)
+    }
+  }
+  
+  func setupActivityIndicatorView() {
+    addSubview(fuelInformationLoadingIndicator)
+    fuelInformationLoadingIndicator.snp.makeConstraints {
+      $0.center.equalTo(fuelInformationGuide)
+    }
+    fuelInformationLoadingIndicator.hidesWhenStopped = true
   }
   
   func setupBlurView() {

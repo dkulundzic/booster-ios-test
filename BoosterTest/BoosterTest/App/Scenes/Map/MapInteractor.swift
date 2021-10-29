@@ -9,14 +9,22 @@
 import Foundation
 import CoreLocation
 import Combine
+import Model
+import Networking
 
 protocol MapBusinessLogic: AnyObject {
   var userLocationPublisher: AnyPublisher<CLLocation?, Never> { get }
   var userLocation: CLLocationCoordinate2D? { get }
+  func loadFuelPricingInformation() async -> FuelPricingInformation
 }
 
 class MapInteractor {
   private let locationManager = LocationManager()
+  private let fuelInformationService: FuelInformationServiceProtocol
+  
+  init(fuelInformationService: FuelInformationServiceProtocol = FuelInformationService()) {
+    self.fuelInformationService = fuelInformationService
+  }
 }
 
 // MARK: - MapBusinessLogic
@@ -27,5 +35,9 @@ extension MapInteractor: MapBusinessLogic {
   
   var userLocation: CLLocationCoordinate2D? {
     locationManager.currentCoordinate
+  }
+  
+  func loadFuelPricingInformation() async -> FuelPricingInformation {
+    await fuelInformationService.loadFuelInformation()
   }
 }
