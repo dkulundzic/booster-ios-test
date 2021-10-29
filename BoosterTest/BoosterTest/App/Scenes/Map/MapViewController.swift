@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Localization
 
 protocol MapDisplayLogic: AnyObject {
   func displayInfoView(shown: Bool)
@@ -29,6 +30,7 @@ class MapViewController: ContentViewController<MapContentView> {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    setupNavigationBar()
     presenter?.onViewLoaded()
   }
   
@@ -106,6 +108,10 @@ private extension MapViewController {
     contentView.actionsView.centerButtonTapHandler = { [weak self] in
       self?.presenter?.onCenterButtonTapped()
     }
+  }
+  
+  func setupNavigationBar() {
+    navigationItem.title = Localization.Map.title.localized()
   }
   
   func createMapViewRegion(for location: CLLocationCoordinate2D) -> MKCoordinateRegion {

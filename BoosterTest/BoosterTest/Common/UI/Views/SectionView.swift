@@ -13,7 +13,6 @@ public class SectionView: UIView {
   private lazy var titleLabel = UILabel()
   private lazy var subtitleLabel = UILabel()
   private lazy var containerView = UIView()
-  private lazy var separatorView = UIView()
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -27,11 +26,6 @@ public class SectionView: UIView {
 }
 
 public extension SectionView {
-  var isSeparatorHidden: Bool {
-    get { separatorView.isHidden }
-    set { separatorView.isHidden = newValue }
-  }
-
   var title: String? {
     get { titleLabel.text }
     set { titleLabel.text = newValue }
@@ -39,14 +33,10 @@ public extension SectionView {
   
   var subtitle: String? {
     get { subtitleLabel.text }
-    set { subtitleLabel.text = newValue }
-  }
-
-  var attributedSubtitle: NSAttributedString? {
-    get { subtitleLabel.attributedText }
     set {
+      subtitleLabel.text = newValue
       subtitleLabel.isHidden = newValue == nil
-      subtitleLabel.attributedText = newValue      
+      stackView.setCustomSpacing(newValue == nil ? 24 : 6, after: titleLabel)
     }
   }
 
@@ -63,28 +53,37 @@ public extension SectionView {
 // MARK: - Private Methods
 private extension SectionView {
   func setupViews() {
+    setupView()
     setupStackView()
     setupTitleLabel()
     setupSubtitleLabel()
     setupContainerView()
-    setupSeparatorView()
+  }
+  
+  func setupView() {
+    backgroundColor = .white
+    layer.cornerRadius = 8
+    layer.shadowRadius = 16
+    layer.shadowOpacity = 0.25
+    layer.shadowColor = UIColor.black.cgColor
   }
 
   func setupStackView() {
     addSubview(stackView)
     stackView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.edges.equalToSuperview().inset(16)
     }
     stackView.axis = .vertical
     stackView.distribution = .fill
     stackView.alignment = .fill
+    stackView.spacing = 6
   }
 
   func setupTitleLabel() {
     stackView.addArrangedSubview(titleLabel)
-    stackView.setCustomSpacing(6, after: titleLabel)
-    titleLabel.font = .systemFont(ofSize: 12, weight: .medium)
-    titleLabel.textColor = Colors.Text.title.color
+    stackView.setCustomSpacing(24, after: titleLabel)
+    titleLabel.font = .systemFont(ofSize: 16, weight: .medium)
+    titleLabel.textColor = .lightGray
     titleLabel.numberOfLines = 0
   }
 
@@ -99,16 +98,6 @@ private extension SectionView {
 
   func setupContainerView() {
     stackView.addArrangedSubview(containerView)
-    stackView.setCustomSpacing(32, after: containerView)
     containerView.isHidden = true
-  }
-
-  func setupSeparatorView() {
-    stackView.addArrangedSubview(separatorView)
-    separatorView.snp.makeConstraints {
-      $0.height.equalTo(1)
-    }
-    separatorView.backgroundColor = .lightGray
-    separatorView.layer.cornerRadius = 1
   }
 }

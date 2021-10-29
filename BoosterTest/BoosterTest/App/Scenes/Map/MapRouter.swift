@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 protocol MapRoutingLogic: AnyObject {
-  func showBoostRequestScene(using coordinate: CLLocationCoordinate2D)
+  func showBoostRequestScene(using boostLocation: CLLocationCoordinate2D)
 }
 
 protocol MapRouterDelegate: AnyObject { }
@@ -33,8 +33,12 @@ class MapRouter {
 
 // MARK: - MapRoutingLogic
 extension MapRouter: MapRoutingLogic {
-  func showBoostRequestScene(using coordinate: CLLocationCoordinate2D) {
-#warning("TODO:")
-    print(#function)
+  func showBoostRequestScene(using boostLocation: CLLocationCoordinate2D) {
+    let boosterRequestScene = BoostRequestRouter.createModule(boostLocation: boostLocation, delegate: self)
+    boosterRequestScene.hidesBottomBarWhenPushed = true
+    viewController?.navigationController?.pushViewController(boosterRequestScene, animated: true)
   }
 }
+
+// MARK: - BoostRequestRouterDelegate
+extension MapRouter: BoostRequestRouterDelegate { }

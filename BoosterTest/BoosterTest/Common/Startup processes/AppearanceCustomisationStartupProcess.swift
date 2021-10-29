@@ -60,5 +60,13 @@ private extension AppearanceCustomisationStartupProcess {
   
   func customiseOther() {
     UIBarButtonItem.appearance().tintColor = .black
+    UISegmentedControl.appearance().setTitleTextAttributes([
+      NSAttributedString.Key.foregroundColor: UIColor.black as Any,
+      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .medium) as Any
+    ], for: .normal)
+    UISegmentedControl.appearance().setTitleTextAttributes([
+      NSAttributedString.Key.foregroundColor: UIColor.white as Any,
+      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .medium) as Any
+    ], for: .selected)
   }
 }

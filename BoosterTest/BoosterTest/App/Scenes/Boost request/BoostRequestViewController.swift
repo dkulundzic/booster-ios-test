@@ -10,17 +10,14 @@ import UIKit
 
 protocol BoostRequestDisplayLogic: AnyObject { }
 
-class BoostRequestViewController: UIViewController {
+class BoostRequestViewController: ContentViewController<BoostRequestContentView> {
+  override var isNavigationBarHidden: Bool? { false }
   var presenter: BoostRequestViewPresentingLogic?
-  private lazy var contentView = BoostRequestContentView()
-
-  override func loadView() {
-    view = contentView
-  }
-  
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    setupNavigationBar()
   }
 }
 
@@ -32,7 +29,10 @@ private extension BoostRequestViewController {
     setupContentView()
   }
   
-  func setupContentView() {
-    view.addSubview(contentView)
+  func setupContentView() { }
+  
+  func setupNavigationBar() {
+    #warning("TODO: Localise")
+    navigationItem.title = "Create a Boost"
   }
 }
