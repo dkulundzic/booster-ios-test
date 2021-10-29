@@ -8,6 +8,7 @@
 
 // MARK: - Actions
 "action_next" = "Next";
+"action_order_boost" = "Order Boost";
 
 // MARK: - Map
 "map_title" = "Map";

@@ -11,6 +11,7 @@ import Foundation
 public struct Localization {
   public enum Actions: String, LocalizationAsset {
     case next = "action_next"
+    case orderBoost = "action_order_boost"
   }
   
   public enum Map: String, LocalizationAsset {

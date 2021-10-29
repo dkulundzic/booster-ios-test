@@ -8,8 +8,12 @@
 
 import UIKit
 import Model
+import Localization
+import System
 
 class BoostRequestContentView: UIView {
+  var actionTapHandler: Action?
+  private lazy var actionButton = ActionButton()
   private lazy var stackView = UIStackView()
   private lazy var deliveryWindowSectionView = SectionView()
   private lazy var deliveryWindowSegmentedControl = UISegmentedControl(items: Boost.DeliveryWindow.allCases.map(\.description))
@@ -30,12 +34,17 @@ private extension BoostRequestContentView {
   @objc func deliveryWindowSegmentedControlChangedSelectedSegment(_ sender: UISegmentedControl) {
     print(#function, sender.selectedSegmentIndex)
   }
+  
+  @objc func actionButtonTapped() {
+    actionTapHandler?()
+  }
 }
 
 // MARK: - Private Methods
 private extension BoostRequestContentView {
   func setupViews() {
     setupView()
+    setupActionButton()
     setupStackView()
     setupDeliveryWindowSectionView()
     setupDeliveryWindowSegmentedControl()
@@ -45,11 +54,22 @@ private extension BoostRequestContentView {
     backgroundColor = .white
   }
   
+  func setupActionButton() {
+    addSubview(actionButton)
+    actionButton.snp.makeConstraints {
+      $0.leading.trailing.equalToSuperview().inset(16)
+      $0.bottom.equalTo(safeAreaLayoutGuide).inset(16)
+    }
+    actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    actionButton.setTitle(Localization.Actions.orderBoost.localized(), for: .normal)
+    actionButton.setContentCompressionResistancePriority(.required, for: .vertical)
+  }
+  
   func setupStackView() {
     addSubview(stackView)
     stackView.snp.makeConstraints {
       $0.leading.trailing.top.equalToSuperview().inset(16)
-      $0.bottom.lessThanOrEqualToSuperview().inset(16)
+      $0.bottom.lessThanOrEqualTo(actionButton.snp.top).offset(-24)
     }
     stackView.axis = .vertical
     stackView.distribution = .fill
@@ -70,6 +90,5 @@ private extension BoostRequestContentView {
     deliveryWindowSegmentedControl.selectedSegmentTintColor = Colors.General.purple.color
     deliveryWindowSegmentedControl.apportionsSegmentWidthsByContent = true
     deliveryWindowSegmentedControl.addTarget(self, action: #selector(deliveryWindowSegmentedControlChangedSelectedSegment(_:)), for: .valueChanged)
-    
   }
 }
