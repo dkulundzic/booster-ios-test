@@ -39,6 +39,7 @@ private extension GradientButton {
     titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     colors = [Colors.General.lightPurple.color, Colors.General.purple.color]
     setTitleColor(.white, for: .normal)
+    setTitleColor(.white.withAlphaComponent(0.5), for: .disabled)
     layer.cornerRadius = 6
   }
   
