@@ -1186,7 +1186,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Martian & Machine";
+				ORGANIZATIONNAME = Codeopolis;
 				TargetAttributes = {
 					480E562F229BF2B40031BDF7 = {
 						CreatedOnToolsVersion = 10.2.1;
