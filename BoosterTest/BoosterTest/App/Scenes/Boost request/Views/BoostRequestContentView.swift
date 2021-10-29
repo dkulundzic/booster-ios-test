@@ -16,6 +16,8 @@ class BoostRequestContentView: UIView {
   var deliveryWindowSelectionHandler: ParametrisedAction<Int>?
   var paymentMethodSelectionHandler: ParametrisedAction<Int>?
   var dateSelectionHandler: ParametrisedAction<Date>?
+  private lazy var scrollView = UIScrollView()
+  private lazy var contentView = UIView()
   private lazy var actionButton = ActionButton()
   private lazy var stackView = UIStackView()
   private lazy var dateSectionView = SectionView()
@@ -66,7 +68,8 @@ private extension BoostRequestContentView {
 private extension BoostRequestContentView {
   func setupViews() {
     setupView()
-    setupActionButton()
+    setupScrollView()
+    setupContentView()
     setupStackView()
     setupDateSectionView()
     setupDatePicker()
@@ -74,28 +77,33 @@ private extension BoostRequestContentView {
     setupDeliveryWindowSegmentedControl()
     setupPaymentMethodSectionView()
     setupPaymentMethodSegmentedControl()
+    setupActionButton()
   }
   
   func setupView() {
     backgroundColor = .white
   }
   
-  func setupActionButton() {
-    addSubview(actionButton)
-    actionButton.snp.makeConstraints {
-      $0.leading.trailing.equalToSuperview().inset(16)
-      $0.bottom.equalTo(safeAreaLayoutGuide).inset(16)
+  func setupScrollView() {
+    addSubview(scrollView)
+    scrollView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
     }
-    actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
-    actionButton.setTitle(Localization.Actions.orderBoost.localized(), for: .normal)
-    actionButton.setContentCompressionResistancePriority(.required, for: .vertical)
+    scrollView.alwaysBounceVertical = true
+  }
+  
+  func setupContentView() {
+    scrollView.addSubview(contentView)
+    contentView.snp.makeConstraints {
+      $0.width.equalTo(self)
+      $0.edges.equalToSuperview()
+    }
   }
   
   func setupStackView() {
-    addSubview(stackView)
+    contentView.addSubview(stackView)
     stackView.snp.makeConstraints {
-      $0.leading.trailing.top.equalToSuperview().inset(16)
-      $0.bottom.lessThanOrEqualTo(actionButton.snp.top).offset(-24)
+      $0.edges.equalToSuperview().inset(16)
     }
     stackView.axis = .vertical
     stackView.distribution = .fill
@@ -149,5 +157,16 @@ private extension BoostRequestContentView {
     paymentMethodSegmentedControl.selectedSegmentTintColor = Colors.General.lightPurple.color
     paymentMethodSegmentedControl.apportionsSegmentWidthsByContent = true
     paymentMethodSegmentedControl.addTarget(self, action: #selector(paymentMethodSegmentedControlChangedSelectedSegment(_:)), for: .valueChanged)
+  }
+  
+  func setupActionButton() {
+    addSubview(actionButton)
+    actionButton.snp.makeConstraints {
+      $0.leading.trailing.equalToSuperview().inset(16)
+      $0.bottom.equalTo(safeAreaLayoutGuide).inset(16)
+    }
+    actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    actionButton.setTitle(Localization.Actions.orderBoost.localized(), for: .normal)
+    actionButton.setContentCompressionResistancePriority(.required, for: .vertical)
   }
 }
