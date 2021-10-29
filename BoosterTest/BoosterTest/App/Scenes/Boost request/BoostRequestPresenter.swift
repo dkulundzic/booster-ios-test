@@ -16,6 +16,7 @@ protocol BoostRequestViewPresentingLogic: AnyObject {
   func onDeliveryWindowSegmentSelected(at index: Int)
   func onPaymentMethodSegmentSelected(at index: Int)
   func onActionButtonTapped()
+  func onDateSelected(_ date: Date)
 }
 
 class BoostRequestPresenter {
@@ -25,6 +26,7 @@ class BoostRequestPresenter {
   private let boostLocation: CLLocationCoordinate2D
   private let deliveryWindowSubject = CurrentValueSubject<Boost.DeliveryWindow?, Never>(nil)
   private let paymentMethodSubject = CurrentValueSubject<Boost.PaymentMethod?, Never>(nil)
+  private var selectedDate = Date()
   private var bag = Set<AnyCancellable>()
   
   init(
@@ -65,6 +67,10 @@ extension BoostRequestPresenter: BoostRequestViewPresentingLogic {
       await interactor.orderBoost(at: boostLocation, using: deliveryWindow, paymentMethod: paymentMethod)
       await MainActor.run { self.router.showBoostOrderedAlert() }
     }
+  }
+  
+  func onDateSelected(_ date: Date) {
+    selectedDate = date
   }
 }
 

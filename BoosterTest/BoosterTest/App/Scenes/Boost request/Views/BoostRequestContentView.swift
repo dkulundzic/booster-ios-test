@@ -15,8 +15,11 @@ class BoostRequestContentView: UIView {
   var actionTapHandler: Action?
   var deliveryWindowSelectionHandler: ParametrisedAction<Int>?
   var paymentMethodSelectionHandler: ParametrisedAction<Int>?
+  var dateSelectionHandler: ParametrisedAction<Date>?
   private lazy var actionButton = ActionButton()
   private lazy var stackView = UIStackView()
+  private lazy var dateSectionView = SectionView()
+  private lazy var datePicker = UIDatePicker()
   private lazy var deliveryWindowSectionView = SectionView()
   private lazy var deliveryWindowSegmentedControl = UISegmentedControl(items: Boost.DeliveryWindow.allCases.map(\.description))
   private lazy var paymentMethodSectionView = SectionView()
@@ -53,6 +56,10 @@ private extension BoostRequestContentView {
   @objc func actionButtonTapped() {
     actionTapHandler?()
   }
+  
+  @objc func datePickerChanged(_ sender: UIDatePicker) {
+    dateSelectionHandler?(sender.date)
+  }
 }
 
 // MARK: - Private Methods
@@ -61,6 +68,8 @@ private extension BoostRequestContentView {
     setupView()
     setupActionButton()
     setupStackView()
+    setupDateSectionView()
+    setupDatePicker()
     setupDeliveryWindowSectionView()
     setupDeliveryWindowSegmentedControl()
     setupPaymentMethodSectionView()
@@ -92,6 +101,24 @@ private extension BoostRequestContentView {
     stackView.distribution = .fill
     stackView.alignment = .fill
     stackView.spacing = 24
+  }
+  
+  func setupDateSectionView() {
+    stackView.addArrangedSubview(dateSectionView)
+#warning("TODO: Localise")
+    dateSectionView.title = "Delivery date"
+#warning("TODO: Localise")
+    dateSectionView.subtitle = "Please select the delivery date for you Boost."
+  }
+  
+  func setupDatePicker() {
+    dateSectionView.embedView(datePicker)
+    datePicker.date = Date()
+    datePicker.minimumDate = Date()
+    datePicker.preferredDatePickerStyle = .compact
+    datePicker.datePickerMode = .date
+    datePicker.tintColor = Colors.General.lightPurple.color
+    datePicker.addTarget(self, action: #selector(datePickerChanged(_:)), for: .valueChanged)
   }
   
   func setupDeliveryWindowSectionView() {

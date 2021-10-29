@@ -46,6 +46,9 @@ private extension BoostRequestViewController {
     contentView.actionTapHandler = { [weak self] in
       self?.presenter?.onActionButtonTapped()
     }
+    contentView.dateSelectionHandler = { [weak self] selectedDate in
+      self?.presenter?.onDateSelected(selectedDate)
+    }
   }
   
   func setupNavigationBar() {
