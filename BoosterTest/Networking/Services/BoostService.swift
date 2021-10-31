@@ -18,6 +18,8 @@ public protocol BoostServiceProtocol {
     using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
   ) async -> Boost
+  
+  func cancelBoost(_ boost: Boost) async
 }
 
 public final class BoostService {
@@ -39,5 +41,9 @@ extension BoostService: BoostServiceProtocol {
     let boost = Boost(date: date, deliveryWindow: deliveryWindow, paymentMethod: paymentMethod)
     boostsStore.add(boost: boost)
     return boost
+  }
+  
+  public func cancelBoost(_ boost: Boost) async {
+    boostsStore.remove(boost: boost)
   }
 }

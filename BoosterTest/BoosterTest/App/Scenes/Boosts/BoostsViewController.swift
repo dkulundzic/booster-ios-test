@@ -15,15 +15,13 @@ protocol BoostsDisplayLogic: AnyObject {
 
 class BoostsViewController: UIContentViewController<BoostsContentView> {
   var presenter: BoostsViewPresentingLogic?
-  private var dataSource: BoostsDataSource?
-  private lazy var diffableDataSource = UICollectionViewDiffableDataSource<Int, BoostsDataSourceItem>(collectionView: contentView.collectionView) { collectionView, indexPath, item in
-    switch item {
-    case .boost(let viewModel):
-      let cell = collectionView.dequeueReusableCell(BoostsCell.self, at: indexPath)
-      cell.update(viewModel)
-      return cell
+  private lazy var cellProvider = BoostsCellProvider()
+  private lazy var dataSource = UICollectionViewDiffableDataSource<Int, BoostsDataSourceItem>(
+    collectionView: contentView.collectionView,
+    cellProvider: { [weak self] in
+      self?.cellProvider.provideCell(for: $0, at: $1, for: $2)
     }
-  }
+  )
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +35,7 @@ class BoostsViewController: UIContentViewController<BoostsContentView> {
 extension BoostsViewController: BoostsDisplayLogic {
   func displayBoosts(using dataSource: BoostsDataSource) {
     contentView.isEmptyViewShown = dataSource.isEmpty
-    diffableDataSource.apply(dataSource.snapshot)
+    self.dataSource.apply(dataSource.snapshot)
   }
 }
 

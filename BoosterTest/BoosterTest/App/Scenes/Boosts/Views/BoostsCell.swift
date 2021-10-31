@@ -87,7 +87,7 @@ private extension BoostsCell {
     contentView.addSubview(deliveryWindowLabel)
     deliveryWindowLabel.snp.makeConstraints {
       $0.leading.equalTo(paymentMethodImageView)
-      $0.top.equalTo(paymentMethodImageView.snp.bottom).offset(6)
+      $0.top.equalTo(paymentMethodImageView.snp.bottom).offset(6).priority(999)
       $0.trailing.bottom.equalToSuperview().inset(16)
     }
     deliveryWindowLabel.textColor = Colors.Text.labelSecondary.color

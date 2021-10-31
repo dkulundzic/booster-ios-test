@@ -17,7 +17,27 @@ extension UIAlertController {
       message: Localization.Alerts.boostOrderedMessage.localized(),
       preferredStyle: .alert
     )
-    alertController.addAction(.confirmation(action: action))
-    return alertController
+    alertController.addAction(.acknowledgement(action: action))
+    return alertController.validate()
+  }
+  
+  static func boostCancellationConfirmation(action: Action?) -> UIAlertController {
+    let alertController = UIAlertController(
+      title: Localization.Alerts.boostCancellationTitle.localized(),
+      message: Localization.Alerts.boostCancellationMessage.localized(),
+      preferredStyle: .alert
+    )
+    alertController.addAction(.negation())
+    alertController.addAction(.confirmation(style: .destructive, action: action))
+    return alertController.validate()
+  }
+}
+
+private extension UIAlertController {
+  func validate() -> UIAlertController {
+    if !actions.contains(where: { $0.style == .cancel }) {
+      addAction(.cancel())
+    }
+    return self
   }
 }

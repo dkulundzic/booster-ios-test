@@ -41,4 +41,8 @@ extension BoostsRouter: BoostsRoutingLogic {
 }
 
 // MARK: - BoostDetailsRouterDelegate
-extension BoostsRouter: BoostDetailsRouterDelegate { }
+extension BoostsRouter: BoostDetailsRouterDelegate {
+  func boostDetailsRouterCancelledBoost(_ boost: Boost) {
+    viewController?.navigationController?.popViewController(animated: true)
+  }
+}

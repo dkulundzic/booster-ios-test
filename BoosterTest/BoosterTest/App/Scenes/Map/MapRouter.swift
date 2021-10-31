@@ -61,4 +61,8 @@ extension MapRouter: BoostRequestRouterDelegate {
 }
 
 // MARK: - BoostDetailsRouterDelegate
-extension MapRouter: BoostDetailsRouterDelegate { }
+extension MapRouter: BoostDetailsRouterDelegate {
+  func boostDetailsRouterCancelledBoost(_ boost: Boost) {
+    viewController?.navigationController?.popViewController(animated: true)
+  }
+}

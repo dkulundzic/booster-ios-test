@@ -7,10 +7,24 @@
 //
 
 import Foundation
+import Networking
+import Model
 
-protocol BoostDetailsBusinessLogic: AnyObject { }
+protocol BoostDetailsBusinessLogic: AnyObject {
+  func cancelBoost(_ boost: Boost) async
+}
 
-class BoostDetailsInteractor { }
+class BoostDetailsInteractor {
+  private let boostService: BoostServiceProtocol
+  
+  init(boostService: BoostServiceProtocol = BoostService()) {
+    self.boostService = boostService
+  }
+}
 
 // MARK: - BoostDetailsBusinessLogic
-extension BoostDetailsInteractor: BoostDetailsBusinessLogic { }
+extension BoostDetailsInteractor: BoostDetailsBusinessLogic {
+  func cancelBoost(_ boost: Boost) async {
+    await boostService.cancelBoost(boost)
+  }
+}

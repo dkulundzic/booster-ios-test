@@ -9,9 +9,14 @@
 import UIKit
 import Model
 
-protocol BoostDetailsRoutingLogic: AnyObject { }
+protocol BoostDetailsRoutingLogic: AnyObject {
+  func showCancellationConfirmationAlert(for boost: Boost)
+  func notifyBoostCancellation(_ boost: Boost)
+}
 
-protocol BoostDetailsRouterDelegate: AnyObject { }
+protocol BoostDetailsRouterDelegate: AnyObject {
+  func boostDetailsRouterCancelledBoost(_ boost: Boost)
+}
 
 class BoostDetailsRouter {
   weak var viewController: BoostDetailsViewController?
@@ -33,4 +38,14 @@ class BoostDetailsRouter {
 }
 
 // MARK: - BoostDetailsRoutingLogic
-extension BoostDetailsRouter: BoostDetailsRoutingLogic { }
+extension BoostDetailsRouter: BoostDetailsRoutingLogic {
+  func showCancellationConfirmationAlert(for boost: Boost) {
+    viewController?.present(UIAlertController.boostCancellationConfirmation { [weak self] in
+      self?.viewController?.presenter?.onBoostCancellationConfirmed()
+    }, animated: true, completion: nil)
+  }
+  
+  func notifyBoostCancellation(_ boost: Boost) {
+    delegate?.boostDetailsRouterCancelledBoost(boost)
+  }
+}

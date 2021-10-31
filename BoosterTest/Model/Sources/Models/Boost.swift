@@ -54,3 +54,9 @@ public struct Boost {
     self.paymentMethod = paymentMethod
   }
 }
+
+extension Boost: Equatable {
+  public static func == (lhs: Boost, rhs: Boost) -> Bool {
+    lhs.id == rhs.id
+  }
+}

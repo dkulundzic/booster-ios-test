@@ -12,10 +12,11 @@ import Model
 protocol BoostDetailsViewPresentingLogic: AnyObject {
   func onViewLoaded()
   func onCancelBarButtonTapped()
+  func onBoostCancellationConfirmed()
 }
 
 class BoostDetailsPresenter {
-  var interactor: BoostDetailsBusinessLogic?
+  var interactor: BoostDetailsBusinessLogic
   weak private var view: BoostDetailsDisplayLogic?
   private let router: BoostDetailsRoutingLogic
   private let boost: Boost
@@ -23,7 +24,7 @@ class BoostDetailsPresenter {
   init(
     boost: Boost,
     interface: BoostDetailsDisplayLogic,
-    interactor: BoostDetailsBusinessLogic?,
+    interactor: BoostDetailsBusinessLogic,
     router: BoostDetailsRoutingLogic
   ) {
     self.boost = boost
@@ -41,7 +42,13 @@ extension BoostDetailsPresenter: BoostDetailsViewPresentingLogic {
   }
   
   func onCancelBarButtonTapped() {
-#warning("TODO:")
-    print(#function)
+    router.showCancellationConfirmationAlert(for: boost)
+  }
+  
+  func onBoostCancellationConfirmed() {
+    Task {
+      await interactor.cancelBoost(boost)
+      await MainActor.run { self.router.notifyBoostCancellation(self.boost) }
+    }
   }
 }

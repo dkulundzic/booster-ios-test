@@ -46,6 +46,12 @@ extension BoostsDataSource {
     data = boosts
     buildSections()
   }
+  
+  func remove(boost: Boost) {
+    guard let indexOf = data.firstIndex(of: boost) else { return }
+    data.remove(at: indexOf)
+    buildSections()
+  }
 }
 
 private extension BoostsDataSource {

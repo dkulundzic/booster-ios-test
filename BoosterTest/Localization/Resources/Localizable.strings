@@ -10,11 +10,15 @@
 "action_next" = "Next";
 "action_order_boost" = "Order Boost";
 "action_cancel" = "Cancel";
-"action_confirmation" = "Ok";
+"action_acknowledgement" = "Ok";
+"action_confirmation" = "Yes";
+"action_negation" = "No";
 
 // MARK: - Alerts
 "alerts_boost_ordered_title" = "Boost ordered";
-"alerts_boost_ordered_message" = "Congratulations, you have successfully ordered a boost!";
+"alerts_boost_ordered_message" = "Congratulations, you have successfully ordered a Boost!";
+"alerts_boost_cancelled_title" = "Boost cancellation";
+"alerts_boost_cancelled_message" = "Are you sure you want to cancel your scheduled Boost?";
 
 // MARK: - Boosts
 "boosts_title" = "Boosts";
@@ -35,5 +39,5 @@
 
 // MARK: - Map
 "map_title" = "Map";
-"map_info_title" = "Order a boost";
+"map_info_title" = "Order a Boost";
 "map_info_subtitle" = "Zoom & drag the map to pin exact spot";

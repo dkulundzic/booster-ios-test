@@ -16,6 +16,7 @@
 		48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */; };
 		48057144272C4B4C001A98DA /* BoostsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057143272C4B4C001A98DA /* BoostsEmptyView.swift */; };
 		48057146272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */; };
+		48057149272E9EF4001A98DA /* BoostsCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057148272E9EF4001A98DA /* BoostsCellProvider.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
@@ -274,6 +275,7 @@
 		48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVendor.swift; sourceTree = "<group>"; };
 		48057143272C4B4C001A98DA /* BoostsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsEmptyView.swift; sourceTree = "<group>"; };
 		48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-BoosterTest.swift"; sourceTree = "<group>"; };
+		48057148272E9EF4001A98DA /* BoostsCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsCellProvider.swift; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
@@ -489,6 +491,14 @@
 				48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */,
 			);
 			path = "Collection view layouts";
+			sourceTree = "<group>";
+		};
+		48057147272E9EE7001A98DA /* Cell provider */ = {
+			isa = PBXGroup;
+			children = (
+				48057148272E9EF4001A98DA /* BoostsCellProvider.swift */,
+			);
+			path = "Cell provider";
 			sourceTree = "<group>";
 		};
 		480E55F4229BEEE80031BDF7 /* Protocols */ = {
@@ -834,6 +844,7 @@
 		48444C3E272AD8C10093381D /* Boosts */ = {
 			isa = PBXGroup;
 			children = (
+				48057147272E9EE7001A98DA /* Cell provider */,
 				48444C6C272AD9AB0093381D /* Data source */,
 				48444C55272AD92E0093381D /* Views */,
 				48444C4F272AD92A0093381D /* BoostsInteractor.swift */,
@@ -1557,6 +1568,7 @@
 				48444C5E272AD9590093381D /* MapViewController.swift in Sources */,
 				48444C78272ADC760093381D /* ColorAsset.swift in Sources */,
 				48444C46272AD8F60093381D /* BoostDetailsPresenter.swift in Sources */,
+				48057149272E9EF4001A98DA /* BoostsCellProvider.swift in Sources */,
 				48444CC2272C2DD80093381D /* BoostsCell.swift in Sources */,
 				48444CB0272C13FD0093381D /* SectionView.swift in Sources */,
 				48444C49272AD8F60093381D /* BoostDetailsInteractor.swift in Sources */,

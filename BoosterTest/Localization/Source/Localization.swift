@@ -13,12 +13,16 @@ public struct Localization {
     case next = "action_next"
     case orderBoost = "action_order_boost"
     case cancel = "action_cancel"
+    case acknowledgement = "action_acknowledgement"
     case confirmation = "action_confirmation"
+    case negation = "action_negation"
   }
   
   public enum Alerts: String, LocalizationAsset {
     case boostOrderedTitle = "alerts_boost_ordered_title"
     case boostOrderedMessage = "alerts_boost_ordered_message"
+    case boostCancellationTitle = "alerts_boost_cancelled_title"
+    case boostCancellationMessage = "alerts_boost_cancelled_message"
   }
   
   public enum Boosts: String, LocalizationAsset {
