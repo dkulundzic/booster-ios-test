@@ -15,6 +15,7 @@
 		48057140272C42BD001A98DA /* ListLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805713F272C42BD001A98DA /* ListLayoutVendor.swift */; };
 		48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */; };
 		48057144272C4B4C001A98DA /* BoostsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057143272C4B4C001A98DA /* BoostsEmptyView.swift */; };
+		48057146272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
@@ -272,6 +273,7 @@
 		4805713F272C42BD001A98DA /* ListLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayoutVendor.swift; sourceTree = "<group>"; };
 		48057141272C42CB001A98DA /* CompositionalLayoutVendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVendor.swift; sourceTree = "<group>"; };
 		48057143272C4B4C001A98DA /* BoostsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsEmptyView.swift; sourceTree = "<group>"; };
+		48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
@@ -737,8 +739,8 @@
 		482201D022982534003319F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4805713B272C3DB3001A98DA /* Model */,
 				48444C92272B26750093381D /* CoreLocation */,
+				4805713B272C3DB3001A98DA /* Model */,
 				482201D322982546003319F0 /* UIKit */,
 			);
 			path = Extensions;
@@ -763,6 +765,7 @@
 			children = (
 				48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */,
 				48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */,
+				48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */,
 				480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */,
 				480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */,
 				48444C72272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift */,
@@ -1531,6 +1534,7 @@
 				480E55FE229BEF860031BDF7 /* Bundle-System.swift in Sources */,
 				48444CAE272C13310093381D /* VerticalSeparatorView.swift in Sources */,
 				48444C73272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift in Sources */,
+				48057146272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift in Sources */,
 				48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */,
 				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
 				48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */,

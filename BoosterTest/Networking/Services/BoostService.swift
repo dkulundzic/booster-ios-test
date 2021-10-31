@@ -17,7 +17,7 @@ public protocol BoostServiceProtocol {
     on date: Date,
     using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async
+  ) async -> Boost
 }
 
 public final class BoostService {
@@ -34,10 +34,10 @@ extension BoostService: BoostServiceProtocol {
     on date: Date,
     using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async {
+  ) async -> Boost {
     await Task.sleep(1 * 1000000000)
-    boostsStore.add(
-      boost: Boost(date: date, deliveryWindow: deliveryWindow, paymentMethod: paymentMethod)
-    )
+    let boost = Boost(date: date, deliveryWindow: deliveryWindow, paymentMethod: paymentMethod)
+    boostsStore.add(boost: boost)
+    return boost
   }
 }

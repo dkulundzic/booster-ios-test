@@ -7,15 +7,26 @@
 //
 
 import Foundation
+import Model
 
-protocol BoostDetailsViewPresentingLogic: AnyObject { }
+protocol BoostDetailsViewPresentingLogic: AnyObject {
+  func onViewLoaded()
+  func onCancelBarButtonTapped()
+}
 
 class BoostDetailsPresenter {
   var interactor: BoostDetailsBusinessLogic?
   weak private var view: BoostDetailsDisplayLogic?
   private let router: BoostDetailsRoutingLogic
+  private let boost: Boost
   
-  init(interface: BoostDetailsDisplayLogic, interactor: BoostDetailsBusinessLogic?, router: BoostDetailsRoutingLogic) {
+  init(
+    boost: Boost,
+    interface: BoostDetailsDisplayLogic,
+    interactor: BoostDetailsBusinessLogic?,
+    router: BoostDetailsRoutingLogic
+  ) {
+    self.boost = boost
     self.view = interface
     self.interactor = interactor
     self.router = router
@@ -23,4 +34,14 @@ class BoostDetailsPresenter {
 }
 
 // MARK: - BoostDetailsViewPresentingLogic
-extension BoostDetailsPresenter: BoostDetailsViewPresentingLogic { }
+extension BoostDetailsPresenter: BoostDetailsViewPresentingLogic {
+  func onViewLoaded() {
+#warning("TODO:")
+    print(#function)
+  }
+  
+  func onCancelBarButtonTapped() {
+#warning("TODO:")
+    print(#function)
+  }
+}

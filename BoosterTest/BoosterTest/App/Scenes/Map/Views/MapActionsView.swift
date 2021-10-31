@@ -79,7 +79,7 @@ private extension MapActionsView {
     homeButton.snp.makeConstraints {
       $0.size.equalTo(buttonSize)
     }
-    homeButton.tintColor = Colors.Text.labelTertiary.color
+    homeButton.tintColor = Colors.General.lightPurple.color
     homeButton.isEnabled = false
     homeButton.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
     homeButton.setImage(Icons.house.image, for: .normal)
@@ -90,7 +90,7 @@ private extension MapActionsView {
     centerButton.snp.makeConstraints {
       $0.size.equalTo(buttonSize)
     }
-    centerButton.tintColor = Colors.Text.labelTertiary.color
+    centerButton.tintColor = Colors.General.lightPurple.color
     centerButton.addTarget(self, action: #selector(centerButtonTapped), for: .touchUpInside)
     centerButton.setImage(Icons.scope.image, for: .normal)
   }

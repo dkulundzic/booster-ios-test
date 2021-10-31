@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Combine
+import Model
 
 protocol MapViewPresentingLogic: AnyObject {
   func onViewLoaded()
@@ -18,6 +19,7 @@ protocol MapViewPresentingLogic: AnyObject {
   func onHomeButtonTapped()
   func onCenterButtonTapped()
   func onActionButtonTapped()
+  func onBoostOrdered(_ boost: Boost)
 }
 
 class MapPresenter {
@@ -78,6 +80,10 @@ extension MapPresenter: MapViewPresentingLogic {
   func onActionButtonTapped() {
     guard let boostLocation = boostLocationSubject.value else { return }
     router.showBoostRequestScene(using: boostLocation)
+  }
+  
+  func onBoostOrdered(_ boost: Boost) {
+    router.showBoostDetails(for: boost)
   }
 }
 

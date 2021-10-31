@@ -26,6 +26,10 @@ public struct Localization {
     case deliveryWindowDetailFormat = "boosts_delivery_detail_format"
   }
   
+  public enum BoostDetails: String, LocalizationAsset {
+    case title = "boost_details_title"
+  }
+  
   public enum BoostRequest: String, LocalizationAsset {
     case title = "boosts_request_title"
     case deliveryDateSectionTitle = "boosts_request_delivery_date_section_title"

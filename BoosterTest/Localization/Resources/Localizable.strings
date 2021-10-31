@@ -20,6 +20,10 @@
 "boosts_title" = "Boosts";
 "boosts_delivery_detail_format" = "Delivered in the %@";
 
+// MARK: - Boost Details
+"boost_details_title" = "Boost details";
+
+
 // MARK: - Boost Request
 "boosts_request_title" = "Request a Boost";
 "boosts_request_delivery_date_section_title" = "Delivery date";

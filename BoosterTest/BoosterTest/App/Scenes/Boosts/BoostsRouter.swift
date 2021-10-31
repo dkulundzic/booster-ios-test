@@ -34,7 +34,11 @@ class BoostsRouter {
 // MARK: - BoostsRoutingLogic
 extension BoostsRouter: BoostsRoutingLogic {
   func showBoostDetails(for boost: Boost) {
-#warning("TODO:")
-    print(#function)
+    let boostDetailsScene = BoostDetailsRouter.createModule(boost: boost, delegate: self)
+    boostDetailsScene.hidesBottomBarWhenPushed = true
+    viewController?.navigationController?.pushViewController(boostDetailsScene, animated: true)
   }
 }
+
+// MARK: - BoostDetailsRouterDelegate
+extension BoostsRouter: BoostDetailsRouterDelegate { }

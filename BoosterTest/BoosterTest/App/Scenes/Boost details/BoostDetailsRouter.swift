@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Model
 
 protocol BoostDetailsRoutingLogic: AnyObject { }
 
@@ -16,13 +17,16 @@ class BoostDetailsRouter {
   weak var viewController: BoostDetailsViewController?
   weak var delegate: BoostDetailsRouterDelegate?
   
-  static func createModule(delegate: BoostDetailsRouterDelegate?) -> BoostDetailsViewController {
+  static func createModule(
+    boost: Boost,
+    delegate: BoostDetailsRouterDelegate?
+  ) -> BoostDetailsViewController {
     let view = BoostDetailsViewController(nibName: nil, bundle: nil)
     let interactor = BoostDetailsInteractor()
     let router = BoostDetailsRouter()
     router.delegate = delegate
     router.viewController = view
-    let presenter = BoostDetailsPresenter(interface: view, interactor: interactor, router: router)
+    let presenter = BoostDetailsPresenter(boost: boost, interface: view, interactor: interactor, router: router)
     view.presenter = presenter
     return view
   }

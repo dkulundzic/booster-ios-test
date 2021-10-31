@@ -22,5 +22,11 @@ class BoostDetailsContentView: UIView {
 
 // MARK: - Private Methods
 private extension BoostDetailsContentView {
-  func setupViews() { }
+  func setupViews() {
+    setupView()
+  }
+  
+  func setupView() {
+    backgroundColor = Colors.General.background.color
+  }
 }
