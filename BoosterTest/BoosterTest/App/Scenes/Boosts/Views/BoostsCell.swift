@@ -11,7 +11,7 @@ import UIKit
 class BoostsCell: UICollectionViewCell {
   struct ViewModel: Hashable {
     let id: String
-    let formattedDate: String
+    let formattedDate: String?
     let deliveryWindowText: NSAttributedString?
     let paymentMethodIcon: UIImage
     

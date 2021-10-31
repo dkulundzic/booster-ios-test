@@ -9,6 +9,8 @@
 import UIKit
 
 class BoostDetailsContentView: UIView {
+  private lazy var cardContainerView = CardContainerView()
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -24,9 +26,18 @@ class BoostDetailsContentView: UIView {
 private extension BoostDetailsContentView {
   func setupViews() {
     setupView()
+    setupCardContainerView()
   }
   
   func setupView() {
     backgroundColor = Colors.General.background.color
+  }
+  
+  func setupCardContainerView() {
+    addSubview(cardContainerView)
+    cardContainerView.snp.makeConstraints {
+      $0.leading.top.trailing.equalToSuperview().inset(16)
+      $0.height.equalToSuperview().multipliedBy(0.5)
+    }
   }
 }

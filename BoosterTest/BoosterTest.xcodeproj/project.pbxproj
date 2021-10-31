@@ -17,6 +17,8 @@
 		48057144272C4B4C001A98DA /* BoostsEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057143272C4B4C001A98DA /* BoostsEmptyView.swift */; };
 		48057146272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */; };
 		48057149272E9EF4001A98DA /* BoostsCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057148272E9EF4001A98DA /* BoostsCellProvider.swift */; };
+		4805714B272EA1E9001A98DA /* CardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805714A272EA1E9001A98DA /* CardContainerView.swift */; };
+		4805714F272EA36E001A98DA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805714E272EA36E001A98DA /* DateFormatter.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
@@ -276,6 +278,8 @@
 		48057143272C4B4C001A98DA /* BoostsEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsEmptyView.swift; sourceTree = "<group>"; };
 		48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-BoosterTest.swift"; sourceTree = "<group>"; };
 		48057148272E9EF4001A98DA /* BoostsCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsCellProvider.swift; sourceTree = "<group>"; };
+		4805714A272EA1E9001A98DA /* CardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
+		4805714E272EA36E001A98DA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
@@ -714,6 +718,7 @@
 				488240682349464A00CB6FFE /* Environment.swift */,
 				488240692349464B00CB6FFE /* Global.swift */,
 				488240712349469C00CB6FFE /* PropertyWrappers.swift */,
+				4805714E272EA36E001A98DA /* DateFormatter.swift */,
 				4882405F234945B500CB6FFE /* SimpleLogger.swift */,
 				4882405B234945A200CB6FFE /* StartupProcess.swift */,
 				4882405C234945A300CB6FFE /* StartupProcessService.swift */,
@@ -788,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				48444C86272AEE5F0093381D /* ActionButton.swift */,
+				4805714A272EA1E9001A98DA /* CardContainerView.swift */,
 				48444C84272AEBF30093381D /* GradientButton.swift */,
 				48444C88272B10B00093381D /* InfoView.swift */,
 				48444CAF272C13FD0093381D /* SectionView.swift */,
@@ -808,8 +814,8 @@
 		482201D622982554003319F0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				48444CA1272C0A430093381D /* Boost request */,
 				48444C3F272AD8DC0093381D /* Boost details */,
+				48444CA1272C0A430093381D /* Boost request */,
 				48444C3E272AD8C10093381D /* Boosts */,
 				48444C3D272AD8BA0093381D /* Map */,
 				48444C3C272AD8B40093381D /* Tab bar */,
@@ -1524,6 +1530,7 @@
 				48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */,
 				48444C76272ADBE50093381D /* Colors.swift in Sources */,
 				48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */,
+				4805714B272EA1E9001A98DA /* CardContainerView.swift in Sources */,
 				480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */,
 				48444C8C272B1B320093381D /* Animation.swift in Sources */,
 				48444C71272ADADF0093381D /* AppearanceCustomisationStartupProcess.swift in Sources */,
@@ -1607,6 +1614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4805714F272EA36E001A98DA /* DateFormatter.swift in Sources */,
 				488240722349469C00CB6FFE /* PropertyWrappers.swift in Sources */,
 				4882405E234945A300CB6FFE /* StartupProcessService.swift in Sources */,
 				48824064234945D000CB6FFE /* Asset.swift in Sources */,

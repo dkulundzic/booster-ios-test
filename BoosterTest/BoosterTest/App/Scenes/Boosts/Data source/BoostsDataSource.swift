@@ -29,12 +29,7 @@ enum BoostsDataSourceSection: SectionProtocol {
 class BoostsDataSource: DataBackedDataSourceProtocol {
   private(set) var data = [Boost]()
   private(set) lazy var sections = [BoostsDataSourceSection]()
-  private lazy var dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-    formatter.timeStyle = .none
-    return formatter
-  }()
+  private let dateFormatter = System.DateFormatter()
   
   init() {
     buildSections()
@@ -61,7 +56,7 @@ private extension BoostsDataSource {
         .setFont(.systemFont(ofSize: 16, weight: .regular))
         .setFont(.systemFont(ofSize: 16, weight: .bold), inRangeOf: $0.deliveryWindow.description)
         .create()
-      let formattedDate = dateFormatter.string(from: $0.date)
+      let formattedDate = dateFormatter.format(date: $0.date)
       return BoostsDataSourceItem.boost(
         BoostsCell.ViewModel(
           id: $0.id,
