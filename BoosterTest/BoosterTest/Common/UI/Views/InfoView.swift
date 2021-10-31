@@ -114,7 +114,7 @@ private extension InfoView {
   func setupTitleLabel() {
     stackView.addArrangedSubview(titleLabel)
     titleLabel.font = .systemFont(ofSize: 16, weight: .semibold)
-    titleLabel.textColor = Colors.Text.title.color
+    titleLabel.textColor = Colors.Text.labelPrimary.color
     titleLabel.setContentHuggingPriority(.defaultLow + 1, for: .horizontal)
     titleLabel.setContentHuggingPriority(.defaultLow + 1, for: .vertical)
   }
@@ -122,7 +122,7 @@ private extension InfoView {
   func setupSubtitleLabel() {
     stackView.addArrangedSubview(subtitleLabel)
     subtitleLabel.font = .systemFont(ofSize: 16, weight: .regular)
-    subtitleLabel.textColor = Colors.Text.subtitle.color
+    subtitleLabel.textColor = Colors.Text.labelSecondary.color
     subtitleLabel.setContentHuggingPriority(.defaultLow, for: .horizontal)
     subtitleLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
   }

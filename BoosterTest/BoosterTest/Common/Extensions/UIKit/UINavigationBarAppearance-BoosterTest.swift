@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UINavigationBarAppearance {
-  static func defaultStandard(shadowColor: UIColor = .lightGray) -> UINavigationBarAppearance {
+  static func defaultStandard(shadowColor: UIColor = Colors.Views.shadowColor.color) -> UINavigationBarAppearance {
     let appearance = UINavigationBarAppearance()
     appearance.backgroundColor = .white
     appearance.shadowColor = shadowColor

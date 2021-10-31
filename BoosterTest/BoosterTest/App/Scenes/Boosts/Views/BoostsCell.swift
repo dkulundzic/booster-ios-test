@@ -90,7 +90,7 @@ private extension BoostsCell {
       $0.top.equalTo(paymentMethodImageView.snp.bottom).offset(6)
       $0.trailing.bottom.equalToSuperview().inset(16)
     }
-    deliveryWindowLabel.textColor = .lightGray
+    deliveryWindowLabel.textColor = Colors.Text.labelSecondary.color
     deliveryWindowLabel.font = .systemFont(ofSize: 16, weight: .regular)
   }
 }

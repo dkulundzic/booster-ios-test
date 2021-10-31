@@ -84,7 +84,7 @@ private extension SectionView {
     stackView.addArrangedSubview(titleLabel)
     stackView.setCustomSpacing(24, after: titleLabel)
     titleLabel.font = .systemFont(ofSize: 16, weight: .medium)
-    titleLabel.textColor = .lightGray
+    titleLabel.textColor = Colors.Text.labelPrimary.color
     titleLabel.numberOfLines = 0
   }
 
@@ -92,7 +92,7 @@ private extension SectionView {
     stackView.addArrangedSubview(subtitleLabel)
     stackView.setCustomSpacing(24, after: subtitleLabel)
     subtitleLabel.font = .systemFont(ofSize: 12, weight: .medium)
-    subtitleLabel.textColor = .black
+    subtitleLabel.textColor = Colors.Text.labelSecondary.color
     subtitleLabel.isHidden = true
     subtitleLabel.numberOfLines = 0
   }

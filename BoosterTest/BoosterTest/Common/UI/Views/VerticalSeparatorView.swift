@@ -31,6 +31,6 @@ private extension VerticalSeparatorView {
     snp.makeConstraints {
       $0.width.equalTo(0.5)
     }
-    backgroundColor = .lightGray
+    backgroundColor = Colors.Views.separatorBackground.color
   }
 }

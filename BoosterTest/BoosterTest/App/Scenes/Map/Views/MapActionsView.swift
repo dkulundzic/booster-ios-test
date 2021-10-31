@@ -59,7 +59,7 @@ private extension MapActionsView {
   func setupView() {
     backgroundColor = .white
     layer.cornerRadius = 8
-    layer.borderColor = UIColor.lightGray.cgColor
+    layer.borderColor = Colors.Views.borderColor.color.cgColor
     layer.borderWidth = 1
   }
   
@@ -79,7 +79,7 @@ private extension MapActionsView {
     homeButton.snp.makeConstraints {
       $0.size.equalTo(buttonSize)
     }
-    homeButton.tintColor = .darkGray
+    homeButton.tintColor = Colors.Text.labelTertiary.color
     homeButton.isEnabled = false
     homeButton.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
     homeButton.setImage(Icons.house.image, for: .normal)
@@ -90,7 +90,7 @@ private extension MapActionsView {
     centerButton.snp.makeConstraints {
       $0.size.equalTo(buttonSize)
     }
-    centerButton.tintColor = .darkGray
+    centerButton.tintColor = Colors.Text.labelTertiary.color
     centerButton.addTarget(self, action: #selector(centerButtonTapped), for: .touchUpInside)
     centerButton.setImage(Icons.scope.image, for: .normal)
   }

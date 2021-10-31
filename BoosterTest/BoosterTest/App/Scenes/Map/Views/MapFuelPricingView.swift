@@ -46,10 +46,10 @@ private extension MapFuelPricingView {
       $0.edges.equalToSuperview()
     }
     infoView.titleFont = .systemFont(ofSize: 18, weight: .regular)
-    infoView.titleColor = Colors.Text.subtitle.color
+    infoView.titleColor = Colors.Text.labelSecondary.color
     infoView.titleAlignmnent = .center
     infoView.subtitleFont = .systemFont(ofSize: 22, weight: .medium)
-    infoView.subtitleColor = .black
+    infoView.subtitleColor = Colors.Text.labelPrimary.color
     infoView.subtitleAlignmnent = .center
   }
 }

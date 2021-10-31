@@ -16,7 +16,15 @@ public struct Colors {
   }
   
   public enum Text: String, ColorAsset {
-    case title
-    case subtitle
+    case labelPrimary
+    case labelSecondary
+    case labelTertiary
+  }
+  
+  public enum Views: String, ColorAsset {
+    case borderColor
+    case tintColor
+    case separatorBackground
+    case shadowColor
   }
 }
