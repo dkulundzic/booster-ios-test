@@ -9,7 +9,9 @@
 import UIKit
 import Localization
 
-protocol BoostDetailsDisplayLogic: AnyObject { }
+protocol BoostDetailsDisplayLogic: AnyObject {
+  func displayBoostDetails(_ details: BoostDetailsContentView.ViewModel)
+}
 
 class BoostDetailsViewController: ContentViewController<BoostDetailsContentView> {
   override var isNavigationBarHidden: Bool? { false }
@@ -24,7 +26,11 @@ class BoostDetailsViewController: ContentViewController<BoostDetailsContentView>
 }
 
 // MARK: - BoostDetailsDisplayLogic
-extension BoostDetailsViewController: BoostDetailsDisplayLogic { }
+extension BoostDetailsViewController: BoostDetailsDisplayLogic {
+  func displayBoostDetails(_ details: BoostDetailsContentView.ViewModel) {
+    contentView.update(details)
+  }
+}
 
 private extension BoostDetailsViewController {
   @objc func cancelBarButtonTapped() {

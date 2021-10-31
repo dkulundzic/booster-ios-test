@@ -59,7 +59,9 @@ private extension AppearanceCustomisationStartupProcess {
   }
   
   func customiseOther() {
+    UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = Colors.General.lightPurple.color
     UIBarButtonItem.appearance().tintColor = .black
+    
     UISegmentedControl.appearance().setTitleTextAttributes([
       NSAttributedString.Key.foregroundColor: UIColor.black as Any,
       NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .medium) as Any

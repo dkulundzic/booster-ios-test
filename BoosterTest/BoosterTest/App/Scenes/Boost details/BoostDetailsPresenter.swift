@@ -8,6 +8,7 @@
 
 import Foundation
 import Model
+import System
 
 protocol BoostDetailsViewPresentingLogic: AnyObject {
   func onViewLoaded()
@@ -20,6 +21,7 @@ class BoostDetailsPresenter {
   weak private var view: BoostDetailsDisplayLogic?
   private let router: BoostDetailsRoutingLogic
   private let boost: Boost
+  private let dateFormatter = System.DateFormatter()
   
   init(
     boost: Boost,
@@ -37,8 +39,12 @@ class BoostDetailsPresenter {
 // MARK: - BoostDetailsViewPresentingLogic
 extension BoostDetailsPresenter: BoostDetailsViewPresentingLogic {
   func onViewLoaded() {
-#warning("TODO:")
-    print(#function)
+    let details = BoostDetailsContentView.ViewModel(
+      formattedDate: dateFormatter.format(date: boost.date),
+      deliveryWindow: boost.deliveryWindow.description,
+      paymentMethod: boost.paymentMethod.description
+    )
+    view?.displayBoostDetails(details)
   }
   
   func onCancelBarButtonTapped() {
