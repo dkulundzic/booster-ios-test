@@ -307,6 +307,7 @@
 		480E563F229BF2B40031BDF7 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		480E5641229BF2B40031BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		480E5666229BFF0B0031BDF7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		481F67A8273097B70010AD6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4822014122982175003319F0 /* BoosterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoosterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4822014422982175003319F0 /* BoosterTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterTestApp.swift; sourceTree = "<group>"; };
 		4822014B22982175003319F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -572,6 +573,7 @@
 		4822013822982175003319F0 = {
 			isa = PBXGroup;
 			children = (
+				481F67A8273097B70010AD6D /* README.md */,
 				4822014322982175003319F0 /* BoosterTest */,
 				4822015822982175003319F0 /* BoosterTestTests */,
 				480E5652229BF3790031BDF7 /* Frameworks */,
