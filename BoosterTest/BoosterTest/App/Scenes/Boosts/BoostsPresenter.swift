@@ -50,7 +50,16 @@ extension BoostsPresenter: BoostsViewPresentingLogic {
 
 private extension BoostsPresenter {
   func setupObserving() {
-    boostsStore.boostsPublisher
+    dataSource
+      .sectionsPublisher
+      .sink { [weak self] in
+        guard let strongSelf = self else { return }
+        strongSelf.view?.displayBoosts(using: strongSelf.dataSource)
+      }
+      .store(in: &bag)
+    
+    boostsStore
+      .boostsPublisher
       .receive(on: DispatchQueue.main)
       .sink { [weak self] boosts in
         guard let strongSelf = self else { return }

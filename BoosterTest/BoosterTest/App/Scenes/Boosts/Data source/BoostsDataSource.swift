@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 import System
 import Model
 import Localization
@@ -27,31 +28,46 @@ enum BoostsDataSourceSection: SectionProtocol {
 }
 
 class BoostsDataSource: DataBackedDataSourceProtocol {
-  private(set) var data = [Boost]()
-  private(set) lazy var sections = [BoostsDataSourceSection]()
+  var data: [Boost] { dataSubject.value }
+  var sections: [BoostsDataSourceSection] { sectionSubject.value }
+  private let dataSubject = CurrentValueSubject<[Boost], Never>([])
+  private let sectionSubject = CurrentValueSubject<[BoostsDataSourceSection], Never>([])
   private let dateFormatter = System.DateFormatter()
+  private var bag = Set<AnyCancellable>()
   
   init() {
-    buildSections()
+    setupObserving()
   }
 }
 
 extension BoostsDataSource {
+  var sectionsPublisher: AnyPublisher<Void, Never> {
+    sectionSubject
+      .map { _ in }
+      .eraseToAnyPublisher()
+  }
+  
   func setBoosts(_ boosts: [Boost]) {
-    data = boosts
-    buildSections()
+    dataSubject.value = boosts
   }
   
   func remove(boost: Boost) {
-    guard let indexOf = data.firstIndex(of: boost) else { return }
-    data.remove(at: indexOf)
-    buildSections()
+    guard let indexOf = dataSubject.value.firstIndex(of: boost) else { return }
+    dataSubject.value.remove(at: indexOf)
   }
 }
 
 private extension BoostsDataSource {
+  func setupObserving() {
+    dataSubject
+      .sink { [weak self] _ in
+        self?.buildSections()
+      }
+      .store(in: &bag)
+  }
+  
   func buildSections() {
-    let items: [BoostsDataSourceItem] = data.map {
+    let items: [BoostsDataSourceItem] = dataSubject.value.map {
       let deliveryWindowText = try? AttributedStringBuilder(text: Localization.Boosts.deliveryWindowDetailFormat.localized($0.deliveryWindow.description))
         .setFont(.systemFont(ofSize: 16, weight: .regular))
         .setFont(.systemFont(ofSize: 16, weight: .bold), inRangeOf: $0.deliveryWindow.description)
@@ -66,6 +82,6 @@ private extension BoostsDataSource {
         )
       )
     }
-    sections = [.boosts(items)]
+    sectionSubject.value = [.boosts(items)]
   }
 }
