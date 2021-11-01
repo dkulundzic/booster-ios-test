@@ -8,14 +8,27 @@
 
 import Foundation
 import Combine
+import Localization
 
 public protocol BoostsStoreProtocol {
   var boostsPublisher: AnyPublisher<[Boost], Never> { get }
-  func add(boost: Boost)
+  var boosts: [Boost] { get }
+  func add(boost: Boost) throws
   func remove(boost: Boost)
 }
 
 public final class BoostsStore {
+  public enum Error: LocalizedError {
+    case alreadyExistsForGivenDate
+    
+    public var errorDescription: String? {
+      switch self {
+      case .alreadyExistsForGivenDate:
+        return Localization.Errors.boostExistsForSelectedDate.localized()
+      }
+    }
+  }
+  
   private static let boostsSubject = CurrentValueSubject<[Boost], Never>(
     [
       .init(date: Calendar.current.date(byAdding: .day, value: 1, to: Date())!, deliveryWindow: .afternoon, paymentMethod: .creditCard),
@@ -33,7 +46,14 @@ extension BoostsStore: BoostsStoreProtocol {
     Self.boostsSubject.eraseToAnyPublisher()
   }
   
-  public func add(boost: Boost) {
+  public var boosts: [Boost] {
+    Self.boostsSubject.value
+  }
+  
+  public func add(boost: Boost) throws {
+    guard !boosts.contains(where: { Calendar.current.isDate(boost.date, inSameDayAs: $0.date) }) else {
+      throw Error.alreadyExistsForGivenDate
+    }
     Self.boostsSubject.value.append(boost)
     Self.boostsSubject.value.sort(by: { $0.date < $1.date })
   }

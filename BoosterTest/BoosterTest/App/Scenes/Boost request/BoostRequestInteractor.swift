@@ -17,7 +17,7 @@ protocol BoostRequestBusinessLogic: AnyObject {
     on date: Date,
     using deliveryMethod: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async -> Boost
+  ) async throws -> Boost
 }
 
 class BoostRequestInteractor {
@@ -35,7 +35,7 @@ extension BoostRequestInteractor: BoostRequestBusinessLogic {
     on date: Date,
     using deliveryMethod: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async -> Boost {
-    await boostService.orderBoost(at: boostLocation, on: date, using: deliveryMethod, paymentMethod: paymentMethod)
+  ) async throws -> Boost {
+    try await boostService.orderBoost(at: boostLocation, on: date, using: deliveryMethod, paymentMethod: paymentMethod)
   }
 }

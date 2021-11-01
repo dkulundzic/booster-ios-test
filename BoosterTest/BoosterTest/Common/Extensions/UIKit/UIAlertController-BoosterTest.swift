@@ -31,6 +31,12 @@ extension UIAlertController {
     alertController.addAction(.confirmation(style: .destructive, action: action))
     return alertController.validate()
   }
+  
+  static func error(title: String?, message: String?, action: Action? = nil) -> UIAlertController {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertController.addAction(.acknowledgement(action: action))
+    return alertController.validate()
+  }
 }
 
 private extension UIAlertController {

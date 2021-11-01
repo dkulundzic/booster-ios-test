@@ -12,6 +12,7 @@ import Model
 
 protocol BoostRequestRoutingLogic: AnyObject {
   func showBoostOrderedAlert(for boost: Boost)
+  func showErrorAlert(using message: String?)
   func dismiss()
 }
 
@@ -20,7 +21,7 @@ protocol BoostRequestRouterDelegate: AnyObject {
   func boostRequestDelegateRequestedDismissal()
 }
 
-class BoostRequestRouter {
+class BoostRequestRouter: Router {
   weak var viewController: BoostRequestViewController?
   weak var delegate: BoostRequestRouterDelegate?
   
@@ -42,6 +43,10 @@ extension BoostRequestRouter: BoostRequestRoutingLogic {
     viewController?.present(UIAlertController.boostOrdered { [weak self] in
       self?.delegate?.boostRequestDelegateOrderedBoost(boost)
     }, animated: true, completion: nil)
+  }
+  
+  func showErrorAlert(using message: String?) {
+    showErrorAlert(message: message)
   }
   
   func dismiss() {

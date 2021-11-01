@@ -63,9 +63,24 @@ extension BoostRequestPresenter: BoostRequestViewPresentingLogic {
         return
       }
     Task {
-      await MainActor.run { self.view?.displayActionButton(enabled: false) }
-      let boost = await interactor.orderBoost(at: boostLocation, on: selectedDate, using: deliveryWindow, paymentMethod: paymentMethod)
-      await MainActor.run { self.router.showBoostOrderedAlert(for: boost) }
+      await MainActor.run {
+        self.view?.displayActionButton(enabled: false)
+      }
+      
+      do {
+        let boost = try await interactor.orderBoost(
+          at: boostLocation,
+          on: selectedDate,
+          using: deliveryWindow,
+          paymentMethod: paymentMethod
+        )
+        await MainActor.run { self.router.showBoostOrderedAlert(for: boost) }
+      } catch {
+        await MainActor.run {
+          self.view?.displayActionButton(enabled: true)
+          self.router.showErrorAlert(using: error.localized)
+        }
+      }
     }
   }
   

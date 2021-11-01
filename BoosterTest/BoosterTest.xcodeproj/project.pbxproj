@@ -19,6 +19,8 @@
 		48057149272E9EF4001A98DA /* BoostsCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057148272E9EF4001A98DA /* BoostsCellProvider.swift */; };
 		4805714B272EA1E9001A98DA /* CardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805714A272EA1E9001A98DA /* CardContainerView.swift */; };
 		4805714F272EA36E001A98DA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4805714E272EA36E001A98DA /* DateFormatter.swift */; };
+		48057152272EB01C001A98DA /* Error-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057151272EB01C001A98DA /* Error-BoosterTest.swift */; };
+		48057154272EB05E001A98DA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48057153272EB05E001A98DA /* Router.swift */; };
 		480E55F0229BEE6F0031BDF7 /* UITableView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */; };
 		480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */; };
 		480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */; };
@@ -280,6 +282,8 @@
 		48057148272E9EF4001A98DA /* BoostsCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostsCellProvider.swift; sourceTree = "<group>"; };
 		4805714A272EA1E9001A98DA /* CardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContainerView.swift; sourceTree = "<group>"; };
 		4805714E272EA36E001A98DA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		48057151272EB01C001A98DA /* Error-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error-BoosterTest.swift"; sourceTree = "<group>"; };
+		48057153272EB05E001A98DA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		480E55EC229BEE6F0031BDF7 /* UITableView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EE229BEE6F0031BDF7 /* UIColor-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-BoosterTest.swift"; sourceTree = "<group>"; };
 		480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView-BoosterTest.swift"; sourceTree = "<group>"; };
@@ -505,10 +509,19 @@
 			path = "Cell provider";
 			sourceTree = "<group>";
 		};
+		48057150272EB013001A98DA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				48057151272EB01C001A98DA /* Error-BoosterTest.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		480E55F4229BEEE80031BDF7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				480E55F5229BEEF20031BDF7 /* ReusableView.swift */,
+				48057153272EB05E001A98DA /* Router.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -754,6 +767,7 @@
 		482201D022982534003319F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				48057150272EB013001A98DA /* Foundation */,
 				48444C92272B26750093381D /* CoreLocation */,
 				4805713B272C3DB3001A98DA /* Model */,
 				482201D322982546003319F0 /* UIKit */,
@@ -1530,6 +1544,7 @@
 				48444CBA272C22730093381D /* UIAlertController-BoosterTest.swift in Sources */,
 				48444C76272ADBE50093381D /* Colors.swift in Sources */,
 				48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */,
+				48057154272EB05E001A98DA /* Router.swift in Sources */,
 				4805714B272EA1E9001A98DA /* CardContainerView.swift in Sources */,
 				480E55F3229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift in Sources */,
 				48444C8C272B1B320093381D /* Animation.swift in Sources */,
@@ -1557,6 +1572,7 @@
 				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
 				48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */,
 				48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */,
+				48057152272EB01C001A98DA /* Error-BoosterTest.swift in Sources */,
 				48444C6A272AD9730093381D /* TabBarInteractor.swift in Sources */,
 				48444CA7272C0A500093381D /* BoostRequestContentView.swift in Sources */,
 				48057140272C42BD001A98DA /* ListLayoutVendor.swift in Sources */,

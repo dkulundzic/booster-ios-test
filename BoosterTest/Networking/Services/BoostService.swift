@@ -17,7 +17,7 @@ public protocol BoostServiceProtocol {
     on date: Date,
     using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async -> Boost
+  ) async throws -> Boost
   
   func cancelBoost(_ boost: Boost) async
 }
@@ -36,10 +36,10 @@ extension BoostService: BoostServiceProtocol {
     on date: Date,
     using deliveryWindow: Boost.DeliveryWindow,
     paymentMethod: Boost.PaymentMethod
-  ) async -> Boost {
+  ) async throws -> Boost {
     await Task.sleep(1 * 1000000000)
     let boost = Boost(date: date, deliveryWindow: deliveryWindow, paymentMethod: paymentMethod)
-    boostsStore.add(boost: boost)
+    try boostsStore.add(boost: boost)
     return boost
   }
   

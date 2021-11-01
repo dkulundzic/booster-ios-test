@@ -19,10 +19,16 @@ public struct Localization {
   }
   
   public enum Alerts: String, LocalizationAsset {
+    case errorTitle = "alerts_error_generic_title"
     case boostOrderedTitle = "alerts_boost_ordered_title"
     case boostOrderedMessage = "alerts_boost_ordered_message"
     case boostCancellationTitle = "alerts_boost_cancelled_title"
     case boostCancellationMessage = "alerts_boost_cancelled_message"
+  }
+  
+  public enum Errors: String, LocalizationAsset {
+    case generic = "error_generic"
+    case boostExistsForSelectedDate = "error_boost_exists_for_date"
   }
   
   public enum Boosts: String, LocalizationAsset {

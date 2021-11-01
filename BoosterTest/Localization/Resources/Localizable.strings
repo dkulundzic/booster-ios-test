@@ -8,17 +8,22 @@
 
 // MARK: - Actions
 "action_next" = "Next";
-"action_order_boost" = "Order Boost";
+"action_order_boost" = "Order a Boost";
 "action_cancel" = "Cancel";
 "action_acknowledgement" = "Ok";
 "action_confirmation" = "Yes";
 "action_negation" = "No";
 
 // MARK: - Alerts
+"alerts_error_generic_title" = "Error";
 "alerts_boost_ordered_title" = "Boost ordered";
 "alerts_boost_ordered_message" = "Congratulations, you have successfully ordered a Boost!";
 "alerts_boost_cancelled_title" = "Boost cancellation";
 "alerts_boost_cancelled_message" = "Are you sure you want to cancel your scheduled Boost?";
+
+// MARK: - Errors
+"error_generic" = "An error occurred.";
+"error_boost_exists_for_date" = "You already have a Boost scheduled for the selected date.\n\nPlease select another date.";
 
 // MARK: - Boosts
 "boosts_title" = "Boosts";
@@ -26,7 +31,6 @@
 
 // MARK: - Boost Details
 "boost_details_title" = "Boost details";
-
 
 // MARK: - Boost Request
 "boosts_request_title" = "Request a Boost";
