@@ -1,5 +1,9 @@
 #  Booster test app
 
+## Project setup
+
+There aren't any special set-up steps needed, `SwiftLint` is the only dependency, but you can ignore it if you like.
+
 ## App architecture
 
 The app uses the VIPER architecture that I found to be most modular and scalable, as well as easy to read. In my experience,
@@ -65,7 +69,7 @@ developed by the Big A.
 
 ## Git process
 
-Regarding Git, the flow I use is Git Flow, with PR for submitting new code into `dev`. 
+Regarding Git, the flow I use is Git Flow, with PRs for submitting new code into `dev`. 
 
 ## Tests
 
