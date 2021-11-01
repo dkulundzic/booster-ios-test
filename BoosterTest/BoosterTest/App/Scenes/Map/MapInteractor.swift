@@ -15,15 +15,15 @@ import Networking
 protocol MapBusinessLogic: AnyObject {
   var userLocationPublisher: AnyPublisher<CLLocation?, Never> { get }
   var userLocation: CLLocationCoordinate2D? { get }
-  func loadFuelPricingInformation() async -> FuelPricingInformation
+  func loadFuelPricingInformation() async throws -> FuelPricing
 }
 
 class MapInteractor {
   private let locationManager = LocationManager()
-  private let fuelInformationService: FuelInformationServiceProtocol
+  private let fuelPricingNetworkService: FuelPricingNetworkServiceProtocol
   
-  init(fuelInformationService: FuelInformationServiceProtocol = FuelInformationService()) {
-    self.fuelInformationService = fuelInformationService
+  init(fuelPricingNetworkService: FuelPricingNetworkServiceProtocol = FuelPricingNetworkService()) {
+    self.fuelPricingNetworkService = fuelPricingNetworkService
   }
 }
 
@@ -37,7 +37,7 @@ extension MapInteractor: MapBusinessLogic {
     locationManager.currentCoordinate
   }
   
-  func loadFuelPricingInformation() async -> FuelPricingInformation {
-    await fuelInformationService.loadFuelInformation()
+  func loadFuelPricingInformation() async throws -> FuelPricing {
+    try await fuelPricingNetworkService.fetchFuelPricing()
   }
 }

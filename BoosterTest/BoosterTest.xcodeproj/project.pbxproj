@@ -36,6 +36,9 @@
 		480E5653229BF3790031BDF7 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4822018322982413003319F0 /* Model.framework */; };
 		480E5654229BF37C0031BDF7 /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; };
 		480E5667229BFF0B0031BDF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 480E5666229BFF0B0031BDF7 /* Localizable.strings */; };
+		481B32BB273063F800EA82F9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481B32BA273063F800EA82F9 /* Resource.swift */; };
+		481B32BD2730643F00EA82F9 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481B32BC2730643F00EA82F9 /* Host.swift */; };
+		481B32C62730651400EA82F9 /* FuelPricingResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481B32C52730651400EA82F9 /* FuelPricingResource.swift */; };
 		4822014522982175003319F0 /* BoosterTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822014422982175003319F0 /* BoosterTestApp.swift */; };
 		4822014C22982175003319F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4822014B22982175003319F0 /* Assets.xcassets */; };
 		4822015A22982175003319F0 /* BoosterTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822015922982175003319F0 /* BoosterTestTests.swift */; };
@@ -92,8 +95,8 @@
 		48444C94272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */; };
 		48444C96272BDFBB0093381D /* MapFuelPricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C95272BDFBB0093381D /* MapFuelPricingView.swift */; };
 		48444C98272BE09F0093381D /* MapFuelPricingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */; };
-		48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C99272BEAF50093381D /* FuelPricingInformation.swift */; };
-		48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9C272BEB360093381D /* FuelInformationService.swift */; };
+		48444C9A272BEAF50093381D /* FuelPricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C99272BEAF50093381D /* FuelPricing.swift */; };
+		48444C9D272BEB360093381D /* FuelPricingNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9C272BEB360093381D /* FuelPricingNetworkService.swift */; };
 		48444C9F272C08500093381D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C9E272C08500093381D /* ViewController.swift */; };
 		48444CA7272C0A500093381D /* BoostRequestContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA2272C0A500093381D /* BoostRequestContentView.swift */; };
 		48444CA8272C0A500093381D /* BoostRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444CA3272C0A500093381D /* BoostRequestPresenter.swift */; };
@@ -308,6 +311,9 @@
 		480E563F229BF2B40031BDF7 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		480E5641229BF2B40031BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		480E5666229BFF0B0031BDF7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		481B32BA273063F800EA82F9 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		481B32BC2730643F00EA82F9 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		481B32C52730651400EA82F9 /* FuelPricingResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingResource.swift; sourceTree = "<group>"; };
 		4822014122982175003319F0 /* BoosterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoosterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4822014422982175003319F0 /* BoosterTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterTestApp.swift; sourceTree = "<group>"; };
 		4822014B22982175003319F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -369,8 +375,8 @@
 		48444C93272B26880093381D /* CLLocationCoordinate2D-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D-BoosterTest.swift"; sourceTree = "<group>"; };
 		48444C95272BDFBB0093381D /* MapFuelPricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFuelPricingView.swift; sourceTree = "<group>"; };
 		48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFuelPricingInfoView.swift; sourceTree = "<group>"; };
-		48444C99272BEAF50093381D /* FuelPricingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingInformation.swift; sourceTree = "<group>"; };
-		48444C9C272BEB360093381D /* FuelInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelInformationService.swift; sourceTree = "<group>"; };
+		48444C99272BEAF50093381D /* FuelPricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricing.swift; sourceTree = "<group>"; };
+		48444C9C272BEB360093381D /* FuelPricingNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricingNetworkService.swift; sourceTree = "<group>"; };
 		48444C9E272C08500093381D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48444CA2272C0A500093381D /* BoostRequestContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestContentView.swift; sourceTree = "<group>"; };
 		48444CA3272C0A500093381D /* BoostRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostRequestPresenter.swift; sourceTree = "<group>"; };
@@ -540,9 +546,11 @@
 		480E5631229BF2B40031BDF7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				48444C9B272BEB2C0093381D /* Services */,
-				480E5632229BF2B40031BDF7 /* Networking.h */,
+				481B32BC2730643F00EA82F9 /* Host.swift */,
 				480E5633229BF2B40031BDF7 /* Info.plist */,
+				480E5632229BF2B40031BDF7 /* Networking.h */,
+				481B32B9273063B400EA82F9 /* Resource */,
+				48444C9B272BEB2C0093381D /* Services */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -569,6 +577,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		481B32B9273063B400EA82F9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				481B32BA273063F800EA82F9 /* Resource.swift */,
+				481B32C52730651400EA82F9 /* FuelPricingResource.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		4822013822982175003319F0 = {
@@ -998,7 +1015,7 @@
 			isa = PBXGroup;
 			children = (
 				48444CB7272C21550093381D /* BoostService.swift */,
-				48444C9C272BEB360093381D /* FuelInformationService.swift */,
+				48444C9C272BEB360093381D /* FuelPricingNetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1027,7 +1044,7 @@
 			isa = PBXGroup;
 			children = (
 				48444CB3272C14E90093381D /* Boost.swift */,
-				48444C99272BEAF50093381D /* FuelPricingInformation.swift */,
+				48444C99272BEAF50093381D /* FuelPricing.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1161,6 +1178,8 @@
 				480E5651229BF3750031BDF7 /* PBXTargetDependency */,
 			);
 			name = Networking;
+			packageProductDependencies = (
+			);
 			productName = Networking;
 			productReference = 480E5630229BF2B40031BDF7 /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1528,8 +1547,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48444C9D272BEB360093381D /* FuelInformationService.swift in Sources */,
+				481B32C62730651400EA82F9 /* FuelPricingResource.swift in Sources */,
+				481B32BB273063F800EA82F9 /* Resource.swift in Sources */,
+				48444C9D272BEB360093381D /* FuelPricingNetworkService.swift in Sources */,
 				48444CB8272C21550093381D /* BoostService.swift in Sources */,
+				481B32BD2730643F00EA82F9 /* Host.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1626,7 +1648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48444C9A272BEAF50093381D /* FuelPricingInformation.swift in Sources */,
+				48444C9A272BEAF50093381D /* FuelPricing.swift in Sources */,
 				48444CB4272C14E90093381D /* Boost.swift in Sources */,
 				48444CC0272C2BB20093381D /* BoostsStore.swift in Sources */,
 			);

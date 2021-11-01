@@ -10,7 +10,7 @@ import Foundation
 import Localization
 
 public struct Boost {
-  public enum DeliveryWindow: CustomStringConvertible, CaseIterable {
+  public enum DeliveryWindow: String, CustomStringConvertible, CaseIterable {
     case morning
     case afternoon
     
@@ -24,9 +24,9 @@ public struct Boost {
     }
   }
   
-  public enum PaymentMethod: CaseIterable {
+  public enum PaymentMethod: String, CaseIterable {
     case cash
-    case creditCard
+    case creditCard = "credit_card"
     
     public var description: String {
       switch self {
