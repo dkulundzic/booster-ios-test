@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Ideally, the pricing view can present an arbirtrary number of data points.
 class MapFuelPricingInfoView: UIView {
   private(set) lazy var regularPriceView = MapFuelPricingView()
   private(set) lazy var premiumPriceView = MapFuelPricingView()
@@ -24,9 +23,6 @@ class MapFuelPricingInfoView: UIView {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-}
-
-extension MapFuelPricingInfoView {
 }
 
 // MARK: - Private Methods

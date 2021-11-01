@@ -62,6 +62,7 @@ extension BoostRequestPresenter: BoostRequestViewPresentingLogic {
       let paymentMethod = paymentMethodSubject.value else {
         return
       }
+    
     Task {
       await MainActor.run {
         self.view?.displayActionButton(enabled: false)

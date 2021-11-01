@@ -16,14 +16,6 @@ open class UIContentViewController<ContentView: UIView>: UIViewController {
   }
 }
 
-open class UIContentTabBarController<ContentView: UIView>: UITabBarController {
-  public private(set) lazy var contentView = ContentView()
-
-  open override func loadView() {
-    view = contentView
-  }
-}
-
 open class UIContentPageViewController<ContentView: UIView>: UIPageViewController {
   public private(set) lazy var contentView = ContentView()
 

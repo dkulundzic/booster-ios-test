@@ -26,16 +26,6 @@ open class InfoView: UIView {
 }
 
 public extension InfoView {
-  var axis: NSLayoutConstraint.Axis {
-    get { return stackView.axis }
-    set { stackView.axis = newValue }
-  }
-
-  var spacing: CGFloat {
-    get { return stackView.spacing }
-    set { stackView.spacing = newValue }
-  }
-
   var title: String? {
     get { return titleLabel.text }
     set { titleLabel.text = newValue }
@@ -56,19 +46,9 @@ public extension InfoView {
     set { titleLabel.textAlignment = newValue ?? .left }
   }
 
-  var titleNumberOfLines: Int {
-    get { return titleLabel.numberOfLines }
-    set { titleLabel.numberOfLines = newValue }
-  }
-
   var subtitle: String? {
     get { return subtitleLabel.text }
     set { subtitleLabel.text = newValue }
-  }
-
-  var attributedSubtitle: NSAttributedString? {
-    get { return subtitleLabel.attributedText }
-    set { subtitleLabel.attributedText = newValue }
   }
 
   var subtitleFont: UIFont? {
@@ -84,11 +64,6 @@ public extension InfoView {
   var subtitleAlignmnent: NSTextAlignment? {
     get { return subtitleLabel.textAlignment }
     set { subtitleLabel.textAlignment = newValue ?? .left }
-  }
-
-  var subtitleNumberOfLines: Int {
-    get { return subtitleLabel.numberOfLines }
-    set { subtitleLabel.numberOfLines = newValue }
   }
 }
 

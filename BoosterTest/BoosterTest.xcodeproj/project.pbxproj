@@ -69,7 +69,6 @@
 		48444C5D272AD9590093381D /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C58272AD9590093381D /* MapRouter.swift */; };
 		48444C5E272AD9590093381D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C59272AD9590093381D /* MapViewController.swift */; };
 		48444C5F272AD9590093381D /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C5A272AD9590093381D /* MapInteractor.swift */; };
-		48444C66272AD9730093381D /* TabBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C61272AD9730093381D /* TabBarContentView.swift */; };
 		48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C62272AD9730093381D /* TabBarPresenter.swift */; };
 		48444C68272AD9730093381D /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C63272AD9730093381D /* TabBarRouter.swift */; };
 		48444C69272AD9730093381D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48444C64272AD9730093381D /* TabBarViewController.swift */; };
@@ -347,7 +346,6 @@
 		48444C58272AD9590093381D /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		48444C59272AD9590093381D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		48444C5A272AD9590093381D /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
-		48444C61272AD9730093381D /* TabBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContentView.swift; sourceTree = "<group>"; };
 		48444C62272AD9730093381D /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		48444C63272AD9730093381D /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		48444C64272AD9730093381D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -852,7 +850,6 @@
 		48444C3C272AD8B40093381D /* Tab bar */ = {
 			isa = PBXGroup;
 			children = (
-				48444C6B272AD97D0093381D /* Views */,
 				48444C65272AD9730093381D /* TabBarInteractor.swift */,
 				48444C62272AD9730093381D /* TabBarPresenter.swift */,
 				48444C63272AD9730093381D /* TabBarRouter.swift */,
@@ -925,14 +922,6 @@
 				48444C8D272B1E770093381D /* MapSelectionPinView.swift */,
 				48444C97272BE09F0093381D /* MapFuelPricingInfoView.swift */,
 				48444C95272BDFBB0093381D /* MapFuelPricingView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		48444C6B272AD97D0093381D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				48444C61272AD9730093381D /* TabBarContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1583,7 +1572,6 @@
 				48444C73272ADB690093381D /* UINavigationBarAppearance-BoosterTest.swift in Sources */,
 				48057146272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift in Sources */,
 				48444C48272AD8F60093381D /* BoostDetailsViewController.swift in Sources */,
-				48444C66272AD9730093381D /* TabBarContentView.swift in Sources */,
 				48057142272C42CB001A98DA /* CompositionalLayoutVendor.swift in Sources */,
 				48444C67272AD9730093381D /* TabBarPresenter.swift in Sources */,
 				48057152272EB01C001A98DA /* Error-BoosterTest.swift in Sources */,

@@ -13,6 +13,7 @@ import Combine
 final class LocationManager: NSObject {
   private static let locationManager = CLLocationManager()
   private let locationSubject = CurrentValueSubject<CLLocation?, Never>(nil)
+  private let authorizationStatusSubject = CurrentValueSubject<CLAuthorizationStatus, Never>(.notDetermined)
   private var bag = Set<AnyCancellable>()
   
   override init() {
@@ -32,6 +33,10 @@ extension LocationManager {
     locationSubject.eraseToAnyPublisher()
   }
   
+  var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> {
+    authorizationStatusSubject.eraseToAnyPublisher()
+  }
+  
   var currentCoordinate: CLLocationCoordinate2D? {
     locationSubject.value?.coordinate
   }
@@ -40,6 +45,8 @@ extension LocationManager {
 // MARK: - CLLocationManagerDelegate
 extension LocationManager: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    authorizationStatusSubject.value = status
+    
     if status == .authorizedAlways || status == .authorizedWhenInUse {
        manager.startUpdatingLocation()
     }

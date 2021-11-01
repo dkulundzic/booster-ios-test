@@ -8,6 +8,7 @@
 
 import UIKit
 
+#warning("NOTE: A more precise image for the pin is advised.")
 class MapSelectionPinView: UIView {
   private lazy var pinImageView = UIImageView(image: Icons.car.image)
   
