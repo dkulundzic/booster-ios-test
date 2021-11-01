@@ -23,6 +23,14 @@ public class SectionView: UIView {
   public required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+  
+  public override var bounds: CGRect {
+    didSet { dropShadow(shadowPath: UIBezierPath(rect: bounds).cgPath) }
+  }
+  
+  public override var frame: CGRect {
+    didSet { dropShadow(shadowPath: UIBezierPath(rect: frame).cgPath) }
+  }
 }
 
 public extension SectionView {
@@ -63,10 +71,6 @@ private extension SectionView {
   func setupView() {
     backgroundColor = .white
     layer.cornerRadius = 8
-    #warning("TODO: Extract into reusable method on UIView.")
-    layer.shadowRadius = 16
-    layer.shadowOpacity = 0.25
-    layer.shadowColor = UIColor.black.cgColor
   }
 
   func setupStackView() {

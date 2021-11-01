@@ -8,15 +8,23 @@
 
 import UIKit
 
-class CardContainerView: UIView {
+open class CardContainerView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
   }
   
   @available(*, unavailable)
-  required init?(coder aDecoder: NSCoder) {
+  required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  open override var bounds: CGRect {
+    didSet { dropShadow(shadowPath: UIBezierPath(rect: bounds).cgPath) }
+  }
+  
+  open override var frame: CGRect {
+    didSet { dropShadow(shadowPath: UIBezierPath(rect: frame).cgPath) }
   }
 }
 
@@ -42,9 +50,5 @@ private extension CardContainerView {
   func setupView() {
     backgroundColor = Colors.General.background.color
     layer.cornerRadius = 8
-#warning("TODO: Extract into reusable method on UIView.")
-    layer.shadowRadius = 16
-    layer.shadowOpacity = 0.25
-    layer.shadowColor = UIColor.black.cgColor
   }
 }

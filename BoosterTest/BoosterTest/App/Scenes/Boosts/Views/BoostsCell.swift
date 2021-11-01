@@ -33,6 +33,11 @@ class BoostsCell: UICollectionViewCell {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    contentView.dropShadow(shadowPath: UIBezierPath(rect: contentView.bounds).cgPath)
+  }
 }
 
 extension BoostsCell {
@@ -55,10 +60,7 @@ private extension BoostsCell {
   func setupView() {
     contentView.backgroundColor = .white
     contentView.layer.cornerRadius = 8
-#warning("TODO: Extract into reusable method on UIView.")
-    contentView.layer.shadowRadius = 16
-    contentView.layer.shadowOpacity = 0.25
-    contentView.layer.shadowColor = UIColor.black.cgColor
+    contentView.dropShadow()
   }
   
   func setupPaymentMethodImageView() {

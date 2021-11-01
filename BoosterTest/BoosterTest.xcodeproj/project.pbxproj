@@ -126,6 +126,8 @@
 		4882409A2349473A00CB6FFE /* LocalizationAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488240992349473A00CB6FFE /* LocalizationAsset.swift */; };
 		4882409E2349482E00CB6FFE /* System.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		488240A42349492E00CB6FFE /* System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482201A822982422003319F0 /* System.framework */; };
+		48C7021427304079001BDC34 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488240782349471A00CB6FFE /* Localization.framework */; };
+		48C7021627304100001BDC34 /* UIView-BoosterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7021527304100001BDC34 /* UIView-BoosterTest.swift */; };
 		48F988392729B54400505FC8 /* BoosterAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F988382729B54400505FC8 /* BoosterAppRouter.swift */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +243,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 482201A722982422003319F0;
 			remoteInfo = System;
+		};
+		48C7021227304069001BDC34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4822013922982175003319F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 488240772349471A00CB6FFE;
+			remoteInfo = Localization;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -395,6 +404,7 @@
 		488240872349471A00CB6FFE /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
 		488240892349471A00CB6FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488240992349473A00CB6FFE /* LocalizationAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationAsset.swift; sourceTree = "<group>"; };
+		48C7021527304100001BDC34 /* UIView-BoosterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-BoosterTest.swift"; sourceTree = "<group>"; };
 		48F988382729B54400505FC8 /* BoosterAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterAppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -439,6 +449,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C7021427304079001BDC34 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,8 +651,8 @@
 		48220166229821B3003319F0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4822016A2298224B003319F0 /* Configurations */,
 				48220169229821CB003319F0 /* Assets */,
+				4822016A2298224B003319F0 /* Configurations */,
 				48220167229821BF003319F0 /* Other */,
 			);
 			path = Resources;
@@ -793,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				48444CBB272C22BB0093381D /* UIAlertAction-BoosterTest.swift */,
+				48C7021527304100001BDC34 /* UIView-BoosterTest.swift */,
 				48444CB9272C22730093381D /* UIAlertController-BoosterTest.swift */,
 				48057145272E957F001A98DA /* UIBarButtonItem-BoosterTest.swift */,
 				480E55EF229BEE6F0031BDF7 /* UICollectionView-BoosterTest.swift */,
@@ -1228,6 +1240,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				48C7021327304069001BDC34 /* PBXTargetDependency */,
 			);
 			name = Model;
 			productName = Model;
@@ -1557,6 +1570,7 @@
 				48444CA9272C0A500093381D /* BoostRequestRouter.swift in Sources */,
 				48444CAA272C0A500093381D /* BoostRequestViewController.swift in Sources */,
 				48444C91272B26080093381D /* LocationManager.swift in Sources */,
+				48C7021627304100001BDC34 /* UIView-BoosterTest.swift in Sources */,
 				480E55F2229BEE6F0031BDF7 /* UIColor-BoosterTest.swift in Sources */,
 				48444C7C272ADE420093381D /* Icons.swift in Sources */,
 				48444C5D272AD9590093381D /* MapRouter.swift in Sources */,
@@ -1756,6 +1770,11 @@
 			isa = PBXTargetDependency;
 			target = 482201A722982422003319F0 /* System */;
 			targetProxy = 488240A52349493200CB6FFE /* PBXContainerItemProxy */;
+		};
+		48C7021327304069001BDC34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 488240772349471A00CB6FFE /* Localization */;
+			targetProxy = 48C7021227304069001BDC34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

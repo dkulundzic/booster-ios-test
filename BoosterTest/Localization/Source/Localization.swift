@@ -9,6 +9,13 @@
 import Foundation
 
 public struct Localization {
+  public enum General: String, LocalizationAsset {
+    case morning = "general_morning"
+    case afternoon = "general_afternoon"
+    case cash = "general_cash"
+    case creditCard = "general_credit_card"
+  }
+  
   public enum Actions: String, LocalizationAsset {
     case next = "action_next"
     case orderBoost = "action_order_boost"
@@ -34,6 +41,7 @@ public struct Localization {
   public enum Boosts: String, LocalizationAsset {
     case title = "boosts_title"
     case deliveryWindowDetailFormat = "boosts_delivery_detail_format"
+    case emptyMessage = "boosts_empty_message"
   }
   
   public enum BoostDetails: String, LocalizationAsset {

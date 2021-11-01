@@ -8,7 +8,7 @@
 
 import UIKit
 
-#warning("NOTE: Ideally, the pricing view can present an arbirtrary number of data points.")
+// Ideally, the pricing view can present an arbirtrary number of data points.
 class MapFuelPricingInfoView: UIView {
   private(set) lazy var regularPriceView = MapFuelPricingView()
   private(set) lazy var premiumPriceView = MapFuelPricingView()

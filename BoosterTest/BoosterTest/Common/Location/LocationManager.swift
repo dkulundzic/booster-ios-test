@@ -18,7 +18,6 @@ final class LocationManager: NSObject {
   override init() {
     super.init()
     Self.locationManager.delegate = self
-    Self.locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
     Self.locationManager.requestWhenInUseAuthorization()
     Self.locationManager.requestLocation()
   }

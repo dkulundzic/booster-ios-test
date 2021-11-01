@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Localization
 
 class BoostsEmptyView: UIView {
   private lazy var messageLabel = UILabel()
@@ -34,8 +35,7 @@ private extension BoostsEmptyView {
       $0.leadingMargin.trailingMargin.equalToSuperview()
       $0.centerY.equalToSuperview().multipliedBy(0.75)
     }
-    #warning("TODO: Localise")
-    messageLabel.text = "No scheduled Boosts"
+    messageLabel.text = Localization.Boosts.emptyMessage.localized()
     messageLabel.textColor = .label
     messageLabel.textAlignment = .center
     messageLabel.font = .systemFont(ofSize: 24, weight: .medium)

@@ -67,8 +67,7 @@ extension MapPresenter: MapViewPresentingLogic {
   }
   
   func onHomeButtonTapped() {
-#warning("TODO:")
-    print(#function)
+    // Not implemented, expected functionality unknown.
   }
   
   func onCenterButtonTapped() {

@@ -7,19 +7,19 @@
 //
 
 import Foundation
+import Localization
 
 public struct Boost {
   public enum DeliveryWindow: CustomStringConvertible, CaseIterable {
     case morning
     case afternoon
     
-#warning("TODO: Localise")
     public var description: String {
       switch self {
       case .morning:
-        return "Morning"
+        return Localization.General.morning.localized()
       case .afternoon:
-        return "Afternoon"
+        return Localization.General.afternoon.localized()
       }
     }
   }
@@ -28,13 +28,12 @@ public struct Boost {
     case cash
     case creditCard
     
-#warning("TODO: Localise")
     public var description: String {
       switch self {
       case .cash:
-        return "Cash"
+        return Localization.General.cash.localized()
       case .creditCard:
-        return "Credit Card"
+        return Localization.General.creditCard.localized()
       }
     }
   }

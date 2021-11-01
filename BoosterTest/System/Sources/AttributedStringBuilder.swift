@@ -65,7 +65,6 @@ public extension AttributedStringBuilder {
     return try addAttribute(key: .font, object: font, range: nsRange)
   }
 
-  
   @discardableResult
   func setTextColor(_ color: UIColor?) -> Self {
     return addAttribute(key: .foregroundColor, object: color)

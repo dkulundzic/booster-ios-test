@@ -6,6 +6,12 @@
   Copyright © 2019 Codeopolis. All rights reserved.
 */
 
+// MARK: - General
+"general_morning" = "Morning";
+"general_afternoon" = "Afternoon";
+"general_cash" = "Cash";
+"general_credit_card" = "Credit Card";
+
 // MARK: - Actions
 "action_next" = "Next";
 "action_order_boost" = "Order a Boost";
@@ -28,6 +34,7 @@
 // MARK: - Boosts
 "boosts_title" = "Boosts";
 "boosts_delivery_detail_format" = "Delivered in the %@";
+"boosts_empty_message" = "No scheduled Boosts";
 
 // MARK: - Boost Details
 "boost_details_title" = "Boost details";

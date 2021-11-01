@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreLocation
-#warning("NOTE: Used for practical purposes, while respecting API boundaries.")
+// Used for practical purposes, while respecting API boundaries.
 @testable import Model
 
 public protocol BoostServiceProtocol {
