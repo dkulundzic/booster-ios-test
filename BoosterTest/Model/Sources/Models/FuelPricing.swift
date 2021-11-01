@@ -8,9 +8,9 @@
 
 import Foundation
 
-public struct FuelPricingInformation {
+public struct FuelPricing {
   public let regularPrice: Float
   public let premiumPrice: Float
 }
 
-extension FuelPricingInformation: Decodable { }
+extension FuelPricing: Decodable { }

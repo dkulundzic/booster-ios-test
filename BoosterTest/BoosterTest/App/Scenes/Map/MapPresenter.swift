@@ -107,7 +107,7 @@ private extension MapPresenter {
         self.view?.displayFuelInformationLoading(inProgress: true)
       }
       
-      let pricingInformation = await interactor.loadFuelPricingInformation()
+      let pricingInformation = try await interactor.loadFuelPricingInformation()
       let formattedRegularPrice = currencyFormatter.string(from: NSNumber(value: pricingInformation.regularPrice))
       let formattedPremiumPrice = currencyFormatter.string(from: NSNumber(value: pricingInformation.premiumPrice))
       
