@@ -64,7 +64,6 @@ private extension BoostsPresenter {
       .sink { [weak self] boosts in
         guard let strongSelf = self else { return }
         strongSelf.dataSource.setBoosts(boosts)
-        strongSelf.view?.displayBoosts(using: strongSelf.dataSource)
       }
       .store(in: &bag)
   }
